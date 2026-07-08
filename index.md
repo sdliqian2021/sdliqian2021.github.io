@@ -1,3 +1,3 @@
-# Industrial AI
+# Qian Li's Technical Blog
 
-Posts and notes for the Industrial AI site.
+Posts and notes for tire industry, digital twin and Industrial AI.
