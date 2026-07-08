@@ -4,7 +4,7 @@ Posts and notes for tire industry, digital twin and Industrial AI.
 
 ## Articles
 
-- [AI and Humans: Like Simulation and Physical Testing (Topic 1.0)](<Posts/Topic 1_0_AI will not replace human I Post.html>)
+- [AI and Humans: Like Simulation and Physical Testing](<Posts/Topic 1_0_AI will not replace human I Post.html>)
 - [How AI Can Help and Change Physics-Based Simulations Like FEA](<Posts/Topic 4_0_AI and Physics Based Simulations Like FEA.html>)
 - [Topic 4_1: The Solver Is Not the Opportunity. The Workflow Is.](<Posts/Topic 4_1_Code Agents and AI Native Simulation Workflows.html>)
 - [Topic 4_2: The CAD Platform Is Not the Opportunity. The Design Workflow Is.](<Posts/Topic 4_2_Code Agents and AI Native Tire CAD Workflows.html>)
