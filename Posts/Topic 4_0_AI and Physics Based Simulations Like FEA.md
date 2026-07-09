@@ -229,24 +229,6 @@ Questions:
 - Where does the surrogate fail?
 - How should the valid input domain be defined?
 
-## Possible Post Angle
-
-The post can be written from a personal experiment perspective:
-
-> I cannot discuss tire simulation details, but I can explore the same question through rubber simulation: how does AI change the workflow around physics-based simulation like FEA?
-
-The useful answer may be:
-
-> AI makes simulation workflows easier to build, automate, and explore. But the hard part remains physics, material behavior, validation, and knowing when the model is allowed to make a decision.
-
-## Draft Title Options
-
-- How AI Will Change Physics-Based Simulation
-- AI Will Not Replace FEA. It Will Change the Simulation Workflow.
-- The Solver Is Not the Hardest Part: AI and Rubber FEA
-- AI for Rubber Simulation: Faster Workflows, Same Physics
-- AI Can Write Simulation Tools. It Cannot Validate Physics for You.
-
 ## Core Idea
 
 > AI can accelerate rubber FEA workflows, but physics and validation remain the foundation.
