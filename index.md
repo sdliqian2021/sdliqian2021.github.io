@@ -1,27 +1,32 @@
 # Qian Li's Technical Blog
 
-_Last updated: 2026-07-09 12:40 America/New_York (UTC-04:00)_
+_Last updated: 2026-07-11 America/New_York (UTC-04:00)_
 
-Posts and notes for tire industry, digital twin and Industrial AI.
+Posts and notes about the tire industry, digital twins, and Industrial AI.
+
+[About](about.html)
 
 ## Articles
 
-- [AI and Humans: Like Simulation and Physical Testing](<Posts/Topic 1_0_AI will not replace human I Post.html>)
+- [AI and Humans: Like Simulation and Physical Testing](posts/ai-humans-simulation-and-physical-testing.html)
+
 <!--
-- [How AI Can Help and Change Physics-Based Simulations Like FEA](<Posts/Topic 4_0_AI and Physics Based Simulations Like FEA.html>)
-- [Topic 4_1: The Solver Is Not the Opportunity. The Workflow Is.](<Posts/Topic 4_1_Code Agents and AI Native Simulation Workflows.html>)
-- [Topic 4_2: The CAD Platform Is Not the Opportunity. The Design Workflow Is.](<Posts/Topic 4_2_Code Agents and AI Native Tire CAD Workflows.html>)
-- [How a 5G Factory Can Help the Tire Design Process](<Posts/Topic 5_0_China Tire Industry_How 5G Factory Can Help the Tire Design Process.html>)
-- [Topic 6: What Guangrao Can Learn from Akron](<Posts/Topic 5_1_China Tire Industry_Guangrao.html>)
-- [Topic 7: What Akron Tire Companies Can Learn from Guangrao](<Posts/Topic 5_2_China Tire Industry_akron_guangrao_advantages_disadvantages.html>)
-- [AI and Humans: Like Simulation and Physical Testing (Topic 9.0)](<Posts/Topic 9_0_AI will not replace human I Post.html>)
-- [The AI Productivity Paradox: Why Individual AI Productivity Rises Faster Than Company Productivity](<Posts/Topic 9_0_The AI Productivity Paradox.html>)
-- [What Is Industrial AI?](<Posts/Topic 9_0_What Is Industrial AI.html>)
-- [Why Industrial AI Struggles to Scale](<Posts/Topic 9_1__Why Industrial AI Struggles to Scale.html>)
-- [The Industrial AI Bottleneck Is Not Data Scarcity. It Is Dead Data.](<Posts/Topic 9_1_1_The Industrial AI Bottleneck Is Dead Data.html>)
-- [Controlled Systems for Industrial AI](<Posts/Topic 9_2_1_Building Industrial AI_Three Steps.html>)
-- [What Is a Process Digital Twin?](<Posts/Topic 9_3_1_Process Digital Twin_what.html>)
-- [Why Industrial AI Should Build the Process Digital Twin First](<Posts/Topic 9_3_2_ Process Digital Twin_why.html>)
-- [Can We Demonstrate a Process Digital Twin with Public Data?](<Posts/Topic 9_3_3_ Process Digital Twin_Public Data Demo.html>)
-- [Industrial Agent = LLM + Digital-Twin Harness](<Posts/Topic 9_4_Industrial Agent Design.html>)
+The remaining articles are intentionally hidden until they are ready to publish.
+
+- [How AI Can Help and Change Physics-Based Simulations Like FEA](posts/ai-physics-based-simulation.html)
+- [The Solver Is Not the Opportunity. The Workflow Is.](posts/ai-native-simulation-workflows.html)
+- [The CAD Platform Is Not the Opportunity. The Design Workflow Is.](posts/ai-native-tire-cad-workflows.html)
+- [How a 5G Factory Can Help the Tire Design Process](posts/5g-factory-tire-design.html)
+- [What Guangrao Can Learn from Akron](posts/what-guangrao-can-learn-from-akron.html)
+- [What Akron Tire Companies Can Learn from Guangrao](posts/what-akron-can-learn-from-guangrao.html)
+- [AI and Humans: Like Simulation and Physical Testing - Additional Notes](posts/ai-humans-simulation-and-physical-testing-notes.html)
+- [The AI Productivity Paradox](posts/ai-productivity-paradox.html)
+- [What Is Industrial AI?](posts/what-is-industrial-ai.html)
+- [Why Industrial AI Struggles to Scale](posts/why-industrial-ai-struggles-to-scale.html)
+- [The Industrial AI Bottleneck Is Not Data Scarcity. It Is Dead Data.](posts/industrial-ai-dead-data-bottleneck.html)
+- [Controlled Systems for Industrial AI](posts/controlled-systems-for-industrial-ai.html)
+- [What Is a Process Digital Twin?](posts/what-is-a-process-digital-twin.html)
+- [Why Industrial AI Should Build the Process Digital Twin First](posts/why-build-the-process-digital-twin-first.html)
+- [Can We Demonstrate a Process Digital Twin with Public Data?](posts/process-digital-twin-public-data-demo.html)
+- [Industrial Agent = LLM + Digital-Twin Harness](posts/industrial-agent-digital-twin-harness.html)
 -->

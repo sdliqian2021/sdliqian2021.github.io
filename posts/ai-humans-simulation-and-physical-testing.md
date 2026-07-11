@@ -2,7 +2,6 @@
 
 _Last updated: 2026-07-09 12:40 America/New_York (UTC-04:00)_
 
-fsafsafsafasfsfs
 
 Over the weekends I saw several ariticles discussing the topics of whether AI is replacing the human labors. And suddenly realize some analogies to the discussions we have had regarding the relations between simulations and physical testings in the industry. 
 
