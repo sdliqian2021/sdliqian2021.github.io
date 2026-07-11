@@ -1,5 +1,7 @@
 # Why Industrial AI Struggles to Scale
 
+_Last updated: 2026-07-09 12:40 America/New_York (UTC-04:00)_
+
 **Purpose:** This note frames the central problem of current Industrial AI and the main reasons behind it.
 
 **Core thesis:** Industrial AI can perform well in a controlled proof of concept, but it often fails to scale into production and deliver repeatable ROI. The scaling gap is the visible problem. The deeper reasons are weak industrial data foundations, insufficient trust for operational use, and the fact that industrial systems evolve over time.

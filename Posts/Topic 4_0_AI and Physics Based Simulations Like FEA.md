@@ -1,5 +1,7 @@
 # How AI Can Help and Change Physics-Based Simulations Like FEA
 
+_Last updated: 2026-07-09 12:40 America/New_York (UTC-04:00)_
+
 ## Painpoints in the current industry engineering simulation workflow
 - process documented using pictures, excel, powerpoint and word documents
 - software keep updating, but those documents are not necessary updated, not matter we are using internal solver or external solver supplier, there are always internal process 

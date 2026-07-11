@@ -1,5 +1,7 @@
 # Can We Demonstrate a Process Digital Twin with Public Data?
 
+_Last updated: 2026-07-09 12:40 America/New_York (UTC-04:00)_
+
 **Purpose:** Define a credible public-data demonstration that teaches how a process digital twin works without overstating what an open benchmark can prove.
 
 **Core thesis:** Public data can demonstrate process-state reconstruction, model synchronization, prediction, decision support, and feedback. However, a historical dataset alone is not a complete digital twin. A credible demonstration must add an executable process model or replay environment and organize the system around a concrete decision loop.

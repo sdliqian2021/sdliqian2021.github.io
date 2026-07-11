@@ -1,5 +1,7 @@
 # The Industrial AI Bottleneck Is Not Data Scarcity. It Is Dead Data.
 
+_Last updated: 2026-07-09 12:40 America/New_York (UTC-04:00)_
+
 ## Painpoints
 - many processes are manual, 
 

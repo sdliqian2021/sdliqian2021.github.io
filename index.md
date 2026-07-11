@@ -1,10 +1,13 @@
 # Qian Li's Technical Blog
 
+_Last updated: 2026-07-09 12:40 America/New_York (UTC-04:00)_
+
 Posts and notes for tire industry, digital twin and Industrial AI.
 
 ## Articles
 
 - [AI and Humans: Like Simulation and Physical Testing](<Posts/Topic 1_0_AI will not replace human I Post.html>)
+<!--
 - [How AI Can Help and Change Physics-Based Simulations Like FEA](<Posts/Topic 4_0_AI and Physics Based Simulations Like FEA.html>)
 - [Topic 4_1: The Solver Is Not the Opportunity. The Workflow Is.](<Posts/Topic 4_1_Code Agents and AI Native Simulation Workflows.html>)
 - [Topic 4_2: The CAD Platform Is Not the Opportunity. The Design Workflow Is.](<Posts/Topic 4_2_Code Agents and AI Native Tire CAD Workflows.html>)
@@ -21,3 +24,4 @@ Posts and notes for tire industry, digital twin and Industrial AI.
 - [Why Industrial AI Should Build the Process Digital Twin First](<Posts/Topic 9_3_2_ Process Digital Twin_why.html>)
 - [Can We Demonstrate a Process Digital Twin with Public Data?](<Posts/Topic 9_3_3_ Process Digital Twin_Public Data Demo.html>)
 - [Industrial Agent = LLM + Digital-Twin Harness](<Posts/Topic 9_4_Industrial Agent Design.html>)
+-->

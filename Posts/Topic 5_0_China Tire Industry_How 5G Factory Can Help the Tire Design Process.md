@@ -1,5 +1,7 @@
 # How a 5G Factory Can Help the Tire Design Process
 
+_Last updated: 2026-07-09 12:40 America/New_York (UTC-04:00)_
+
 ## Recent Literature and Media Review: China Tire Digitalization, 2024-2026
 
 The recent public evidence from China's tire industry suggests that digitalization is moving from isolated automation projects toward connected production, quality, energy, logistics, and field-use data systems. The phrase "5G factory" is important, but the practical story is broader: 5G/private industrial networks, industrial IoT, MES, WMS, RFID, AGV logistics, AI inspection, digital energy-carbon platforms, smart tire systems, and industrial data platforms are being combined into a more traceable tire value chain.

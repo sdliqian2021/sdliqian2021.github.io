@@ -1,5 +1,7 @@
 # Topic 4_2: The CAD Platform Is Not the Opportunity. The Design Workflow Is.
 
+_Last updated: 2026-07-09 12:40 America/New_York (UTC-04:00)_
+
 ## 1. Most Tire Companies Do Not Own the CAD Platform
 
 Most tire companies do not own the core CAD design platform. They usually rely on supplier platforms such as CATIA, PTC Creo, Siemens NX/UG, or other established engineering design systems.

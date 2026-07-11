@@ -1,5 +1,7 @@
 # Why Industrial AI Should Build the Process Digital Twin First
 
+_Last updated: 2026-07-09 12:40 America/New_York (UTC-04:00)_
+
 **Purpose:** Explain why scalable Industrial AI requires a process representation and decision infrastructure before it requires more isolated AI models.
 
 **Core thesis:** Industrial AI pilots often succeed because people manually reconstruct process context around a prepared dataset. Building the process digital twin first makes that context persistent, governed, executable, and reusable.

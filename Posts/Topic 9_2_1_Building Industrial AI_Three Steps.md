@@ -1,4 +1,7 @@
 # Controlled Systems for industiral AI
+
+_Last updated: 2026-07-09 12:40 America/New_York (UTC-04:00)_
+
 Here we discuss the three steps to build the industrial AI, which must be a controlled AI system. 
 
 ## Step 1: Pick one workflow, not “AI transformation”

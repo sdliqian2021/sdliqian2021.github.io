@@ -1,5 +1,7 @@
 # AI and Humans: Like Simulation and Physical Testing
 
+_Last updated: 2026-07-09 12:40 America/New_York (UTC-04:00)_
+
 Over the weekends I saw several ariticles discussing the topics of whether AI is replacing the human labors. And suddenly realize some analogies to the discussions we have had regarding the relations between simulations and physical testings in the industry. 
 
 Over the years we have been developing higher and higher fidliety simulations, with faster and faster speed, and making it more and more user friendly. And people says one day the simulations will replace not all, but the marjority of the testing, so there would be less and less testing engineers or technicans needed. However, this is paritally true that simulations in deed becomes more powerful, it enables the engineer explore much larger design space in the early design phase, which can not be done through the tradiational testing ways. However, no matter how advanced the simulation models are, we still rely on the testing as the criterion to judge the design. Simulations have been best used for ranking the order, pointing the directions, rather than giving the absolute predictions. There are rare cases we purely rely on the simulations but not testing to make the critical decisions. 

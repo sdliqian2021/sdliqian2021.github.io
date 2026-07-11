@@ -1,5 +1,7 @@
 # What Is a Process Digital Twin?
 
+_Last updated: 2026-07-09 12:40 America/New_York (UTC-04:00)_
+
 **Purpose:** Establish a precise, practical definition of a process digital twin before discussing its role in Industrial AI.
 
 **Core thesis:** A process digital twin is not a dashboard, a simulation, or a machine-learning model. It is a continuously updated and executable representation of an industrial process that connects process state, history, models, constraints, decisions, and measured outcomes.

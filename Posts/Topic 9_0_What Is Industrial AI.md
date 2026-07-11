@@ -1,5 +1,7 @@
 # What Is Industrial AI?
 
+_Last updated: 2026-07-09 12:40 America/New_York (UTC-04:00)_
+
 Industrial AI, or Industry AI, is artificial intelligence applied to engineered physical systems and industrial operations. Its purpose is to improve how products, processes, assets, and lifecycle decisions perform in the real world.
 
 It is not simply "AI used by an industrial company." A chatbot that helps a manufacturing company write emails or summarize HR policies may be useful, but it is still Business AI. An AI system that estimates machine health, detects product defects, guides simulation cases, optimizes process settings, or supports engineering design decisions is much closer to Industrial AI.

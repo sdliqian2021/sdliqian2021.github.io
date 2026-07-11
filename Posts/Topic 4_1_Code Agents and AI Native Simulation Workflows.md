@@ -1,5 +1,7 @@
 # Topic 4_1: The Solver Is Not the Opportunity. The Workflow Is.
 
+_Last updated: 2026-07-09 12:40 America/New_York (UTC-04:00)_
+
 ## 1. Most Tire Companies Do Not Own the Solver
 
 Most tire companies do not own the core finite element solver. They usually rely on commercial simulation providers such as Abaqus, Ansys, LS-DYNA, or other established platforms.
