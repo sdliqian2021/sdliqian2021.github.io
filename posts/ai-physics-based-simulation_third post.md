@@ -4,7 +4,12 @@ _Last updated: 2026-07-09 12:40 America/New_York (UTC-04:00)_
 
 ## Painpoints in the current industry engineering simulation workflow
 - process documented using pictures, excel, powerpoint and word documents
-- software keep updating, but those documents are not necessary updated, not matter we are using internal solver or external solver supplier, there are always internal process 
+- software keep updating, but those documents are not necessary updated, not matter we are using internal solver or external solver supplier, there are always internal process
+- people often talk about the upgrade of the factory, but why not many people talk about upgrade of the software system like the simulation system.  
+- though many companies do not own their CAD system, but the core knowledge is the design workflow
+- though many companies do not own their simulations solver, the core knowledge in fact are the process knowledge.
+- We need to think about the upgrade of the whole system rather than doing the small patches. the so called AI native simulations system
+- this system in my mind is human, hardcoded rules, and AI combined system, and it is 
 
 ## Purpose
 

@@ -1,6 +1,8 @@
-# AI and Humans: Like Simulation and Physical Testing
+# From the long tail problem to the relations of AI and Humans
 
 _Last updated: 2026-07-09 12:40 America/New_York (UTC-04:00)_
+
+A few days ago a colleage ask me an question, he said, Qian, from my last 25 years experience in various companies: big or small, I found often in those 
 
 Over the weekends I saw several ariticles discussing the topics of whether AI is replacing the human labors. And suddenly realize some analogies to the discussions we have had regarding the relations between simulations and physical testings in the industry. 
 
@@ -15,6 +17,7 @@ So like we always say simulation and testing are friends, rather than the enermy
 Simulation improves through physical testing, and physical testing becomes smarter through simulation. AI can improve human productivity, while human judgment keeps AI useful, valid, and safe.
 
 
+- **another interesting angle** is this: in the big companies, there has been many matured process, it is so matured that there is almost no one is not replaceable, but why the big companies are still try to hire the best talents and engineers or scitists to do such repetive and tedious jobs but they just follow the process. if they are so repetives, repeatable, why do not the company hire just technicans to just follow the process. My understanding is that the long tail problem. 99% of time you do not need an engineer to debug the process, but the company could not afford the 1% of the process is down, which might cause signficant loss.
 
 more thinking about the relations between physical and digital 
 
@@ -23,3 +26,4 @@ more thinking about the relations between physical and digital
 - there is better hardware, there will be more data collected, and there will be better and smarted algorithms can be built, just like the tire wear algorithms
 
 - the world I envisoned is everthing have their own digtial twin model or you called AI model, that can be plugged into the basic knowledge model anytime. those AI model are trained by the invidual, 
+ 

@@ -9,6 +9,10 @@ Posts and notes about the tire industry, digital twins, and Industrial AI.
 ## Articles
 
 - [AI and Humans: Like Simulation and Physical Testing](posts/ai-humans-simulation-and-physical-testing.html)
+- [The AI Productivity Paradox](posts/ai-productivity-paradox.html)
+- [How a 5G Factory Can Help the Tire Design Process](posts/5g-factory-tire-design.html)
+- [What Guangrao Can Learn from Akron](posts/what-guangrao-can-learn-from-akron.html)
+- [What Akron Tire Companies Can Learn from Guangrao](posts/what-akron-can-learn-from-guangrao.html)
 
 <!--
 The remaining articles are intentionally hidden until they are ready to publish.
