@@ -1,3 +1,18 @@
+---
+layout: default
+title: "The AI Productivity Paradox"
+description: "Why individual gains from AI do not automatically become organizational productivity."
+content_type: essay
+published: 2026-07-08
+updated: 2026-07-11
+topics:
+  - Industrial AI
+  - Productivity
+permalink: /posts/ai-productivity-paradox.html
+nav: essays
+page_class: article-page
+---
+
 # The AI Productivity Paradox: Why Individual AI Productivity Rises Faster Than Company Productivity
 
 _Last updated: 2026-07-09 12:40 America/New_York (UTC-04:00)_

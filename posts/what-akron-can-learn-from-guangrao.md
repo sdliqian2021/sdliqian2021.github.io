@@ -1,3 +1,18 @@
+---
+layout: default
+title: "What Akron Tire Companies Can Learn from Guangrao"
+description: "What established tire companies can learn from speed, integration, and manufacturing intensity."
+content_type: essay
+published: 2026-07-08
+updated: 2026-07-11
+topics:
+  - Tire industry
+  - Manufacturing
+permalink: /posts/what-akron-can-learn-from-guangrao.html
+nav: essays
+page_class: article-page
+---
+
 # Topic 7: What Akron Tire Companies Can Learn from Guangrao
 
 _Last updated: 2026-07-09 12:40 America/New_York (UTC-04:00)_

@@ -1,0 +1,16 @@
+title: Qian Li | Technical Blog
+short_title: Qian Li
+description: Technical essays on Industrial AI, digital twins, engineering simulation, and tire-industry intelligence.
+url: https://sdliqian2021.github.io
+baseurl: ""
+lang: en
+timezone: America/New_York
+markdown: kramdown
+site_section: essays
+primary_site_url: https://sdliqian2021.github.io
+intelligence_url: https://sdliqian2021.github.io/tire-and-rubber-weekly-intelligence-report
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+

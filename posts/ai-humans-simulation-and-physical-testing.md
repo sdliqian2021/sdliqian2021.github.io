@@ -1,3 +1,18 @@
+---
+layout: default
+title: "AI and Humans: Like Simulation and Physical Testing"
+description: "A technical note on how AI and human judgment can complement one another rather than compete for the same role."
+content_type: essay
+published: 2026-07-08
+updated: 2026-07-12
+topics:
+  - Industrial AI
+  - Human judgment
+permalink: /posts/ai-humans-simulation-and-physical-testing.html
+nav: essays
+page_class: article-page
+---
+
 # From the long tail problem to the relations of AI and Humans
 
 _Last updated: 2026-07-09 12:40 America/New_York (UTC-04:00)_

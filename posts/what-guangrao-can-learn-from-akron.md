@@ -1,3 +1,18 @@
+---
+layout: default
+title: "What Guangrao Can Learn from Akron"
+description: "What a fast-growing tire cluster can learn from a mature innovation ecosystem."
+content_type: essay
+published: 2026-07-08
+updated: 2026-07-11
+topics:
+  - Tire industry
+  - Innovation ecosystems
+permalink: /posts/what-guangrao-can-learn-from-akron.html
+nav: essays
+page_class: article-page
+---
+
 # Topic 6: What Guangrao Can Learn from Akron
 
 _Last updated: 2026-07-09 12:40 America/New_York (UTC-04:00)_

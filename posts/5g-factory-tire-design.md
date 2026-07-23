@@ -1,3 +1,22 @@
+---
+layout: default
+title: "How a 5G Factory Can Help the Tire Design Process"
+description: "How connected factory data can shorten the loop between manufacturing evidence and tire design decisions."
+content_type: essay
+published: 2026-07-08
+updated: 2026-07-12
+topics:
+  - Digital twin
+  - Manufacturing
+permalink: /posts/5g-factory-tire-design.html
+nav: essays
+page_class: article-page
+related_url: /tire-and-rubber-weekly-intelligence-report/deep-analysis/2026-07-15-5g-enabled-tire-factory-design-loop/
+related_title: "The evidence-reviewed 5G factory analysis"
+related_description: "Tire & Rubber Intelligence examines the same design loop through claim-level public evidence, caveats, and watch indicators."
+related_link_label: "Read the deep analysis"
+---
+
 # How a 5G Factory Can Help the Tire Design Process
 
 _Last updated: 2026-07-09 12:40 America/New_York (UTC-04:00)_
