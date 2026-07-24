@@ -1,7 +1,7 @@
 ---
 layout: default
 title: About
-description: About Qian Li's technical blog and its human-led editorial workflow.
+description: My technical blog.
 nav: about
 ---
 
@@ -11,16 +11,11 @@ This site brings together two related technical publications.
 
 ## Technical essays and notes
 
-The main blog develops ideas about Industrial AI, digital twins, engineering
-simulation, manufacturing workflows, and regional tire ecosystems such as Akron
-and Guangrao.
+The main blog logs ideas and my thoughts about Modeling and Simulations, digital twins, Industrial AI, and Tire and Rubber Industry
 
 ## Tire & Rubber Intelligence
 
-[Tire & Rubber Intelligence]({{ site.intelligence_url }}/) is the specialized
-industry publication. Weekly reports identify material signals; deep analysis
-examines decision-relevant questions through linked public evidence, technical
-interpretation, limitations, and watch indicators.
+[Tire & Rubber Intelligence]({{ site.intelligence_url }}/) is the specialized industry obseveration. Weekly reports identify interesting news; deep analysis examines and summarizes some thoughts on the industry through linked public evidence, technical interpretation, limitations, and watch indicators.
 
 ## Editorial workflow
 
