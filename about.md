@@ -5,9 +5,9 @@ description: My technical blog.
 nav: about
 ---
 
-# About this publication
+# About This Blog
 
-This site brings together two related technical publications.
+This site brings together my thoughts on different areas of interest
 
 ## Technical essays and notes
 
@@ -15,17 +15,17 @@ The main blog logs ideas and my thoughts about Modeling and Simulations, digital
 
 ## Tire & Rubber Intelligence
 
-[Tire & Rubber Intelligence]({{ site.intelligence_url }}/) is the specialized industry obseveration. Weekly reports identify interesting news; deep analysis examines and summarizes some thoughts on the industry through linked public evidence, technical interpretation, limitations, and watch indicators.
+[Tire & Rubber Intelligence]({{ site.intelligence_url }}/) is the specialized industry obseveration. Weekly reports identify interesting news collected automatically by using AI agents with human reviews; deep analysis examines and summarizes my thoughts on the industry through linked public evidence, technical interpretation, limitations, and watch indicators.
 
-## Editorial workflow
+## How it works
 
-The human author creates the idea and initial draft. Codex may provide
-proofreading, suggestions, evidence checks, and mechanical publishing support.
-The human decides which revisions to accept, gives final content approval, and
-personally commits and pushes public changes to GitHub.
+| Stage | Human | AI agents |
+| --- | --- | --- |
+| Ideas and direction | I choose the topics, questions, point of view, and purpose of each article. | Suggest possible angles and help organize the initial idea. |
+| Research | I select the sources, judge their relevance, and add technical knowledge and experience. | Find and organize public information, summarize sources, and connect evidence to claims. |
+| Writing and analysis | I develop the argument, provide the interpretation, and write or substantially shape the content. | Help structure drafts, compare information, and suggest clearer wording or examples. |
+| Review | I check the reasoning, accuracy, tone, and limitations, and decide which revisions to accept. | Proofread, check consistency, challenge unsupported claims, and flag gaps or uncertainty. |
 
-Drafts, research records, evidence mappings, confidence notes, and workflow
-files remain outside the public repositories.
 
 ## Disclaimer
 
