@@ -11,10 +11,6 @@ topics:
 permalink: /posts/5g-factory-tire-design.html
 nav: essays
 page_class: article-page
-related_url: /tire-and-rubber-weekly-intelligence-report/deep-analysis/2026-07-15-5g-enabled-tire-factory-design-loop/
-related_title: "The evidence-reviewed 5G factory analysis"
-related_description: "Tire & Rubber Intelligence examines the same design loop through claim-level public evidence, caveats, and watch indicators."
-related_link_label: "Read the deep analysis"
 ---
 
 # How a 5G Factory Can Help the Tire Design Process

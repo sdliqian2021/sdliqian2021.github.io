@@ -15,7 +15,7 @@ The main blog logs ideas and my thoughts about Modeling and Simulations, digital
 
 ## Tire & Rubber Intelligence
 
-[Tire & Rubber Intelligence]({{ site.intelligence_url }}/) is the specialized industry obseveration. Weekly reports identify interesting news collected automatically by using AI agents with human reviews; deep analysis examines and summarizes my thoughts on the industry through linked public evidence, technical interpretation, limitations, and watch indicators.
+[Tire & Rubber Intelligence]({{ site.intelligence_url }}/) is the specialized industry observation. Weekly reports collect interesting public news with help from AI agents and human review.
 
 ## Disclaimer
 
