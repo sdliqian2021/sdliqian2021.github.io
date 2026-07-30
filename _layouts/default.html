@@ -10,55 +10,38 @@
     <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
   </head>
   {% assign is_article = false %}
-  {% if page.page_class == "article-page" or page.url contains "/posts/" or page.url contains "/reports/" or page.url contains "/deep-analysis/" %}
+  {% if page.page_class == "article-page" or page.url contains "/posts/" %}
     {% assign is_article = true %}
   {% endif %}
-  <body class="site-{{ site.site_section }}{% if is_article %} article-page{% endif %}">
-    <!-- unified-publication-shell v1 -->
+  <body{% if is_article %} class="article-page"{% endif %}>
     <a class="skip-link" href="#main-content">Skip to content</a>
 
     <header class="site-header">
-      <div class="shell nav-shell">
-        <a class="brand" href="{{ site.primary_site_url }}/" aria-label="Qian Li technical thoughts home">
-          <span class="brand-mark" aria-hidden="true">QL</span>
-          <span class="brand-copy">
-            <strong>Qian Li</strong>
-            <small>Technical thoughts</small>
-          </span>
-        </a>
-
-        <nav class="primary-nav" aria-label="Primary navigation">
-          <a href="{{ site.primary_site_url }}/"{% if page.nav == "home" %} aria-current="page"{% endif %}>Home</a>
-          <a href="{{ site.primary_site_url }}/#technical-essays"{% if site.site_section == "essays" and page.nav != "home" and page.nav != "about" %} aria-current="page"{% endif %}>Technical essays</a>
-          <a href="{{ site.intelligence_url }}/"{% if site.site_section == "intelligence" and page.nav != "about" %} aria-current="page"{% endif %}>Tire intelligence</a>
+      <div class="page-width header-inner">
+        <a class="site-name" href="{{ site.primary_site_url }}/">Qian Li's Notes</a>
+        <nav class="site-nav" aria-label="Primary navigation">
+          <a href="{{ site.primary_site_url }}/#technical-essays"{% if page.nav == "home" or page.nav == "essays" %} aria-current="page"{% endif %}>Technical thoughts</a>
+          <a href="{{ site.intelligence_url }}/">Intelligence</a>
           <a href="{{ site.primary_site_url }}/about.html"{% if page.nav == "about" %} aria-current="page"{% endif %}>About</a>
         </nav>
       </div>
     </header>
 
-    <main id="main-content" class="shell content-shell">
+    <main id="main-content" class="page-width main-content">
       {{ content }}
 
       {% if page.related_url %}
-        <aside class="related-reading" aria-labelledby="related-reading-title">
-          <p class="eyebrow">Related reading</p>
-          <h2 id="related-reading-title">{{ page.related_title }}</h2>
-          <p>{{ page.related_description }}</p>
-          <a class="text-link" href="{{ page.related_url }}">{{ page.related_link_label | default: "Read the related article" }} <span aria-hidden="true">→</span></a>
+        <aside class="related-reading">
+          <strong>Related:</strong>
+          <a href="{{ page.related_url }}">{{ page.related_title }}</a>
+          {% if page.related_description %}<p>{{ page.related_description }}</p>{% endif %}
         </aside>
       {% endif %}
     </main>
 
     <footer class="site-footer">
-      <div class="shell footer-shell">
-        <p>
-          {% if site.site_section == "intelligence" %}
-            Tire &amp; Rubber Intelligence is part of Qian Li's technical publications.
-          {% else %}
-            Human-authored technical essays and evidence-assisted industry intelligence.
-          {% endif %}
-        </p>
-        <p><a href="{{ site.primary_site_url }}/about.html">Editorial approach and disclaimer</a></p>
+      <div class="page-width">
+        <p>© {{ site.time | date: "%Y" }} Qian Li · Technical thoughts and public-source intelligence.</p>
       </div>
     </footer>
   </body>
