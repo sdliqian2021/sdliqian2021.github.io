@@ -9,10 +9,10 @@ technical publications.
 - Shared navigation and visual styling connect the two sites without combining
   their private editorial workflows.
 
-Only publication-ready files belong here. Drafting, evidence work, approval
-records, and private assets are maintained in the separate Industrial AI
-workspace.
+Only publication-ready files belong here. Working notes and private assets are
+maintained in the separate Industrial AI workspace. A single named note is
+copied into this repository whenever the author chooses to publish or update
+it.
 
 The human author reviews the local Git changes, commits, and pushes them. GitHub
 Pages then publishes from the `main` branch and repository root.
-
