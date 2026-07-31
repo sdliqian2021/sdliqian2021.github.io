@@ -1,15 +1,14 @@
 ---
 layout: default
 title: Home
-description: Qian Li's technical thoughts on Industrial AI, simulation, digital twins, and the tire industry.
+description: Qian Li's learning thoughts on Industrial AI, simulation, digital twins, and the tire industry.
 nav: home
 ---
 
 <header class="blog-intro">
-  <h1>Hi, I'm Qian.</h1>
+  <h1>Welcome to Qian's blog.</h1>
   <p>
-    I use this blog to document technical thoughts on Industrial AI,
-    engineering simulation, digital twins, and the tire industry.
+    Hi, I am Qian Li, I use this blog to document my thoughts on Tire Industry, Industrial AI, engineering simulations and digital twins.
   </p>
 </header>
 
