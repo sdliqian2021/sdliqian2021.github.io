@@ -7,15 +7,15 @@ nav: about
 
 # About This Blog
 
-This site brings together my thoughts on different areas of interest
+This site brings together my thoughts on different areas of interest.
 
 ## Technical essays and notes
 
-The main blog logs ideas and my thoughts about Modeling and Simulations, digital twins, Industrial AI, and Tire and Rubber Industry
+The main blog logs ideas and my thoughts about Modeling and Simulations, digital twins, Industrial AI, and Tire and Rubber Industry.
 
 ## Tire & Rubber Intelligence
 
-[Tire & Rubber Intelligence]({{ site.intelligence_url }}/) is the specialized industry observation. Weekly reports collect interesting public news with help from AI agents and human review.
+[Tire & Rubber Intelligence]({{ site.intelligence_url }}/) is the specialized industry observation. 
 
 ## Disclaimer
 
