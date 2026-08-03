@@ -4,7 +4,7 @@ title: "From the long tail problem to the relations of AI and Humans"
 description: "A technical note on how AI and human judgment can complement one another rather than compete for the same role."
 content_type: essay
 published: 2026-07-08
-updated: 2026-07-29
+updated: 2026-08-03
 topics:
   - Industrial AI
   - Human judgment
@@ -17,36 +17,30 @@ page_class: article-page
 
 _Last updated: 2026-07-09 12:40 America/New_York (UTC-04:00)_
 
-## part 1
+## part 1： 从long tail 问题看人工智能与人在工作的中的关系
+大公司中存在许多非常成熟的流程。这些流程成熟到了几乎任何人都可以被替代的程度，但为什么大公司仍然努力招聘最优秀的人才，让工程师或科学家去做那些重复而繁琐、似乎只需要遵循流程的工作？既然这些工作高度重复、可以复现，公司为什么不只雇用技术人员来照着流程执行？我的理解是，这与长尾问题有关。在 99% 的时间里，你可能并不需要工程师来调试流程；但是，公司无法承受剩下 1% 的流程故障，因为它可能造成巨大的损失。
+
 A few days ago a colleage ask me an question, he said, Qian, from my last 25 years experience in various companies: big or small, I found often in those big companies, they like to hire the best talents, but keep them working on the 螺丝钉一样的流水线工作，而不能发挥他们的潜力；还有一种情况就是，在很多流程上总是会有很多资历很深的工程师在做一些看是很枯燥繁琐而且没有什么技术含量的活，其实这些活完全可以找一些technican或者刚入职的年轻人去做就可以了， 为什么不去让这些资深的工程师去做一些难度很高的研发工作呢。
 
-这是一个很有意思的话题，为什么大公司需要把有能力和有经验的人放在枯燥无聊的成熟的流程上？这可能有很多种原因，有的人会说这是因为大公司有钱养的起有能力和有经验的人去做这些没技术含量的工作，有的人会说大公司注重流程成熟，任何人在上面都是在跟流程，跟你有多少经验和能力没关系。我想或许这里有还有一个原因就是所谓的long tail problem，这个名词是我偶尔在看一些智能驾驶的文章时发现的，里面说无人智能驾驶从十年前就在一般的驾驶环境中表现已经很惊艳了，也就是可以涵盖了驾驶中99%的场景问题，但是呢，就是是哪1%的场景始终无法完全保证，所以呢迟迟不能完全商业化和规模化，以至于现在waymo和tesla 的robotaxi还是在慢慢的一边测试一边使用中，而然还是总是时不时看到这个那个robotaxi造成不便的消息。这让我联想到大公司的流程问题，大公司流程成熟，最注重就是这个流程一直跑的通而不出任何故障，一旦出了问题，这个时候需要尽可能迅速的解决，把downtime减到最低值，在平日里跑流程的时候其实可能不需要这些有经验和有解决问题能力的员工，但在这种极端情况发生的时候必须要有这样的人才在这里，他们的价值不能体现在日常，往往体现在流程出现问题的时候，也就是所谓的long tail问题出现的时候。类似的教训也多次出现在我在工业界工作的经验里，有的时候一个流程出了问题，最好能够找到这个流程的developer，有的时候往往是那个平日里都不怎么接触的，快要退休了的人，不然要是自己去修改或者debugging这个流程的话，往往不如自己推倒了重新建一个新的来的快和有效果。
+这是一个很有意思的话题，为什么大公司需要把有能力和有经验的人放在枯燥无聊的成熟的流程上？这可能有很多种原因，有的人会说这是因为大公司有钱养的起有能力和有经验的人去做这些没技术含量的工作，有的人会说大公司注重流程成熟，任何人在上面都是在跟流程，跟你有多少经验和能力没关系。我想或许这里有还有一个原因就是所谓的long tail problem，这个名词是我偶尔在看一些智能驾驶的文章时发现的，里面说无人智能驾驶从十年前就在一般的驾驶环境中表现已经很惊艳了，也就是可以涵盖了驾驶中99%的场景问题，但是呢，就是是哪1%的场景始终无法完全保证，所以呢迟迟不能完全商业化和规模化，以至于现在waymo和tesla 的robotaxi还是在慢慢的一边测试一边使用中，而然还是总是时不时看到这个那个robotaxi造成不便的消息。现在的自动驾驶主要关注视觉（偶尔听觉）上的表现，并没有太关注车与路面的接触问题，也就是轮胎与路面的接触问题，我想这个最终也会成为一个long tail 问题吧。
 
-现实是退休的总归要退休，年轻人接收这套流程后，要么有能力自己推倒了重建，要么就是等着这个流程不知道哪一天忽然宕机。这让我想到了现在的AI。
+这让我联想到大公司的流程问题，大公司流程成熟，最注重就是这个流程一直跑的通而不出任何故障，一旦出了问题，这个时候需要尽可能迅速的解决，把downtime减到最低值，在平日里跑流程的时候其实可能不需要这些有经验和有解决问题能力的员工，但在这种极端情况发生的时候必须要有这样的人才在这里，他们的价值不能体现在日常，往往体现在流程出现问题的时候，也就是所谓的long tail问题出现的时候。类似的教训也多次出现在我在工业界工作的经验里，有的时候一个流程出了问题，最好能够找到这个流程的developer，有的时候往往是那个平日里都不怎么接触的，快要退休了的人，不然要是自己去修改或者debugging这个流程的话，往往不如自己推倒了重新建一个新的来的快和有效果。
 
-首先她就像一个年轻的新人，现在无法胜任关键的long tail 问题，尤其在众多的legacy 流程面前，她完全无法独当一面，所以我不认为短期内像anthoropi 或者open Ai的boss 在那里宣传的那样会在几年内替代人类，当然这里还有trust和责任归属的原因，不单单是这个long tail；另外，她又极其的有能力，有可能帮助一些有能力的工程是推倒现有的流程去进行重建。虽然有这个可能性， 但对于一些大公司来说，这条路往往走不通，尤其是在花了大笔投资在生成机器之后又花了大量的实践和物力建立很成熟流程的那些公司，很难劝说他们去重建，虽然他们更情愿拿着AI到处修修补补。倒是一些小公司，或者那些刚买了新机器还没有建立成熟的属于自己的生产流程的小公司倒是更有可能做到AI native。但是无论如何，只是从技术角度去讲的话，有没有AI，那种long tail 问题我认为永远会需要熟悉整个流程的人。
+现实是退休的总归要退休，年轻人接收这套流程后，要么有能力自己推倒了重建，要么就是等着这个流程不知道哪一天忽然宕机。这让我想到了现在的AI与人的关系。
 
-
-## part 2
-Over the weekends I saw several ariticles discussing the topics of whether AI is replacing the human labors. And suddenly realize some analogies to the discussions we have had regarding the relations between simulations and physical testings in the industry. 
-
-Over the years we have been developing higher and higher fidliety simulations, with faster and faster speed, and making it more and more user friendly. And people says one day the simulations will replace not all, but the marjority of the testing, so there would be less and less testing engineers or technicans needed. However, this is paritally true that simulations in deed becomes more powerful, it enables the engineer explore much larger design space in the early design phase, which can not be done through the tradiational testing ways. However, no matter how advanced the simulation models are, we still rely on the testing as the criterion to judge the design. Simulations have been best used for ranking the order, pointing the directions, rather than giving the absolute predictions. There are rare cases we purely rely on the simulations but not testing to make the critical decisions. 
-
-In addition, due to the increased needs of running simulations for exploring more design space, we had to increase the testing capacities to satisfy the needs; and since the simulations needs to be run on computeres, we had to increase the investment in the computing infrastructure to meet the needs. Furthermore, to be able to develop higher fidelity models, we had to invest in better and smarter testing machines that can provide better data for us to close the gaps between simualtiosn and physical testings. Those all have somehow contribute to creating more jobs in the area of hardware. 
-
-So if we consider AI as the modeling and simulations of human intelligence, the anology here is straight forward. AI can generate answers and automate tasks, but people are still needed to define the problem, judge the output, understand context, and most imortantly take responsibility for the final decisions. The producities go up 10X, then it will need more people to do the final check; the needs on the computing hardware will definitly create more jobs in that areas; In addition, not mentioning there are more and more AI researcher and engineers keep working on developing better models.  
-
-So like we always say simulation and testing are friends, rather than the enermy, they compliment each other for a much more productive industry process. Similarly in the  case of AI, the better model is not replacement. It should be a feedback loop. 
-
-Simulation improves through physical testing, and physical testing becomes smarter through simulation. AI can improve human productivity, while human judgment keeps AI useful, valid, and safe.
+目前AI就像一个年轻的新人，现在无法胜任关键的long tail 问题，尤其在众多的legacy 流程面前，她完全无法独当一面，所以我不认为短期内像anthoropi 或者open Ai的boss 在那里宣传的那样会在几年内替代人类，当然这里还有trust和责任归属的原因，不单单是这个long tail；另外，她又极其的有能力，有可能帮助一些有能力的工程是推倒现有的流程去进行重建。虽然有这个可能性， 但对于一些大公司来说，这条路往往走不通，尤其是在花了大笔投资在生成机器之后又花了大量的实践和物力建立很成熟流程的那些公司，很难劝说他们去重建，虽然他们更情愿拿着AI到处修修补补。倒是一些小公司，或者那些刚买了新机器还没有建立成熟的属于自己的生产流程的小公司倒是更有可能做到AI native。但是无论如何，只是从技术角度去讲的话，有没有AI，那种long tail 问题我认为永远会需要熟悉整个流程的人。
 
 
-- **another interesting angle** is this: in the big companies, there has been many matured process, it is so matured that there is almost no one is not replaceable, but why the big companies are still try to hire the best talents and engineers or scitists to do such repetive and tedious jobs but they just follow the process. if they are so repetives, repeatable, why do not the company hire just technicans to just follow the process. My understanding is that the long tail problem. 99% of time you do not need an engineer to debug the process, but the company could not afford the 1% of the process is down, which might cause signficant loss.
+## 第二部分：从模拟仿真与物理测试的关系看人工智能与人在工作中的关系
 
-more thinking about the relations between physical and digital 
+这个周末，我看到几篇讨论人工智能是否正在取代人类劳动者的文章，突然意识到，这个话题与我们过去在工业界讨论的模拟仿真和物理测试之间的关系有很多相似之处。
 
-- when I talk about the modeling and simulations here, I am just refer to a physical object, it can be a process 
+多年来，我们一直在开发保真度越来越高、运行速度越来越快、使用起来也越来越友好的仿真技术。人们常说，总有一天，模拟仿真即使不能取代全部测试，也会取代其中的大部分，因此需要的测试工程师和技术人员将会越来越少。这种说法有一部分是对的：模拟仿真确实变得越来越强大，使工程师能够在设计早期探索更大的设计空间，而这是传统测试方法难以做到的。然而，无论仿真模型多么先进，我们仍然需要把物理测试作为评判设计的标准。模拟仿真最适合用来比较方案的优先顺序、指明设计方向，而不是给出绝对准确的预测。在关键决策中，我们很少会完全依赖模拟仿真而不进行物理测试。
 
-- there is better hardware, there will be more data collected, and there will be better and smarted algorithms can be built, just like the tire wear algorithms
+此外，为了通过模拟仿真探索更大的设计空间，我们反而需要提升测试能力来满足由此产生的需求。由于模拟仿真必须在计算机上运行，我们还必须增加对计算基础设施的投入。更进一步，为了开发保真度更高的模型，我们需要投资建设更先进、更智能的测试设备，用它们提供更高质量的数据，从而缩小模拟仿真与物理测试之间的差距。所有这些发展都在某种程度上为硬件相关领域创造了更多工作岗位。
 
-- the world I envisoned is everthing have their own digtial twin model or you called AI model, that can be plugged into the basic knowledge model anytime. those AI model are trained by the invidual,
+如果把人工智能看作对人类智能的建模与模拟，那么这里的类比就非常直接。人工智能可以生成答案并自动执行任务，但仍然需要人来定义问题、判断输出、理解具体情境，最重要的是对最终决策承担责任。如果生产效率提高了十倍，最终需要审核的产出也会增加，因此需要更多的人来进行最后把关；对计算硬件的需求也必然会在相关领域创造更多工作岗位；此外，还有越来越多的人工智能研究人员和工程师在持续开发更好的模型。
+
+因此，正如我们常说的，模拟仿真与物理测试是朋友，而不是敌人。两者相互补充，共同构成效率更高的工业流程。对于人工智能也是如此：更好的模型并不意味着取代人，它应该成为反馈闭环中的一部分。
+
+模拟仿真通过物理测试不断改进，物理测试也通过模拟仿真变得更加智能。人工智能可以提高人的生产效率，而人的判断则能确保人工智能始终有用、有效并且安全。
