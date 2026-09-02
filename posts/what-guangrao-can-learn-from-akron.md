@@ -2,7 +2,7 @@
 layout: default
 title: "What Guangrao Can Learn from Akron"
 description: "What a fast-growing tire cluster can learn from a mature innovation ecosystem."
-content_type: essay
+content_type: legacy_essay
 published: 2026-07-08
 updated: 2026-07-11
 topics:

@@ -2,7 +2,7 @@
 layout: default
 title: "The AI Productivity Paradox"
 description: "Why individual gains from AI do not automatically become organizational productivity."
-content_type: essay
+content_type: legacy_essay
 published: 2026-07-08
 updated: 2026-07-11
 topics:

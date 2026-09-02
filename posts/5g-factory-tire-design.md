@@ -2,7 +2,7 @@
 layout: default
 title: "How a 5G Factory Can Help the Tire Design Process"
 description: "How connected factory data can shorten the loop between manufacturing evidence and tire design decisions."
-content_type: essay
+content_type: legacy_essay
 published: 2026-07-08
 updated: 2026-07-12
 topics:
