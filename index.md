@@ -14,7 +14,7 @@ nav: home
 
 <section id="technical-essays" class="post-section" aria-labelledby="technical-essays-title">
   <h2 id="technical-essays-title">Technical thoughts</h2>
-  {% assign essays = site.pages | where: "content_type", "essay" | sort: "updated" | reverse %}
+  {% assign essays = site.pages | where: "content_type", "essay" | sort: "display_order" %}
   <div class="post-list">
     {% for essay in essays %}
       <article class="post-preview">

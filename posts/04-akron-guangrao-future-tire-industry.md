@@ -1,8 +1,9 @@
 ---
 layout: default
-title: "从 Akron 到广饶：如果中国最大轮胎集群完成整合，世界轮胎业会发生什么？"
+title: "4. 从 Akron 到广饶：如果中国最大轮胎集群完成整合，世界轮胎业会发生什么？"
 description: "How Guangrao could turn manufacturing density into technical depth, OE capability, brand trust, and global operating strength."
 content_type: essay
+display_order: 4
 published: 2026-09-01
 updated: 2026-09-01
 topics:

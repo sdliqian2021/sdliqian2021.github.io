@@ -1,8 +1,9 @@
 ---
 layout: default
-title: "Industrial AI: Digital Twins, Connected Data, and Governed Agents"
+title: "3. Industrial AI: Digital Twins, Connected Data, and Governed Agents"
 description: "A practical framework for Industrial AI, process digital twins, connected data, controlled execution, and governable industrial agents."
 content_type: essay
+display_order: 3
 published: 2026-09-01
 updated: 2026-09-01
 topics:

@@ -247,7 +247,7 @@ def local_replacements(config: dict[str, object]) -> dict[str, str]:
 
 def render_main_index(config: dict[str, object], essays: list[dict[str, object]]) -> tuple[dict[str, object], str]:
     metadata, body = split_front_matter((MAIN_ROOT / "index.md").read_text(encoding="utf-8"))
-    essays = sorted(essays, key=lambda item: str(item.get("updated", item.get("published", ""))), reverse=True)
+    essays = sorted(essays, key=lambda item: int(item.get("display_order", 9999)))
     cards: list[str] = []
     for essay in essays:
         title = html.escape(str(essay.get("title", "Technical thought")))

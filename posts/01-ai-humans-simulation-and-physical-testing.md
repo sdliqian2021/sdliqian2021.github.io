@@ -1,8 +1,9 @@
 ---
 layout: default
-title: "AI and Human Relations: Long-Tail Problems and the Productivity Paradox"
+title: "1. AI and Human Relations: Long-Tail Problems and the Productivity Paradox"
 description: "Why AI complements human judgment in long-tail industrial work, and why personal AI gains do not automatically become company productivity."
 content_type: essay
+display_order: 1
 published: 2026-07-08
 updated: 2026-09-01
 topics:
