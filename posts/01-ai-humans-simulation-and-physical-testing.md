@@ -1,11 +1,11 @@
 ---
 layout: default
-title: "1. AI and Human Relations: Long-Tail Problems and the Productivity Paradox"
+title: "笔记 01：人工智能与人——长尾问题、仿真测试与生产力悖论"
 description: "Why AI complements human judgment in long-tail industrial work, and why personal AI gains do not automatically become company productivity."
 content_type: essay
 display_order: 1
 published: 2026-07-08
-updated: 2026-09-01
+updated: 2026-09-08
 topics:
   - Industrial AI
   - Human judgment
@@ -14,10 +14,61 @@ permalink: /posts/ai-humans-simulation-and-physical-testing.html
 nav: essays
 page_class: article-page
 ---
-# From the long tail problem to the relations of AI and Humans
 
-_Last updated: 2026-07-09 12:40 America/New_York (UTC-04:00)_
-第一部分：从长尾问题看人工智能与人在工作中的关系
+# 笔记 01：人工智能与人——长尾问题、仿真测试与生产力悖论
+
+_最后更新：2026-09-08_
+
+## 写在前面
+
+这不是一篇技术类的随想。这里写下的，是我对人与人工智能之间关系的一些观察和思考。
+
+我的日常工作在工业界，做的是仿真、测试和数据这类很具体的事情。也正因为这样，我更关心的往往不是模型能做到什么，而是人和模型各自应该负责什么——尤其是在那些对错误近乎零容忍的场景里。下面两篇文章，一篇从长尾问题、以及仿真与物理测试的关系谈起，一篇讨论人工智能生产力悖论，其实都是在回答同一个问题。
+
+这些只是我个人阶段性的想法，未必正确，也还在不断修正。如果你有不同的看法，或者有相关的经验想分享，非常欢迎和我讨论。
+
+我的邮箱：<sdliqian@hotmail.com>
+
+## 目录
+
+- [写在前面](#写在前面)
+- **第一篇：[从长尾问题到人工智能与人的关系](#第一篇从长尾问题到人工智能与人的关系)**
+  - [附记：关于物理世界与数字世界的进一步思考](#附记关于物理世界与数字世界的进一步思考)
+  - [一、从长尾问题看人工智能与人在工作中的关系](#一从长尾问题看人工智能与人在工作中的关系)
+  - [二、从仿真与物理测试的关系看人工智能与人在工作中的关系](#二从仿真与物理测试的关系看人工智能与人在工作中的关系)
+- **第二篇：[人工智能生产力悖论——为什么个人效率的提升快于公司效率](#第二篇人工智能生产力悖论为什么个人效率的提升快于公司效率)**
+  - [一、悖论本身](#一悖论本身)
+  - [二、为什么个人效率先涨](#二为什么个人效率先涨)
+  - [三、吞掉这些收益的七种机制](#三吞掉这些收益的七种机制)
+    - [机制一：被加速的环节通常不是瓶颈](#机制一被加速的环节通常不是瓶颈)
+    - [机制二：产出变多，协调成本上升](#机制二产出变多协调成本上升)
+    - [机制三：看着漂亮，却把返工推给下游](#机制三看着漂亮却把返工推给下游)
+    - [机制四：验证税与认知外包](#机制四验证税与认知外包)
+    - [机制五：被当作个人工具，而不是企业系统](#机制五被当作个人工具而不是企业系统)
+    - [机制六：指标衡量的是采用，不是成果](#机制六指标衡量的是采用不是成果)
+    - [机制七：能力错置](#机制七能力错置)
+    - [七种机制小结](#七种机制小结)
+  - [四、对工业人工智能与数字孪生的启示](#四对工业人工智能与数字孪生的启示)
+  - [五、从个人 AI 到企业 AI：成熟度阶梯](#五从个人-ai-到企业-ai成熟度阶梯)
+  - [六、核心结论](#六核心结论)
+  - [七、参考文献](#七参考文献)
+
+---
+
+## 第一篇：从长尾问题到人工智能与人的关系
+
+_最后更新：2026-07-09 12:40（America/New_York, UTC−04:00）_
+_发布状态：published ｜ 发布日期：2026-07-08 ｜ 公开链接：<https://sdliqian2021.github.io/posts/ai-humans-simulation-and-physical-testing.html>_
+
+<!--
+### 附记：关于物理世界与数字世界的进一步思考
+
+- 我这里所说的建模与仿真，指的是对物理对象的建模，而这个对象也可以是一个流程。
+- 有了更好的硬件，就能采集更多数据，并在此基础上建立更好、更智能的算法，例如轮胎磨损算法。
+- 我所设想的世界是：每一个事物都有自己的数字孪生模型，也可以称为人工智能模型；这些模型可以随时接入基础知识模型，而每个模型都由个人训练。
+-->
+
+### 一、从长尾问题看人工智能与人在工作中的关系
 
 几天前和一位在化工行业工作多年的朋友聊天，他提到一个很有意思的问题。他说，回顾自己过去十几年在大大小小公司的工作经历，发现大公司往往喜欢用高工资招聘最优秀的人才，却又常常让他们从事像流水线上的“螺丝钉”一样重复、繁琐的工作，无法充分发挥他们的潜力。还有一种情况是，许多资深而且收入很高的工程师，长期承担着一些看起来枯燥、技术含量也并不高的任务，而这些任务似乎交给技术员或者刚入职的年轻人也应该能够完成。
 
@@ -29,7 +80,9 @@ _Last updated: 2026-07-09 12:40 America/New_York (UTC-04:00)_
 
 企业最关心的是流程能否持续、稳定地运行。一旦出现故障，就必须尽快恢复，把停机时间（downtime）降到最低。日常运行时，流程可能并不需要经验丰富、善于解决复杂问题的员工；但当极端情况发生时，这些人必须在场。他们的价值往往不是在流程正常时体现出来，而是在长尾问题真正出现的时候体现出来。
 
-我最早注意到“长尾问题”这个概念，是从自动驾驶开始的。众所周知，Waymo 很早就展示了令人惊艳的自动驾驶 demo，但经过十多年的发展，到今天自动驾驶才真正开始逐渐走向更大规模的商业化，而且每一步仍然迈得非常谨慎。这其实很好理解。自动驾驶系统很早就在常规道路环境中展现出了令人印象深刻的能力，仿佛已经能够处理 99% 的驾驶场景；真正阻碍其全面商业化和规模化的，往往是剩下那些罕见、复杂而且难以预测的场景。即使一个系统在绝大多数情况下表现良好，只要极少数失误可能造成严重后果，这个“最后的 1%”就不能被忽视。（一个题外话： 当前自动驾驶主要关注视觉感知，有时也会涉及听觉信息，但车辆与路面的接触——也就是轮胎与路面的相互作用——受到的关注相对较少。我想，这也可能成为自动驾驶系统中的一个长尾问题。）
+我最早注意到“长尾问题”这个概念，是从自动驾驶开始的。众所周知，Waymo 很早就展示了令人惊艳的自动驾驶 demo，但经过十多年的发展，到今天自动驾驶才真正开始逐渐走向更大规模的商业化，而且每一步仍然迈得非常谨慎。这其实很好理解。自动驾驶系统很早就在常规道路环境中展现出了令人印象深刻的能力，仿佛已经能够处理 99% 的驾驶场景；真正阻碍其全面商业化和规模化的，往往是剩下那些罕见、复杂而且难以预测的场景。即使一个系统在绝大多数情况下表现良好，只要极少数失误可能造成严重后果，这个“最后的 1%”就不能被忽视。
+
+> **题外话**：当前自动驾驶主要关注视觉感知，有时也会涉及听觉信息，但车辆与路面的接触——也就是轮胎与路面的相互作用——受到的关注相对较少。我想，这也可能成为自动驾驶系统中的一个长尾问题。
 
 我在工业界的经历，也多次印证了这一点。
 
@@ -51,29 +104,29 @@ _Last updated: 2026-07-09 12:40 America/New_York (UTC-04:00)_
 
 人工智能可以承担越来越多的常规工作，帮助人类扩大能力边界。它可以不断压缩那 99% 的常规工作，但并不会自动让最后的 1% 消失。从技术角度看，无论是否使用人工智能，长尾问题仍然需要熟悉整体流程、能够综合判断并承担责任的人来解决。
 
-第二部分：从模拟仿真与物理测试的关系看人工智能与人在工作中的关系
+### 二、从仿真与物理测试的关系看人工智能与人在工作中的关系
 
-最近看到不少讨论人工智能是否正在取代人类劳动者的文章。我觉得这个话题，与我们过去在工业界讨论的模拟仿真和物理测试之间的关系，有很多相似之处。
+最近看到不少讨论人工智能是否正在取代人类劳动者的文章。我觉得这个话题，与我们过去在工业界讨论的仿真和物理测试之间的关系，有很多相似之处。
 
 多年来，我们一直在开发保真度越来越高、运行速度越来越快、使用起来也越来越友好的仿真技术。
 
-人们常说，总有一天，模拟仿真即使不能完全取代物理测试，也会取代其中的大部分。事实好像也是如此：模拟仿真确实变得越来越强大。
+人们常说，总有一天，仿真即使不能完全取代物理测试，也会取代其中的大部分。事实好像也是如此：仿真确实变得越来越强大。
 
-虽然在很多情况下，模拟无法给出绝对准确的预测，但是它非常适合用来比较不同方案的优先顺序、指明设计方向，并帮助工程师在设计早期探索更大的设计空间，而这是传统测试方法很难做到的。
+虽然在很多情况下，仿真无法给出绝对准确的预测，但是它非常适合用来比较不同方案的优先顺序、指明设计方向，并帮助工程师在设计早期探索更大的设计空间，而这是传统测试方法很难做到的。
 
-但是，无论仿真模型多么复杂和先进，在那些对失误近乎零容忍的工程领域里，我们都很难完全信任它。最终，我们仍然需要把物理测试作为评价设计的最终标准之一。在关键决策中，我们也很少会完全依赖模拟仿真，而不进行物理测试。
+但是，无论仿真模型多么复杂和先进，在那些对失误近乎零容忍的工程领域里，我们都很难完全信任它。最终，我们仍然需要把物理测试作为评价设计的最终标准之一。在关键决策中，我们也很少会完全依赖仿真，而不进行物理测试。
 
-更有意思的是，为了通过模拟仿真探索更大的设计空间，我们反而需要进一步提升测试能力，去满足由此产生的新需求。至少在我熟悉的工业研发实践中，需要的测试工程师和技术人员并没有因为模拟能力增强而简单地越来越少。
+更有意思的是，为了通过仿真探索更大的设计空间，我们反而需要进一步提升测试能力，去满足由此产生的新需求。至少在我熟悉的工业研发实践中，需要的测试工程师和技术人员并没有因为仿真能力增强而简单地越来越少。
 
-同时，由于模拟仿真必须在计算机上运行，我们还需要增加对计算基础设施的投入。
+同时，由于仿真必须在计算机上运行，我们还需要增加对计算基础设施的投入。
 
-更进一步，为了开发保真度更高的模型，我们又需要投资建设更先进、更智能的测试设备，用它们提供更高质量的数据，从而不断缩小模拟仿真与物理测试之间的差距。
+更进一步，为了开发保真度更高的模型，我们又需要投资建设更先进、更智能的测试设备，用它们提供更高质量的数据，从而不断缩小仿真与物理测试之间的差距。
 
 所有这些，在某种程度上创造了新的物理测试需求，而不是简单地消灭测试需求。
 
 说到这里，是不是觉得有点似曾相识？
 
-如果把人工智能看作一种对人类智能能力的建模与模拟，那么这里的类比就非常直接。
+如果把人工智能看作一种对人类智能能力的建模与仿真，那么这里的类比就非常直接。
 
 人工智能可以生成答案，也可以自动执行越来越多的任务，但仍然需要人来定义问题、判断输出、理解具体情境。更重要的是，在工业界那些对错误近乎零容忍的场景中，最终仍然需要有人对决策承担责任。
 
@@ -81,9 +134,9 @@ _Last updated: 2026-07-09 12:40 America/New_York (UTC-04:00)_
 
 与此相对应，对计算硬件的巨大需求——比如数据中心、芯片、电力和相关基础设施——已经带动了另外一系列产业的发展。此外，人类对更强人工智能乃至 AGI 的追求，也正在吸引越来越多的研究人员和工程师持续开发更好的模型。
 
-因此，正如我们做模拟的人经常说的那样：
+因此，正如我们做仿真的人经常说的那样：
 
-模拟仿真与物理测试是朋友，而不是敌人。
+> 仿真与物理测试是朋友，而不是敌人。
 
 两者相互补充，共同构成效率更高、能力边界更大的工业研发流程。
 
@@ -91,370 +144,168 @@ _Last updated: 2026-07-09 12:40 America/New_York (UTC-04:00)_
 
 更好的人工智能模型并不一定意味着取代人。更可能的结果是，它逐渐成为未来人类工作方式的一部分。它把人类的价值从高频执行，推向低频但高价值的判断、验证与责任承担。
 
-
-
-
-# The AI Productivity Paradox: Why Individual AI Productivity Rises Faster Than Company Productivity
-
-_Last updated: 2026-07-09 12:40 America/New_York (UTC-04:00)_
-
-Individual AI productivity rises quickly because AI accelerates bounded personal tasks such as drafting, summarizing, coding, searching, and analysis. Company productivity improves more slowly because enterprise value depends on redesigned workflows, reliable data systems, validation, governance, incentives, cross-functional coordination, and clear business metrics. AI becomes transformational only when it is embedded into the operating system of the organization rather than layered on top of old processes as a personal productivity tool.
-
 ---
 
-## Why Individual AI Productivity Rises Faster Than Company Productivity
+## 第二篇：人工智能生产力悖论——为什么个人效率的提升快于公司效率
 
-**Date:** 2026-06-03
-**Topic:** AI productivity paradox; individual productivity vs. enterprise productivity
-**Scope:** Recent English and Chinese articles/reports, with literature cited
+_最后更新：2026-09-08。由两份重叠的英文草稿合并整理并译为中文。_
+_发布状态：published ｜ 发布日期：2026-07-08 ｜ 公开链接：<https://sdliqian2021.github.io/posts/ai-productivity-paradox.html>_
 
----
+> **人工智能提升的是任务执行效率。只有当它被嵌入到重新设计过的工作流、可信的数据体系、决策流程和业务指标之中，公司层面的生产力才会提升；如果只是作为个人效率工具叠加在旧流程之上，则不会。**
 
-### Executive Summary
+这篇笔记是第一篇随笔的分析版。第一篇的论点是：仿真从未取代物理测试，人工智能也不会取代人在“最后 1%”中的作用。这里的问题更窄、也更可测量：如果个人确实变快了，为什么公司的财务报表上看不出来？
 
-In the age of AI, individual productivity can rise dramatically because generative AI helps people draft, summarize, code, search, translate, and analyze faster. However, company-level productivity often improves much more slowly because enterprise productivity is not simply the sum of individual task speed. It depends on the full operating system of the company: workflow design, data infrastructure, quality control, governance, incentives, cross-functional coordination, and how value is measured.
+### 一、悖论本身
 
-The recent literature suggests a clear pattern: AI first creates **localized productivity gains** at the task or individual level. To convert those gains into business-level outcomes, companies must redesign the way work is organized. Otherwise, AI becomes a personal efficiency tool layered on top of old processes, creating more output but not necessarily more enterprise value.
+员工觉得自己变快了，公司看起来却没有变快。收入、利润率、周期时间、质量、人均产出，基本还停在原处（ITPro, 2026）。
 
-The strongest summary is:
+这两句话都有实证支持：
 
-> **AI improves task execution, but company productivity improves only when AI is embedded into redesigned workflows, validated data systems, decision processes, and business metrics.**
+- **个人收益很大，而且可测量。** 随机对照试验显示，软件开发者完成任务的速度最多可提高 55%，写作和分析类任务也有类似量级的效果（Ernst, 2026）。
+- **公司层面的收益目前基本缺席。** NBER 2026 年的企业调查发现，超过 80% 的公司报告人工智能在过去三年对就业和生产力**没有**影响——但同时又预期未来三年会产生实质性影响（Yotzov 等, 2026）。
+- **成熟度极为稀少。** 几乎所有公司都在投资人工智能，但只有约 1% 认为自己已经“成熟”，即人工智能已完全融入工作流并带来实质业务成果（McKinsey, 2025）。
+- **短期方向甚至可能是负的。** MIT Sloan 描述了一条“人工智能采用 J 曲线”：采用人工智能的制造企业，实测生产力会先下降——平均降幅超过 1.3 个百分点——然后才回升（Burnham, 2025）。
 
-This is similar to the historical “electricity productivity paradox.” Early factories that simply replaced steam engines with electric motors did not immediately see large productivity gains. The gains came later, after factories redesigned production lines, layout, labor allocation, and process flow. Recent AI adoption appears to be following a similar pattern.
+根本错误是一道算术题：公司把组织生产力当成了个人任务效率的简单加总。但企业不是一堆任务的集合，而是一条有瓶颈、有审核结构、有责任结构的价值链。
 
----
+**电力的类比。** 早期工厂只是把中央蒸汽机换成一台大电机，几乎没有获得收益。真正的收益在几十年之后才出现：因为电力驱动使**厂房布局本身**可以被重新设计——机器按工艺流程摆放，而不再围着传动轴布置，生产线被重建，劳动力被重新分配。中文评论用同一个类比得出同一个判断：人工智能时代还缺少属于自己的“流水线”（36氪, 2026；钛媒体, 2026）。今天的人工智能落地，看起来正在重复这一模式。
 
-### 1. The Core Paradox
+### 二、为什么个人效率先涨
 
-The central paradox is that many employees feel AI makes them faster, but the company does not see proportional improvement in revenue, margin, cycle time, product quality, or output per employee.
+生成式人工智能对以下这类任务格外有效：文本密集、重复、结构松散、易于检查、依赖已有知识、范围有限、由单个人负责。例如起草邮件、总结会议和文档、生成代码、产出报告初稿、翻译，以及头脑风暴。
 
-Several recent sources discuss this disconnect:
+这些收益是真实的，但它们属于**任务层面**，而不是**系统层面**。把一份初稿从一小时压缩到十分钟，并不自动意味着公司能更早交付产品、赢得更多客户、降低质保成本，或者改善营业利润率。
 
-- NBER’s 2026 firm-level evidence reports that more than 80% of surveyed firms saw no AI impact on employment or productivity over the previous three years, even though firms expected larger effects in the next three years.
-- MIT Sloan’s 2025 discussion of manufacturing AI adoption describes a “J-curve”: productivity may initially decline after AI adoption before later improving.
-- McKinsey’s 2025 workplace AI report states that nearly all companies invest in AI, but only about 1% believe they have reached AI maturity, defined as AI being fully integrated into workflows and driving substantial business outcomes.
-- Chinese commentary from 36氪 frames the same issue as the AI-era “electricity paradox”: personal productivity rises, but company value does not rise proportionally because the organization has not been redesigned.
+### 三、吞掉这些收益的七种机制
 
----
+#### 机制一：被加速的环节通常不是瓶颈
 
-### 2. Why Individual Productivity Improves First
+真正的约束很少是写作、总结或写代码，而是审批、验证、测试、与客户对齐、合规、数据可得性、决策延迟、采购，或跨部门协调。加速一个非瓶颈环节，局部效率上升，而企业整体产出不动。
 
-Generative AI is especially effective at improving tasks that are:
+在工程组织里这一点非常具体：如果开发周期的真实上限是物理测试、仿真验证、数据质量和管理层签核，那么报告写得更快并不会缩短周期。
 
-- text-heavy;
-- repetitive;
-- loosely structured;
-- easy to review;
-- based on existing knowledge;
-- limited in scope;
-- owned by one person.
+#### 机制二：产出变多，协调成本上升
 
-Examples include drafting emails, preparing meeting summaries, generating code snippets, creating first-pass reports, translating content, brainstorming ideas, and summarizing documents.
+当每个人都能更快地生成更多东西，组织收到的文档、代码、幻灯片、方案和分析都会变多。审核负担、重复劳动和决策噪声同时上升。人工智能并没有消除工作，而是把工作从“创作”搬到了“审核、清理和协调”。
 
-These are real productivity gains. However, they are usually **task-level gains**, not necessarily **system-level gains**. A person may finish a draft in 10 minutes instead of one hour, but that does not automatically mean the company ships a product faster, wins more customers, reduces warranty cost, or improves operating margin.
+#### 机制三：看着漂亮，却把返工推给下游
 
----
+“Workslop” 指那些看起来很专业、实际上不完整、肤浅、错误，或者与真实工作情境不匹配的人工智能产出。它在发出者那一端显得很有产出，成本却落在每一个必须去检查、纠正或重做的同事身上（The Guardian, 2026）。在技术、法律、医疗、工程和安全关键领域，“表达流畅”根本不是标准——产出必须正确、可追溯、经过验证，并且符合具体情境。
 
-### 3. Why Company Productivity Does Not Improve Proportionally
+一个相关现象是“空洞的体量”（empty volume）：一位员工用人工智能把三个要点扩写成好几页的方案，接收方再用人工智能把它压缩回三个要点。体量和处理环节都增加了，工作本身却没有推进（Grammarly, 2025）。
 
-#### 3.1 AI Often Speeds Up Non-Bottleneck Tasks
+#### 机制四：验证税与认知外包
 
-A company is a value chain. The limiting factor may not be writing, summarizing, or coding. The real bottleneck may be approval, validation, testing, customer alignment, compliance, data availability, decision latency, procurement, or cross-functional coordination.
+当“生成”变得便宜，真正的成本就从**创作**转移到了**验证**。初级员工节省下来的时间，往往以另一种形式重新出现：资深员工花时间去排查幻觉、逻辑错误和细微的不准确之处（Ernst, 2026）。
 
-If AI speeds up a non-bottleneck task, local productivity improves but enterprise throughput remains unchanged.
+更长期的风险是能力退化。长期依赖人工智能起草、总结和构思，会助长自动化偏见（automation bias）和认知外包——审核者会逐渐失去评估自己所批准内容所需的批判性思维锐度，从而削弱组织应对模糊问题的能力（UC Berkeley, 2026）。与此同时，生成式人工智能在提升当下任务表现的同时，也会降低员工在其他任务上的动机（HBR, 2025）——这意味着衡量生产力必须做质量调整，不能只看速度。
 
-For example, in engineering organizations, faster report writing does not shorten the development cycle if physical testing, simulation validation, data quality, or management sign-off remain the bottlenecks.
+这里也正是第一篇随笔中长尾论点的再现：那些罕见而困难的情况，仍然需要一个真正理解整个系统的人。
 
-#### 3.2 AI Can Increase Coordination Cost
+#### 机制五：被当作个人工具，而不是企业系统
 
-When everyone can generate more content faster, the organization may receive more documents, more code, more slides, more proposals, and more analysis. This can increase review burden, duplicate work, and decision noise.
+大多数部署都是面向个人的：聊天机器人、copilot、写作助手、编程助手、会议纪要工具。有用，但有边界。企业级生产力需要另一种架构——集成的数据管道、工作流自动化、与记录系统（system of record）的连接、人在回路的审核、治理与合规、反馈闭环、质量指标，以及重新设计的岗位和流程。没有这套“支撑装置”（harness），人工智能只会停留在个人助手的位置。Accenture（2025）从运营模式一侧给出了同样的判断：把人工智能叠加在既有流程上，无法释放其潜力；岗位架构、组织结构、治理和指标必须一起重新设计。
 
-The organization then spends more time filtering and validating output. In that case, AI does not remove work; it shifts work from creation to review, cleanup, and coordination.
+#### 机制六：指标衡量的是采用，不是成果
 
-#### 3.3 AI Creates “Workslop” and Hidden Rework
+弱指标占据主导：用户数、提示词数量、部署了多少工具、开展了多少试点、在孤立任务上节省了多少小时。这些都不是业务生产力。
 
-Several recent discussions use the term “workslop” to describe AI-generated output that looks polished but is incomplete, shallow, wrong, or misaligned with the actual work context. Such output may appear productive at the sender’s level but creates downstream burden for colleagues who must check, correct, or redo the work.
+真正能反映业务生产力的指标：产品开发周期时间；每一次经过验证的设计迭代的成本；客户响应时间；缺陷率；质保成本；人均收入；营业利润率；团队吞吐量；工程变更周期时间；从洞察到决策的时间；质量调整后的产出。
 
-This is particularly important in technical, legal, medical, engineering, and safety-critical domains, where fluent output is not enough. The output must be correct, traceable, validated, and contextually appropriate.
+#### 机制七：能力错置
 
-#### 3.4 AI Is Often Used as a Personal Tool, Not an Enterprise System
+中文组织研究把瓶颈放在人才结构上，而不是技术上。2026 年一份与台湾经济研究院相关的分析认为，人工智能资本投入之所以失败，源于“能力错置”：一线工程师缺乏数据处理能力，中层管理者缺乏把人工智能项目转化为流程再造的能力。要走出这个悖论，就必须从“把人头填满”转向有意识地重新设计人才能力生态（邓, 2026）。新华网（2026）与世界经济论坛（2026）则从基础设施一侧得出兼容的结论，把数据基础设施、培训和工作流重构列为早期生产力落差的原因。
 
-Many companies deploy AI as a tool for individuals: chatbots, copilots, writing assistants, coding assistants, or meeting summarizers. This is useful but limited.
+#### 七种机制小结
 
-Enterprise productivity requires a different architecture:
-
-- integrated data pipelines;
-- workflow automation;
-- system-of-record connectivity;
-- human-in-the-loop review;
-- governance and compliance;
-- feedback loops;
-- quality metrics;
-- role redesign;
-- process redesign.
-
-Without this enterprise “harness,” AI remains a personal assistant rather than a company-level productivity engine.
-
-#### 3.5 Metrics Are Misaligned
-
-Many organizations measure AI adoption using weak indicators such as:
-
-- number of users;
-- number of prompts;
-- number of AI tools deployed;
-- number of pilots;
-- time saved in isolated tasks.
-
-These metrics do not necessarily measure business productivity. Better metrics include:
-
-- product development cycle time;
-- cost per validated design iteration;
-- customer response time;
-- defect rate;
-- warranty cost;
-- revenue per employee;
-- operating margin;
-- throughput per team;
-- engineering change cycle time;
-- time from insight to decision;
-- quality-adjusted output.
-
-#### 3.6 Organizational Learning Takes Time
-
-AI adoption requires new skills, new norms, new review practices, and new accountability structures. The literature suggests that this creates a transition cost. MIT Sloan’s manufacturing AI discussion describes this as a productivity J-curve: firms may experience temporary performance decline before longer-term gains appear.
-
-This is not evidence that AI is useless. It means the productivity benefit is delayed until the organization learns how to absorb and operationalize the technology.
-
----
-
-### 4. English-Language Literature Summary
-
-#### 4.1 NBER: Firm-Level Evidence Shows Limited Realized Productivity Impact So Far
-
-NBER’s 2026 working paper, *Firm Data on AI*, provides useful empirical grounding. It reports that firms have seen limited realized impact from AI over the last three years, with more than 80% reporting no effect on employment or productivity. However, firms expect more substantial impacts over the next three years.
-
-This supports the argument that AI’s productivity potential is real but not yet widely captured at firm level.
-
-#### 4.2 MIT Sloan: Manufacturing AI Shows a Productivity J-Curve
-
-MIT Sloan’s 2025 article on AI adoption in manufacturing argues that industrial AI adoption often produces a temporary decline in performance before stronger long-term gains. The reason is that AI adoption requires complementary investments in workflow redesign, training, data infrastructure, and organizational adaptation.
-
-This is especially relevant to industrial AI, manufacturing, simulation, digital twin, and engineering process transformation.
-
-#### 4.3 McKinsey: AI Maturity Is Rare Because Scaling Is a Leadership and Operating-Model Problem
-
-McKinsey’s 2025 report, *Superagency in the Workplace*, emphasizes that most companies are investing in AI, but only a very small share have reached maturity. The report defines maturity as AI being fully integrated into workflows and driving substantial business outcomes.
-
-This supports the view that the bottleneck is not simply employee adoption. The bottleneck is leadership, operating model design, workflow integration, and scaling discipline.
-
-#### 4.4 Accenture: AI Requires Enterprise Model Reinvention
-
-Accenture’s 2025 work on generative AI argues that companies cannot unlock AI’s full potential by layering it on top of existing workflows. Organizations need to redesign how humans and machines work together, including job architecture, structures, governance, and metrics.
-
-This reinforces the idea that AI productivity is an organizational design problem, not just a software deployment problem.
-
-#### 4.5 HBR and The Guardian: AI Can Create Motivation Loss and Rework
-
-Harvard Business Review discusses evidence that generative AI can improve immediate task performance while reducing worker motivation in other tasks. The Guardian and related “workslop” discussions emphasize that low-quality AI-generated output can create downstream rework. These perspectives show that productivity must be quality-adjusted and system-adjusted, not measured only by speed.
-
----
-
-### 5. Chinese-Language Literature Summary
-
-#### 5.1 36氪: AI时代的“电力悖论”
-
-36氪’s article *个人提效10倍，公司颗粒无收：AI时代的“电力悖论”正在重演* directly addresses the question. It argues that AI has raised individual productivity, but company value has not risen proportionally because organizations lack the equivalent of an AI-era “assembly line.”
-
-The article’s key insight is that productivity gains require institutionalized workflow redesign, not only better personal tools.
-
-#### 5.2 新华网 / 世界经济论坛: AI Productivity May First Decline Before Rising
-
-新华网’s Chinese article on AI paradoxes highlights the possibility that AI adoption can initially reduce productivity due to mismatch between new digital tools and old workflows. It specifically mentions data infrastructure, training, and workflow reconstruction as reasons for the early productivity gap.
-
-This closely matches MIT Sloan’s J-curve logic.
-
-#### 5.3 钛媒体: AI Investment Has Not Yet Fully Converted into Financial Returns
-
-钛媒体’s article *AI投入暂未兑现红利：复刻百年电气化，产业变革将至拐点* discusses the gap between heavy AI investment and limited visible impact on revenue or cost structure. It uses the historical analogy of electrification and argues that AI productivity gains will appear when technology becomes deeply integrated with industrial systems.
-
-#### 5.4 毕马威中国: Generative AI Requires Industrial Transformation Pathways
-
-KPMG China’s 2025 white paper, *新智启新质：生成式AI赋能产业变革的实践与路径*, frames generative AI as a driver of industrial transformation but emphasizes practical implementation pathways: strategy, scenario design, data and technology architecture, governance, ethics, safety, and execution.
-
-This is useful for moving from AI pilots to structured enterprise transformation.
-
----
-
-### 6. Synthesis: The Main Mechanisms
-
-The literature converges on six mechanisms explaining the gap between individual productivity and company productivity.
-
-| Mechanism | Individual-Level Effect | Company-Level Risk |
+| 机制 | 个人层面的效果 | 公司层面的风险 |
 |---|---|---|
-| Task acceleration | Employees produce drafts, code, summaries, and analysis faster | The accelerated task may not be the bottleneck |
-| More output | More documents, slides, code, and ideas are generated | Review burden and coordination cost increase |
-| Polished but weak output | AI output looks professional | Rework, error correction, and quality risk increase |
-| Personal tool adoption | Employees use AI independently | Workflows remain fragmented and unstandardized |
-| Poor metrics | Time saved appears impressive | Business outcomes do not improve |
-| Lack of redesign | AI is added to existing processes | Old operating model absorbs or cancels the gain |
+| 一、任务加速 | 初稿、代码、摘要、分析产出更快 | 被加速的环节并不是瓶颈 |
+| 二、产出变多 | 更多文档、幻灯片、代码、想法 | 审核负担与协调成本上升 |
+| 三、Workslop／空洞体量 | 产出看起来很专业 | 返工、纠错、质量风险 |
+| 四、验证税 | 创作时间下降 | 资深人员审核时间上升，能力退化 |
+| 五、个人工具式采用 | 员工各自使用人工智能 | 工作流依旧碎片化、不标准 |
+| 六、指标不当 | 节省的时间看起来很可观 | 业务结果没有变化 |
+| 七、能力错置 | 少数人表现突出 | 能力缺口阻碍规模化 |
 
----
+这七种机制底下还垫着一层转型成本。采用人工智能需要新的技能、规范、审核习惯和责任结构，而组织学习需要时间。这正是 J 曲线所度量的东西——它并不说明人工智能没用，而是说明收益会被推迟到组织学会吸收它之后。
 
-### 7. Implications for Industrial AI and Digital Twin
+### 四、对工业人工智能与数字孪生的启示
 
-For industrial AI, especially in manufacturing, engineering simulation, tire development, and digital twin applications, the lesson is very important:
+> **人工智能的价值不只在于让工程师更快，而在于重新设计工程价值流。**
 
-> **The value of AI is not only in making engineers faster. The value is in redesigning the engineering value stream.**
+在一家轮胎公司，工程师个人已经可以用人工智能更快地写代码、总结测试报告、起草演示材料、检索技术文献。但只有当人工智能被嵌入到整条开发流程中，公司层面的生产力才会移动：
 
-For example, in a tire company, individual engineers may use AI to write code, summarize test reports, draft presentations, or search technical literature faster. But company-level productivity will only improve significantly if AI is embedded into the full development workflow:
+- 需求定义
+- 测试规划
+- 仿真模型搭建
+- 参数识别
+- 验证与确认
+- 数据管理
+- 设计迭代
+- 决策评审
+- 生产反馈
+- 实际使用性能监控
+- 数字孪生更新
 
-- requirements definition;
-- test planning;
-- simulation model setup;
-- parameter identification;
-- validation and verification;
-- data management;
-- design iteration;
-- decision review;
-- production feedback;
-- field performance monitoring;
-- digital twin updating.
+这正是数字孪生的意义所在。数字孪生可以充当围绕人工智能的企业级支撑装置，提供经过验证的情境、物理约束、历史与实时数据、模型可追溯性，以及决策反馈闭环：
 
-This is where digital twin becomes important. A digital twin can act as the enterprise “harness” around AI by providing validated context, physics constraints, real-time or historical data, model traceability, and decision feedback loops.
+> **单独的大语言模型提升个人生产力。大语言模型加上企业级支撑装置，才提升组织生产力。对工业人工智能而言，数字孪生可能是最重要的那个支撑装置。**
 
-In this framing:
+与第一篇随笔连起来读，这两个论证其实是同一个论证的不同尺度。仿真没有消灭物理测试，反而催生了对更好的测试、更好的测量设备和更多算力的新需求。人工智能是对人类推理的一种仿真，它正在产生类似的新需求——对验证的需求，对确认的需求，以及对“由谁为决策负责”的需求。
 
-> **LLM alone improves individual productivity. LLM + enterprise harness improves organizational productivity. Digital twin can be one of the most important harnesses for industrial AI.**
+### 五、从个人 AI 到企业 AI：成熟度阶梯
 
----
+1. **个人使用 AI**——个人用它写作、编程、总结、构思。
+2. **团队级 AI 工作流**——共享实践、模板、审核规则、可复用提示词。
+3. **流程集成的 AI**——嵌入标准流程：工程变更、客户支持、产品开发、质量分析。
+4. **数据连通的 AI**——接入可信企业数据、记录系统、仿真与测试数据库、产品生命周期系统。
+5. **受治理的 AI**——输出可追溯、可审计、经过验证，符合合规与安全要求。
+6. **AI 原生运营模式**——围绕人机协作重新设计岗位、流程、决策权、指标与组织结构。
 
-### 8. Practical Framework: From Personal AI to Enterprise AI
+多数公司目前处在第 1 到第 3 级之间。公司层面的生产力收益需要走到第 4 至第 6 级。毕马威中国（2025）给出的落地路径——战略、场景设计、数据与技术架构、治理、伦理与安全、执行——对应的大致就是这段从第 3 级向第 5、6 级的移动。
 
-A company can think about AI productivity maturity in six levels:
+### 六、核心结论
 
-1. **Personal AI use**
-   Individuals use AI for writing, coding, summarizing, and brainstorming.
+1. **个人收益是真实的，但是局部的。** 人工智能帮人更快完成具体任务。
+2. **公司生产力是系统性的。** 它取决于整条工作流，而不是某个人的任务速度。
+3. **人工智能可以提高产出而不提高价值。** 更多的文档、代码和分析，可能意味着更多的审核负担和决策噪声。
+4. **成本已经从创作转移到验证**——而验证恰恰是人的判断与责任仍然存在的地方。
+5. **主要瓶颈是组织架构。** 数据、工作流、治理、激励、人才结构和领导力，决定人工智能能否规模化。
+6. **对愿意重新设计工作方式的公司，这个悖论大概是暂时的。** 只部署工具的公司，应当预期有限的收益。
+7. **对工业人工智能，数字孪生可以成为关键的企业级支撑装置**，把人工智能从个人助手，转变为经过验证、连通数据、融入物理规律的决策系统。
 
-2. **Team-level AI workflow**
-   Teams define shared AI practices, templates, review rules, and reusable prompts.
+### 七、参考文献
 
-3. **Process-integrated AI**
-   AI is embedded into standard workflows, such as engineering change processes, customer support, product development, or quality analysis.
+英文文献的标题与出版信息保留原文，便于核对与引用。
 
-4. **Data-connected AI**
-   AI connects to trusted enterprise data, systems of record, simulation databases, test databases, and product lifecycle systems.
+**英文文献**
 
-5. **Governed AI**
-   AI outputs are traceable, auditable, validated, and aligned with compliance and safety requirements.
+1. Yotzov, I., Barrero, J. M., Bloom, N., Davis, S. J., & Meyer, B. (2026). *Firm Data on AI*. NBER Working Paper No. 34836. <https://www.nber.org/papers/w34836>
+2. Burnham, K. (2025, July 9). *The "Productivity Paradox" of AI Adoption in Manufacturing Firms*. MIT Sloan School of Management. <https://mitsloan.mit.edu/ideas-made-to-matter/productivity-paradox-ai-adoption-manufacturing-firms>
+3. Mayer, H., Yee, L., Chui, M., & Roberts, R. (2025, January 28). *Superagency in the Workplace: Empowering People to Unlock AI's Full Potential*. McKinsey & Company. <https://www.mckinsey.com/capabilities/tech-and-ai/our-insights/superagency-in-the-workplace-empowering-people-to-unlock-ais-full-potential-at-work>
+4. Accenture. (2025, March 17). *Reinventing Enterprise Models in the Age of Generative AI*. <https://www.accenture.com/us-en/insights/consulting/gen-ai-reinventing-enterprise-models>
+5. ITPro. (2026). *AI Is Speeding Up Work for Individual Employees, but Business-Wide Productivity Is Floundering*. <https://www.itpro.com/technology/artificial-intelligence/ai-is-speeding-up-work-for-individual-employees-but-businesses-wide-productivity-is-floundering>
+6. The Guardian. (2026, April 14). *Bosses Say AI Boosts Productivity — Workers Say They're Drowning in "Workslop"*. <https://www.theguardian.com/technology/2026/apr/14/ai-productivity-workplace-errors>
+7. Harvard Business Review. (2025, May 13). *Research: Gen AI Makes People More Productive — and Less Motivated*. <https://hbr.org/2025/05/research-gen-ai-makes-people-more-productive-and-less-motivated>
+8. Ernst, E. (2026). *The AI Productivity Paradox: Why Your 40% Gain Hasn't Moved the Needle (Yet)*. Medium.
+9. Grammarly. (2025). *2026 AI Trend: Context Will Fix the AI Productivity Paradox*. Grammarly Blog.
+10. UC Berkeley. (2026). *AI Productivity Blind Spot*. California Management Review.
 
-6. **AI-native operating model**
-   The company redesigns roles, workflows, decision rights, metrics, and organizational structure around human-AI collaboration.
+**中文文献**
 
-Most companies are currently between Level 1 and Level 3. Company-level productivity gains require movement toward Levels 4–6.
+11. 36氪.《个人提效 10 倍，公司颗粒无收：AI 时代的“电力悖论”正在重演》. 36氪, 2026 年 4 月 12 日. <https://36kr.com/p/3735259483177220>
+12. 新华网.《2026 年值得关注的人工智能悖论》. 新华网, 2026 年 1 月 4 日. <https://www.news.cn/liangzi/20260104/a67a1e4788d24ca498088825e81eea8f/c.html>
+13. 世界经济论坛.《2026 年值得关注的五大人工智能悖论》. 世界经济论坛中文站, 2026 年 1 月 21 日. <https://cn.weforum.org/stories/2026/01/ai-paradoxes-in-2026-cn/>
+14. 钛媒体.《AI 投入暂未兑现红利：复刻百年电气化，产业变革将至拐点》. 钛媒体, 2026 年 6 月 1 日. <https://www.tmtpost.com/8009771.html>
+15. 毕马威中国.《新智启新质：生成式 AI 赋能产业变革的实践与路径》. KPMG China, 2025 年 7 月 28 日. <https://kpmg.com/cn/zh/insights/2025/07/the-practice-and-path-of-generative-ai-empowering-industrial-transformation.html>
+16. 邓翔（Deng, X.）.《破解 AI 生产力悖论：为何技术投资换不回竞争力？人才战略才是关键》. 永续学院／台湾经济研究院, 2026 年.
 
----
+<!--
+待办（HTML 注释，不会在页面上渲染；仅供编辑时查看）
 
-### 9. Key Takeaways
-
-1. **Individual productivity gains are real, but they are local.**
-   AI helps people complete specific tasks faster.
-
-2. **Company productivity is systemic.**
-   It depends on the whole workflow, not one person’s task speed.
-
-3. **AI can increase output without increasing value.**
-   More documents, code, and analysis can create more review burden and decision noise.
-
-4. **The main bottleneck is organizational architecture.**
-   Data, workflow, governance, incentives, and leadership determine whether AI scales.
-
-5. **The AI productivity paradox is likely temporary for companies that redesign work.**
-   Firms that only deploy tools may see limited gains. Firms that redesign processes around AI may eventually capture significant productivity improvement.
-
-6. **For industrial AI, digital twin can be a key enterprise harness.**
-   It can convert AI from a personal assistant into a validated, data-connected, physics-informed decision system.
-
----
-
-### 10. Literature Cited
-
-#### English Sources
-
-[1] Ivan Yotzov, Jose Maria Barrero, Nicholas Bloom, Steven J. Davis, and Brent Meyer. *Firm Data on AI*. NBER Working Paper No. 34836, 2026.
-URL: https://www.nber.org/papers/w34836
-
-[2] Kristin Burnham. *The “Productivity Paradox” of AI Adoption in Manufacturing Firms*. MIT Sloan School of Management, July 9, 2025.
-URL: https://mitsloan.mit.edu/ideas-made-to-matter/productivity-paradox-ai-adoption-manufacturing-firms
-
-[3] Hannah Mayer, Lareina Yee, Michael Chui, and Roger Roberts. *Superagency in the Workplace: Empowering People to Unlock AI’s Full Potential*. McKinsey & Company, January 28, 2025.
-URL: https://www.mckinsey.com/capabilities/tech-and-ai/our-insights/superagency-in-the-workplace-empowering-people-to-unlock-ais-full-potential-at-work
-
-[4] Accenture. *Reinventing Enterprise Models in the Age of Generative AI*. Accenture, March 17, 2025.
-URL: https://www.accenture.com/us-en/insights/consulting/gen-ai-reinventing-enterprise-models
-
-[5] ITPro. *AI Is Speeding Up Work for Individual Employees, but Business-Wide Productivity Is Floundering*. ITPro, 2026.
-URL: https://www.itpro.com/technology/artificial-intelligence/ai-is-speeding-up-work-for-individual-employees-but-businesses-wide-productivity-is-floundering
-
-[6] The Guardian. *Bosses Say AI Boosts Productivity — Workers Say They’re Drowning in “Workslop”*. The Guardian, April 14, 2026.
-URL: https://www.theguardian.com/technology/2026/apr/14/ai-productivity-workplace-errors
-
-[7] Harvard Business Review. *Research: Gen AI Makes People More Productive—and Less Motivated*. Harvard Business Review, May 13, 2025.
-URL: https://hbr.org/2025/05/research-gen-ai-makes-people-more-productive-and-less-motivated
-
-#### Chinese Sources
-
-[8] 36氪. 《个人提效10倍，公司颗粒无收：AI时代的“电力悖论”正在重演》. 36氪, 2026年4月12日.
-URL: https://36kr.com/p/3735259483177220
-
-[9] 新华网. 《2026年值得关注的人工智能悖论》. 新华网, 2026年1月4日.
-URL: https://www.news.cn/liangzi/20260104/a67a1e4788d24ca498088825e81eea8f/c.html
-
-[10] 世界经济论坛. 《2026年值得关注的五大人工智能悖论》. 世界经济论坛中文站, 2026年1月21日.
-URL: https://cn.weforum.org/stories/2026/01/ai-paradoxes-in-2026-cn/
-
-[11] 钛媒体. 《AI投入暂未兑现红利：复刻百年电气化，产业变革将至拐点》. 钛媒体, 2026年6月1日.
-URL: https://www.tmtpost.com/8009771.html
-
-[12] 毕马威中国. 《新智启新质：生成式AI赋能产业变革的实践与路径》. KPMG China, 2025年7月28日.
-URL: https://kpmg.com/cn/zh/insights/2025/07/the-practice-and-path-of-generative-ai-empowering-industrial-transformation.html
-
----
-
-### 11. One-Sentence Version for Future Use
-
-**AI has dramatically improved individual task productivity, but company productivity remains limited because enterprise value requires workflow redesign, trusted data, governance, quality control, and organizational transformation—not merely faster individual output.**
-
----
-
-## The AI Productivity Paradox: A Summary of Recent Literature
-
-### The Core Paradox: Micro Gains vs. Macro Disappointment
-
-The central issue observed in 2025–2026 enterprise AI adoption is that while individual workers report massive time savings on specific tasks, aggregate corporate productivity remains flat or even declines temporarily. This disconnect occurs because companies often mistakenly treat organizational productivity as the simple sum of individual task efficiencies, ignoring the complex, systemic nature of workflows.
-
-Recent randomized controlled trials show dramatic individual gains—such as software developers completing tasks up to 55% faster—yet these localized wins rarely translate into bottom-line economic growth without significant organizational redesign (Ernst, 2026).
-
-### Key Drivers of the AI Productivity Paradox
-
-**1. The AI Adoption J-Curve and Legacy Misalignment**
-The Massachusetts Institute of Technology (MIT) Sloan School of Management identifies an "AI adoption J-curve." When organizations introduce AI, they frequently experience a measurable, short-term decline in productivity—dropping by over 1.3 percentage points on average in manufacturing sectors. This initial downward slope is caused by a profound misalignment between new predictive or generative AI tools and legacy operational processes. Without parallel investments in data infrastructure, workflow redesign, and staff training, AI tools simply create new bottlenecks (Burnham, 2025; 新华网, 2026).
-
-**2. The Verification Tax and Cognitive Offloading**
-As AI accelerates content and code generation, the burden shifts from *creation* to *verification*. The time saved by junior employees using AI is often consumed by senior staff who must meticulously review outputs for hallucinations, logic errors, and subtle inaccuracies (Ernst, 2026). Furthermore, prolonged reliance on AI creates a "cognitive blind spot." As employees increasingly rely on algorithms for drafting, summarizing, and ideation, they suffer from automation bias and cognitive offloading—gradually losing the critical thinking skills required to evaluate the very outputs they are generating. This diminishes an organization's ability to navigate ambiguity, ultimately eroding long-term value creation (UC Berkeley, 2026).
-
-**3. "Empty Volume" and Workflow Fragmentation**
-The unchecked proliferation of AI-generated content is clogging corporate communication channels. When one employee uses AI to instantly expand a few bullet points into a multi-page proposal, the recipient subsequently uses AI to summarize that long proposal back into bullet points. This cycle adds immense volume and processing steps without advancing the actual work, creating a fragmented workflow where employees feel busier but are less effective (Grammarly, 2025).
-
-**4. The "Ability Mismatch" (能力错置)**
-Chinese organizational research emphasizes that the bottleneck is rarely the technology itself, but rather human resource structures. A 2026 report from the Taiwan Institute of Economic Research highlights that heavy capital investments in AI infrastructure fail due to "ability mismatch" (能力错置). When front-line engineers lack data-handling skills and middle management lacks the ability to translate AI projects into process-reengineering strategies, the technology cannot scale. Escaping the paradox requires transitioning from merely "filling headcount" to actively redesigning the organizational "talent capability ecosystem" (邓翔靖, 2026).
-
----
-
-### Literature Cited
-
-* **Burnham, K. (2025).** *The 'productivity paradox' of AI adoption in manufacturing firms*. MIT Sloan. Discusses the AI J-curve and how initial adoption causes short-term productivity losses due to legacy misalignment.
-* **Ernst, E. (2026).** *The AI Productivity Paradox: Why Your 40% Gain Hasn't Moved the Needle (Yet)*. Medium. Highlights the gap between individual RCT gains (e.g., in software development) and the high organizational costs of coordination and verification.
-* **Grammarly. (2025).** *2026 AI Trend: Context Will Fix the AI Productivity Paradox*. Grammarly Blog. Explores how isolated AI usage creates redundant "empty volume" in corporate communications.
-* **UC Berkeley. (2026).** *AI Productivity Blind Spot*. California Management Review. Analyzes cognitive externalities, automation bias, and how AI desensitizes organizations to critical effort.
-* **新华网 (Xinhua Net). (2026).** *2026年值得关注的人工智能悖论 (AI Paradoxes to Watch in 2026)*. Summarizes the World Economic Forum and MIT Sloan findings for Chinese audiences, emphasizing the J-curve of productivity loss.
-* **邓翔靖 (Deng, X.). (2026).** *破解AI 生产力悖论：为何技术投资换不回竞争力？人才战略才是关键 (Cracking the AI Productivity Paradox: Why Tech Investment Fails to Buy Competitiveness? Talent Strategy is Key)*. 永续学院 (Sustainability College) / Taiwan Institute of Economic Research. Argues that "ability mismatch" and a failure to re-engineer talent structures are the primary barriers to realizing AI ROI.
+- 核实参考文献 16 的作者姓名。原始笔记中该姓名的编码已损坏，可辨认部分为「邓翔…」，第三个字无法恢复。
+- 本文件包含两篇文章，但发布脚本（publishing/publication_status.ps1）按「一个 .md 文件 = 一篇文章」处理，
+  且只识别文件开头的 YAML 元数据。因此第二篇的元数据已改写为正文中的普通说明行。
+  若要让两篇文章各自独立发布，需要把第二篇拆分为单独的笔记文件。
+-->
