@@ -3,7 +3,7 @@ layout: default
 title: "笔记 07：仿真与物理测试为什么不是敌人"
 description: "仿真不会简单消灭物理测试，而是把测试资源转向模型校准、可信度验证、边界确认和高信息量试验。"
 content_type: essay
-display_order: 7
+display_order: 20
 published: 2026-09-18
 updated: 2026-09-18
 permalink: /posts/07-simulation-physical-testing-and-validation.html

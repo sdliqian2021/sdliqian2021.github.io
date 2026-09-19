@@ -3,7 +3,7 @@ layout: default
 title: "笔记 01：AI、资深工程师与工业长尾问题"
 description: "AI 自动化会不断移动常规与异常的边界；工业组织需要重新设计长尾异常、人工接管和责任机制。"
 content_type: essay
-display_order: 1
+display_order: 10
 published: 2026-07-08
 updated: 2026-09-18
 topics:
