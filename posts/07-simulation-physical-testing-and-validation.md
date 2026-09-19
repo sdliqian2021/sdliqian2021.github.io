@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "笔记 07：仿真与物理测试为什么不是敌人"
+title: "工程仿真与物理测试：为什么它们不是敌人"
 description: "仿真不会简单消灭物理测试，而是把测试资源转向模型校准、可信度验证、边界确认和高信息量试验。"
 content_type: essay
 display_order: 20
@@ -15,7 +15,7 @@ topics:
   - Model validation
 ---
 
-# 笔记 07：仿真与物理测试为什么不是敌人
+# 工程仿真与物理测试：为什么它们不是敌人
 
 _最后更新：2026-09-18_
 
@@ -187,4 +187,4 @@ NASA 的模型与仿真标准、ASME 的验证与确认框架，都强调一个�
 
 ---
 
-延伸阅读：[《AI、资深工程师与工业长尾问题》](/posts/ai-humans-simulation-and-physical-testing.html)
+延伸阅读：[《工业 AI 与长尾问题：为什么资深工程师仍然重要》](/posts/ai-humans-simulation-and-physical-testing.html)

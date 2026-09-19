@@ -1,11 +1,11 @@
 ---
 layout: default
-title: "5. China's Tire Industry — Manufacturing Upgrade 2021–2026 and Outlook to 2031"
+title: "中国轮胎制造升级：2021—2026 回顾与 2031 展望"
 description: "An evidence-graded review of China's tire manufacturing upgrade, from automation and equipment localization to industrial software and AI."
 content_type: essay
 display_order: 40
 published: 2026-09-01
-updated: 2026-09-01
+updated: 2026-09-18
 topics:
   - Tire industry
   - Smart manufacturing
@@ -14,7 +14,7 @@ permalink: /posts/china-tire-manufacturing-upgrade-2021-2026.html
 nav: essays
 page_class: article-page
 ---
-# China's Tire Industry — Manufacturing Upgrade 2021–2026 and Outlook to 2031
+# 中国轮胎制造升级：2021—2026 回顾与 2031 展望
 
 ## Executive Summary
 

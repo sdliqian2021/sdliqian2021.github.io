@@ -1,11 +1,11 @@
 ---
 layout: default
-title: "4. 从 Akron 到广饶：如果中国最大轮胎集群完成整合，世界轮胎业会发生什么？"
+title: "Akron 与广饶：轮胎产业集群如何塑造全球竞争"
 description: "How Guangrao could turn manufacturing density into technical depth, OE capability, brand trust, and global operating strength."
 content_type: essay
 display_order: 50
 published: 2026-09-01
-updated: 2026-09-01
+updated: 2026-09-18
 topics:
   - Tire industry
   - Guangrao
@@ -14,7 +14,7 @@ permalink: /posts/akron-guangrao-future-tire-industry.html
 nav: essays
 page_class: article-page
 ---
-# 从 Akron 到广饶：如果中国最大轮胎集群完成整合，世界轮胎业会发生什么？
+# Akron 与广饶：轮胎产业集群如何塑造全球竞争
 
 _Data cutoff: 2026-08-21_
 

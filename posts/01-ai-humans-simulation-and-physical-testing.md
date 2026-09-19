@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "笔记 01：AI、资深工程师与工业长尾问题"
+title: "工业 AI 与长尾问题：为什么资深工程师仍然重要"
 description: "AI 自动化会不断移动常规与异常的边界；工业组织需要重新设计长尾异常、人工接管和责任机制。"
 content_type: essay
 display_order: 10
@@ -16,7 +16,7 @@ nav: essays
 page_class: article-page
 ---
 
-# 笔记 01：AI、资深工程师与工业长尾问题
+# 工业 AI 与长尾问题：为什么资深工程师仍然重要
 
 _最后更新：2026-09-18_
 
@@ -182,4 +182,4 @@ AI 在这里可能发挥两种完全不同的作用。
 
 ---
 
-延伸阅读：[《仿真与物理测试为什么不是敌人》](/posts/07-simulation-physical-testing-and-validation.html)
+延伸阅读：[《工程仿真与物理测试：为什么它们不是敌人》](/posts/07-simulation-physical-testing-and-validation.html)

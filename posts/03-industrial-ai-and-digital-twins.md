@@ -1,11 +1,11 @@
 ---
 layout: default
-title: "3. Industrial AI: Digital Twins, Connected Data, and Governed Agents"
+title: "工业 AI 与数字孪生：如何构建可治理的 AI 代理"
 description: "A practical framework for Industrial AI, process digital twins, connected data, controlled execution, and governable industrial agents."
 content_type: essay
 display_order: 30
 published: 2026-09-01
-updated: 2026-09-01
+updated: 2026-09-18
 topics:
   - Industrial AI
   - Digital twins
@@ -14,7 +14,7 @@ permalink: /posts/industrial-ai-and-digital-twins.html
 nav: essays
 page_class: article-page
 ---
-# What Is Industrial AI?
+# 工业 AI 与数字孪生：如何构建可治理的 AI 代理
 
 _Last updated: 2026-07-09 12:40 America/New_York (UTC-04:00)_
 
