@@ -1,377 +1,299 @@
 ---
 layout: default
 title: "中国轮胎制造升级：2021—2026 回顾与 2031 展望"
-description: "An evidence-graded review of China's tire manufacturing upgrade, from automation and equipment localization to industrial software and AI."
+description: "以证据等级回顾中国轮胎制造从自动化、装备国产化到工业软件与 AI 应用的升级路径。"
 content_type: essay
 display_order: 40
 published: 2026-09-01
-updated: 2026-09-18
+updated: 2026-09-21
 topics:
-  - Tire industry
-  - Smart manufacturing
-  - China
+  - 轮胎产业
+  - 智能制造
+  - 中国
 permalink: /posts/china-tire-manufacturing-upgrade-2021-2026.html
 nav: essays
 page_class: article-page
 ---
+
 # 中国轮胎制造升级：2021—2026 回顾与 2031 展望
 
-## Executive Summary
+## 摘要
 
-China's tire industry between 2021 and 2026 did **not** move in a single step from "manual" to
-"automated." It progressed through **three overlapping layers**:
+2021 至 2026 年间，中国轮胎工业**并没有**一步从“手工”跨到“自动化”，而是经历了**三个相互重叠的层次**：
 
-1. **Mature layer** — automated material handling, robotics, automatic inspection, centralized
-   control, MES/WMS/APS, and end-to-end traceability. *Already mature at leading plants.*
-2. **Scaling layer** — digital twins, industrial-Internet platforms, AI-assisted design, process
-   optimization, predictive analytics, integrated factory data. *Moving from demo to deployment.*
-3. **Emerging layer** — industrial large models, AI agents, autonomous scheduling, carbon-aware
-   manufacturing, simulation-led product/process development. *Only beginning to move from pilot
-   to production.*
+1. **成熟层**：自动化物料输送、机器人、自动检测、集中控制、MES/WMS/APS，以及端到端的可追溯体系。*在领先工厂已经成熟。*
+2. **规模化层**：数字孪生、工业互联网平台、AI 辅助设计、工艺优化、预测性分析、工厂数据集成。*正从演示走向部署。*
+3. **新兴层**：工业大模型、AI 代理、自主排产、碳感知制造、以仿真为先导的产品与工艺开发。*刚刚开始从试点走向生产。*
 
-This interpretation matches the **China Rubber Industry Association (CRIA)** self-assessment: China
-is strong in manufacturing **hardware and core process equipment** but relatively weak in
-**industrial software, large models, and agents**.
+这一解读与**中国橡胶工业协会（CRIA）**的自我评估一致：中国在制造**硬件和核心工艺装备**方面强，但在**工业软件、大模型和智能体**方面相对较弱。
 
-**Strongest independently validated case:** **Guizhou Tyre (Guiyang)** — admitted to the World
-Economic Forum's Global Lighthouse Network (Jan 2025). With >40 Fourth Industrial Revolution
-applications on highly customized heavy-load products, WEF reports **defects −57%, labor
-productivity +68%, inventory −34%**. This is far stronger than a normal corporate "smart factory"
-announcement because it was externally assessed.
+**独立验证最充分的案例：贵州轮胎（贵阳）**，2025 年 1 月入选世界经济论坛全球灯塔网络。该工厂在高度定制化的重载产品上部署了 40 多项第四次工业革命应用，世界经济论坛报告其**缺陷率下降 57%、劳动生产率提高 68%、库存下降 34%**。由于经过外部评估，这比一般企业自行宣布的“智能工厂”有力得多。
 
-**Bottom line:** The transformation is **real but uneven**. Evidence is strongest at a handful of
-leading firms and gets thin for the long tail of producers. The advantage is evolving *from*
-inexpensive large-scale production *toward* automated scale + high equipment utilization + lower
-labor intensity + digital process control + flexible manufacturing + increasingly domestic
-machinery + AI-assisted engineering + green production + the ability to make more technically
-demanding tires. The claim weakens sharply once it moves from "automation" into "AI-native" or
-"fully autonomous" manufacturing.
+**结论：**这场转型**真实但不均衡**。证据在少数领先企业最强，到长尾生产者那里就变得稀薄。竞争优势正在*从*低成本大规模生产，*转向*自动化规模 + 高设备利用率 + 更低劳动强度 + 数字化过程控制 + 柔性制造 + 日益国产化的装备 + AI 辅助工程 + 绿色生产 + 制造技术要求更高的轮胎的能力。一旦从“自动化”进入“AI 原生”或“完全自主”制造，这一论断就会明显弱化。
 
 ---
 
-## How to Read the Evidence (Grading Framework)
+## 如何解读证据（分级框架）
 
-Two grading axes are used throughout so that publicity is never confused with proof.
+全文采用两条分级轴线，避免把宣传误当证明。
 
-**Implementation state**
+**实施状态**
 
-| State | Meaning |
+| 状态 | 含义 |
 |---|---|
-| **Announced / planned** | A target, investment plan, or proposed technology. Not counted as achieved. |
-| **Under construction / deployment** | Physical build or system deployment reported; no operating results yet. |
-| **Commissioned / operational** | Line/factory/software reported running, but robust before/after metrics may be absent. |
-| **Demonstrated result** | Operating performance reported with quantitative outcomes (productivity, defects, cycle time, cost, energy, inventory). |
+| **已宣布／已规划** | 目标、投资计划或拟采用的技术。不计为已实现。 |
+| **在建／部署中** | 已报道实体建设或系统部署，尚无运行结果。 |
+| **已投产／运行中** | 报道生产线、工厂或软件已在运行，但可能缺少可靠的前后对比指标。 |
+| **已证明结果** | 报道了带定量结果的运行绩效（生产率、缺陷、周期、成本、能耗、库存）。 |
 
-**Evidence confidence** — greatest weight to WEF validation, government standards, regulatory
-filings, and audited disclosures; company websites and local-government reports are valuable for
-technical detail but their performance metrics are **company-reported** unless corroborated;
-supplier case studies confirm *what equipment is installed* but have a commercial incentive.
+**证据可信度**：世界经济论坛验证、政府标准、监管备案和经审计的披露权重最高；企业网站和地方政府报道在技术细节上有价值，但其绩效指标除非有旁证，否则均视为**企业自报**；供应商案例可以确认*安装了什么设备*，但带有商业动机。
 
-Coverage window: publicly accessible evidence through **August 14, 2026**, searched in Chinese and
-English.
+覆盖窗口：截至 **2026 年 8 月 14 日**可公开获取的证据，以中英文检索。
 
 ---
 
-## 1. Manufacturing Upgrade Trends (2021–2026)
+## 一、制造升级趋势（2021–2026）
 
-### 1.1 Automation, Robotics, and Smart Factories
+### 1.1 自动化、机器人与智能工厂
 
-| Company | Factory | State | Evidence basis | Confidence |
+| 企业 | 工厂 | 状态 | 证据来源 | 可信度 |
 |---|---|---|---|---|
-| **Guizhou Tyre** | Guiyang | Demonstrated | WEF Lighthouse | **High** |
-| **ZC Rubber (Zhongce)** | Hangzhou / Qiantang "Future Factory" | Demonstrated | Local media + named mgmt source; MIIT recognition | **Medium-high** |
-| **Prinx Chengshan** | Shandong | Demonstrated | Local media, company disclosure | **Medium** |
-| **Doublestar** | Dongjiakou "Industry 4.0" | Demonstrated, lower verification | Industry-assoc / enterprise reporting | **Medium-low** |
-| **Sentury** | Qingdao | Operational / partial | Company filing + Cimcorp supplier case | **Medium** |
-| **Linglong** | Domestic + Zrenjanin (Serbia) | Commissioned / operational | Company + MIIT selections; OEM audits | **Med-high deploy / low magnitude** |
-| **Sailun** | Qingdao + overseas | Operational, green results demonstrated | Sustainability disclosures | **Medium-high (env.)** |
-| **Triangle** | High-performance PCR smart factory | Operational / recognized | Company + Shandong smart-factory list | **Med capability / low outcome** |
+| **贵州轮胎** | 贵阳 | 已证明结果 | 世界经济论坛灯塔工厂 | **高** |
+| **中策橡胶** | 杭州钱塘“未来工厂” | 已证明结果 | 地方媒体 + 具名管理层信源；工信部认定 | **中高** |
+| **浦林成山** | 山东 | 已证明结果 | 地方媒体、企业披露 | **中** |
+| **双星** | 董家口“工业 4.0” | 已证明结果，验证程度较低 | 行业协会／企业报道 | **中低** |
+| **森麒麟** | 青岛 | 运行中／部分 | 企业公告 + Cimcorp 供应商案例 | **中** |
+| **玲珑** | 国内 + 兹雷尼亚宁（塞尔维亚） | 已投产／运行中 | 企业 + 工信部入选；整车厂审核 | **部署中高／效果幅度低** |
+| **赛轮** | 青岛 + 海外 | 运行中，绿色成果已证明 | 可持续发展披露 | **中高（环境）** |
+| **三角** | 高性能乘用胎智能工厂 | 运行中／获认定 | 企业 + 山东省智能工厂名单 | **能力中／结果低** |
 
-### 1.2 Demonstrated KPI results
+### 1.2 已证明的 KPI 结果
 
-**Guizhou Tyre (WEF Lighthouse) — highest confidence**
-- Defect rate **−57%** · Labor productivity **+68%** · Inventory **−34%**
-- (Outline draft also cited energy −43%, capacity +20%, workforce −29% from Guiyang government
-  sources — plausible but not part of the externally validated WEF set.)
+**贵州轮胎（世界经济论坛灯塔工厂），可信度最高**
+- 缺陷率 **−57%** · 劳动生产率 **+68%** · 库存 **−34%**
+- （提纲稿还引用了贵阳市政府来源的能耗 −43%、产能 +20%、用工 −29%，可信但不属于经外部验证的世界经济论坛数据集。）
 
-**ZC Rubber "Future Factory"** — *note the discrepancy between the two source drafts:*
-- **Line-level (report draft):** representative line **450 → 140 workers**, **13,000 tires/day**,
-  yield **+0.8 pp**, >RMB10m annual loss avoided, order switching **+50%**, production cycle
-  **30 → 15 days**, ~RMB500m investment, >10,000 sensors, AI-controlled 5-compound extrusion at
-  0.01 mm.
-- **Factory-wide (outline draft):** workforce **~10,000 → ~2,000**, OEE 92%, 35-second build cycle,
-  vision-inspection consistency 99.8%, development cycle −50%, efficiency +50%.
-- **Reconciliation:** these describe *different scopes* (one line vs. whole factory) and possibly
-  different plants; treat the **line-level 450→140** figure as the better-sourced datapoint and the
-  factory-wide 10,000→2,000 as a broader, lower-confidence company claim.
+**中策橡胶“未来工厂”**，*注意两份来源稿之间的差异：*
+- **生产线层面（报告稿）：**代表性生产线 **450 → 140 人**，**日产 13,000 条**，合格率 **+0.8 个百分点**，每年避免损失超过 1,000 万元，订单切换 **+50%**，生产周期 **30 → 15 天**，投资约 5 亿元，传感器超过 10,000 个，AI 控制的五复合胶料挤出精度达 0.01 mm。
+- **全厂层面（提纲稿）：**用工 **约 10,000 → 约 2,000 人**，OEE 92%，成型节拍 35 秒，视觉检测一致性 99.8%，开发周期 −50%，效率 +50%。
+- **调和：**两组数据描述的是*不同范围*（一条生产线与整座工厂），可能还涉及不同厂区；应把**生产线层面的 450→140** 视为来源更可靠的数据点，把全厂的 10,000→2,000 视为范围更宽、可信度更低的企业说法。
 
-**Prinx Chengshan** — Numerical-control penetration **>80%**, efficiency **+23.4%**, labor cost
-**−30%**, ~RMB120m annual production/operating savings; 2024 legacy-line upgrade RMB140m. *Medium
-confidence* (company disclosure via local media).
+**浦林成山**：数控化率 **>80%**，效率 **+23.4%**，人工成本 **−30%**，每年节省生产运营成本约 1.2 亿元；2024 年老线改造投入 1.4 亿元。*可信度中*（企业经地方媒体披露）。
 
-**Doublestar** — Reported production efficiency ~**3×** and defect rate **>80% lower**.
-*Medium-low confidence* (not independently audited).
+**双星**：报道生产效率约 **3 倍**，缺陷率 **降低 80% 以上**。*可信度中低*（未经独立审计）。
 
-**Sentury (Qingdao, via Cimcorp)** — plant utilization **72% → 96.5%**, ~**+3,800 tires/day**, 100%
-green-tire availability at curing. *Supplier-reported and undated — not a clean 2021–26 delta.*
+**森麒麟（青岛，经 Cimcorp）**：工厂利用率 **72% → 96.5%**，约 **+3,800 条／天**，硫化工序生胎 100% 可用。*供应商报道且未注明日期，不是干净的 2021–26 年增量。*
 
-**MIIT national average (Excellence-level smart factories)** — development cycle **−28.4%**,
-production efficiency **+22.3%**, defect rates **−50.2%**, carbon **−20.4%**.
+**工信部全国平均（卓越级智能工厂）**：开发周期 **−28.4%**，生产效率 **+22.3%**，缺陷率 **−50.2%**，碳排放 **−20.4%**。
 
-> **Critical caveat carried from the report draft:** a "smart factory" award proves *deployment of
-> capability*, not a specific productivity or quality gain. Guizhou stands out precisely because it
-> supplies measured outcomes alongside the technology.
+> **报告稿中延续的关键提醒：**“智能工厂”奖项证明的是*能力已部署*，而不是具体的生产率或质量收益。贵州轮胎之所以突出，正是因为它在技术之外还提供了实测结果。
 
 ---
 
-## 2. AI, Digital Twin, MES, and Industrial Software
+## 二、AI、数字孪生、MES 与工业软件
 
-### 2.1 AI applications (real but heterogeneous)
-Formula/materials optimization · process control · predictive maintenance · machine-vision
-inspection · quality/yield prediction · demand forecasting · product simulation. Mature in
-*selected* prediction/inspection/design tasks; genuinely autonomous end-to-end production remains
-**emerging**, not standard.
+### 2.1 AI 应用（真实但参差不齐）
+配方／材料优化 · 过程控制 · 预测性维护 · 机器视觉检测 · 质量／良率预测 · 需求预测 · 产品仿真。在*选定的*预测、检测和设计任务上已经成熟；真正自主的端到端生产仍处于**新兴**阶段，不是标准配置。
 
-### 2.2 Digital twin — separate the claim from the reality
-- **ZC Rubber:** full-factory twin, tens of thousands of sensors, real-time visualization.
-- **Linglong:** 3D factory model synchronized with production.
-- **Caution:** many public "digital twin" claims (e.g., some Sailun references) are closer to
-  **product-traceability / digital production records** than fully validated engineering twins.
+### 2.2 数字孪生：把说法和现实分开
+- **中策橡胶：**全厂级孪生，数万个传感器，实时可视化。
+- **玲珑：**与生产同步的三维工厂模型。
+- **提醒：**许多公开的“数字孪生”说法（例如赛轮的部分引用）更接近**产品追溯／数字化生产记录**，而不是经过充分验证的工程孪生。
 
-### 2.3 MES / industrial-software stack
-Typical architecture: **PLM → APS → MES → WMS → ERP → Quality/QMS**, connected via industrial
-Internet.
+### 2.3 MES／工业软件栈
+典型架构：**PLM → APS → MES → WMS → ERP → 质量／QMS**，通过工业互联网连接。
 
-| Company | Disclosed systems |
+| 企业 | 披露的系统 |
 |---|---|
-| Linglong | SAP + SRM + APS + MES + AI Vision (+ PLM/TDM, QMS, EAMS, TMS) |
-| Triangle | ERP + PLM + MES + WMS + EAM + CRM + central control/cloud |
-| Prinx Chengshan | PLM + MES |
-| Sailun | MES + WMS + RFID |
-| Sentury | Five-module: control · execution · warehousing/logistics · scan/inspection · scheduling |
+| 玲珑 | SAP + SRM + APS + MES + AI 视觉（+ PLM/TDM、QMS、EAMS、TMS） |
+| 三角 | ERP + PLM + MES + WMS + EAM + CRM + 中央控制／云 |
+| 浦林成山 | PLM + MES |
+| 赛轮 | MES + WMS + RFID |
+| 森麒麟 | 五大模块：控制 · 执行 · 仓储物流 · 扫码检测 · 排产 |
 
-**Enabler:** **GB/T 45018-2024, Tire Intelligent Manufacturing Data Dictionary** (Nov 2024) — a
-prerequisite for interoperability and data-driven applications.
-
----
-
-## 3. Process & Equipment Innovation
-
-### 3.1 Tire building
-**MESNAC NPS one-stage building machine** — reported **35-second single-tire cycle**, machine
-vision + robots + autonomous-learning software, one operator per multiple machines; "lights-out"
-weighing and curing workshops. *Supplier performance claims, not independent plant benchmarks.*
-
-### 3.2 Inspection
-**AI machine-vision** at ZC, Linglong, Sailun, Guizhou — up to **200 fps**, automated defect
-detection, real-time quality feedback.
-
-### 3.3 Smart logistics
-AGVs · aerial monorail conveyors · RFID traceability · automated warehouses.
-ZC "Future Factory": raw-material turnover **+40%**, inventory cost **−30%**.
-
-### 3.4 Equipment localization (a genuinely new capability)
-Per CRIA machinery analysis (Nov 2025, industry-estimate — treat as such): Chinese firms are
-**6 of the global top-10** rubber-machinery companies and **17 of the top-30**, ~**53.2%** of top-30
-sales in 2024. High-end segments still feature strong foreign players (e.g., H-F, VMI). The stack
-remains **hybrid** — Chinese manufacturers are becoming capable **system integrators**, combining
-domestic equipment with select global technology (e.g., Sentury + Cimcorp logistics).
+**关键支撑：GB/T 45018-2024《轮胎智能制造数据字典》**（2024 年 11 月），是互操作和数据驱动应用的前提条件。
 
 ---
 
-## 4. Productivity, Quality, Flexibility, Labor
+## 三、工艺与装备创新
 
-Key insight (from reconciling both drafts): **labor reduction is not the only objective.**
-- Guizhou's standout gains are in **defects and inventory**, not just headcount.
-- ZC combines lower staffing with **faster order change + shorter lead time** → a shift from labor
-  substitution toward **flow optimization and flexibility**.
-- Leading plants are increasingly optimized for **complexity, not only volume** (Guizhou's >60%
-  customized heavy-load orders; Sentury's high-mix, large-diameter products — 17"+ ≈ 65% of sales
-  value, 18"+ ≈ 40%).
+### 3.1 轮胎成型
+**软控（MESNAC）NPS 一次法成型机**：报道**单胎节拍 35 秒**，机器视觉 + 机器人 + 自学习软件，一人看管多台设备；“黑灯”称量和硫化车间。*属供应商性能说法，不是独立的工厂基准。*
 
----
+### 3.2 检测
+中策、玲珑、赛轮、贵州轮胎的 **AI 机器视觉**：最高 **200 fps**，自动缺陷检测，实时质量反馈。
 
-## 5. Green Manufacturing & Decarbonization
+### 3.3 智能物流
+AGV · 空中单轨输送 · RFID 追溯 · 自动化仓库。
+中策“未来工厂”：原材料周转 **+40%**，库存成本 **−30%**。
 
-Green and smart manufacturing are now inseparable — most energy/carbon reduction requires
-fine-grained measurement and process control.
-
-**Sailun (most detailed disclosure)** — 2030 goals: **40% sustainable-material content**, **−30%
-unit energy** and **−30% unit carbon** vs. 2022 baseline. By 2025: sustainable materials **31.04%**;
-unit-energy reductions **17.54%** (semi-steel), **19.89%** (all-steel), **30.20%** (off-road);
-unit-carbon **−22.94% / −24.34% / −37.29%**. Energy-management system covers all 10 factories;
-7 continuously operating factories ISO 50001-certified. *Company-reported but specific enough to
-verify against 2030 targets.*
-
-**ZC Rubber** — 8.6 MW rooftop solar (~8.2m kWh/yr, ~11,377 t CO₂/yr avoided); low-temperature
-mixing 165°C → 140°C (~15% energy cut); VOC reduction **80.92%** via activated carbon + RTO.
-
-**Standards & certifications** — **HG/T 6061-2022** (Green Factory Evaluation) and **HG/T 6062-2022**
-(Green Supply Chain), effective Apr 2023. Sailun (ISO 14001/50001), Prinx Chengshan (National Green
-Factory + Green Supply Chain Enterprise).
+### 3.4 装备国产化（真正的新能力）
+据中国橡胶工业协会橡机分析（2025 年 11 月，属行业估计，应照此看待）：全球橡机前 10 强中中国企业占 **6 家**，前 30 强中占 **17 家**，2024 年约占前 30 强销售额的 **53.2%**。高端细分市场仍有强势外资企业（如 H-F、VMI）。技术栈仍是**混合式**的：中国制造商正在成为有能力的**系统集成商**，把国产装备与精选的全球技术结合起来（例如森麒麟 + Cimcorp 物流）。
 
 ---
 
-## 6. Capacity Modernization & High-Value Products
+## 四、生产率、质量、柔性与用工
 
-Structural shift: **from more capacity toward better capacity.**
-
-**EV / low-rolling-resistance**
-- ZC EV PRO: rolling resistance **−15%**
-- Sailun EcoPoint³: EU label **A/A** (BYD and other Chinese EV OEMs)
-
-**Giant OTR / mining**
-- Sailun 63-inch mining tire · **Aeolus** first Chinese 60/80R57 · Prinx Chengshan 30.00R51
-
-**Aerospace**
-- Triangle Tire — **AS9100D** certification (aerospace-grade QMS, zero-defect requirements)
+关键洞察（综合两份稿件）：**减少用工不是唯一目标。**
+- 贵州轮胎最突出的收益在**缺陷和库存**，而不只是人数。
+- 中策把更低的用工与**更快的订单切换 + 更短的交付周期**结合起来，说明重心正从劳动替代转向**流动优化与柔性**。
+- 领先工厂越来越针对**复杂度而非仅仅产量**做优化（贵州轮胎 60% 以上为定制化重载订单；森麒麟的高混合、大直径产品，17 英寸及以上约占销售额 65%，18 英寸及以上约占 40%）。
 
 ---
 
-## 7. Technology Suppliers
+## 五、绿色制造与脱碳
 
-| Type | Supplier | Role / user |
+绿色制造与智能制造如今已不可分割：大多数能耗和碳减排都依赖精细化的测量和过程控制。
+
+**赛轮（披露最详细）**：2030 年目标：**可持续材料占比 40%**，相对 2022 年基准**单位能耗 −30%**、**单位碳排放 −30%**。到 2025 年：可持续材料 **31.04%**；单位能耗下降 **17.54%**（半钢）、**19.89%**（全钢）、**30.20%**（非公路）；单位碳排放 **−22.94% / −24.34% / −37.29%**。能源管理系统覆盖全部 10 座工厂；7 座持续运行的工厂通过 ISO 50001 认证。*企业自报，但足够具体，可以对照 2030 年目标核验。*
+
+**中策橡胶**：8.6 MW 屋顶光伏（年发电约 820 万 kWh，年减排约 11,377 吨 CO₂）；低温混炼 165°C → 140°C（节能约 15%）；通过活性炭 + RTO 使 VOC 减排 **80.92%**。
+
+**标准与认证**：**HG/T 6061-2022**（绿色工厂评价）和 **HG/T 6062-2022**（绿色供应链），2023 年 4 月实施。赛轮（ISO 14001/50001），浦林成山（国家级绿色工厂 + 绿色供应链管理企业）。
+
+---
+
+## 六、产能现代化与高价值产品
+
+结构性转变：**从更多产能转向更好产能。**
+
+**新能源汽车／低滚阻**
+- 中策 EV PRO：滚动阻力 **−15%**
+- 赛轮 EcoPoint³：欧盟标签 **A/A**（比亚迪及其他中国新能源整车厂）
+
+**巨型工程胎／矿用胎**
+- 赛轮 63 英寸矿用胎 · **风神**首条国产 60/80R57 · 浦林成山 30.00R51
+
+**航空**
+- 三角轮胎：**AS9100D** 认证（航空级质量管理体系，零缺陷要求）
+
+---
+
+## 七、技术供应商
+
+| 类型 | 供应商 | 角色／用户 |
 |---|---|---|
-| Chinese | **MESNAC** | Building machines, curing, industrial software, IoT |
-| Chinese | **Tencent Cloud** | Smart manufacturing / industrial cloud (Linglong) |
-| Chinese | **iFLYTEK** | AI manufacturing / predictive analytics (Sailun) |
-| Foreign | **Siemens** | Curing systems, PLC automation |
-| Foreign | **Cimcorp** | Robotic material-flow / warehouse control (Sentury) |
+| 中国 | **软控（MESNAC）** | 成型机、硫化、工业软件、物联网 |
+| 中国 | **腾讯云** | 智能制造／工业云（玲珑） |
+| 中国 | **科大讯飞** | AI 制造／预测性分析（赛轮） |
+| 外资 | **西门子** | 硫化系统、PLC 自动化 |
+| 外资 | **Cimcorp** | 机器人物流／仓储控制（森麒麟） |
 
 ---
 
-## 8. Policy & Industry Drivers
+## 八、政策与产业驱动因素
 
-- **Made in China 2025** — smart manufacturing, automation.
-- **14th Five-Year Plan for Intelligent Manufacturing (Dec 2021)** — demonstration factories,
-  intelligent equipment, industrial software, standards; 2025 objectives + 2035 vision.
-- **Smart Factory Gradient Program (2024)** — levels Basic / Advanced / Excellent / Leading.
-  Reported 2025: **30,000+ Basic, 1,200 Advanced, 230 Excellent.**
-- **National "AI+" direction (2026 draft outline)** — deeper digital-real economy integration.
-- **CRIA "15th Five-Year" tire recommendations (Mar 2026)** — shift from **scale → quality/value**
-  and **cost advantage → innovation advantage**; full-chain intelligent transformation; AI in
-  materials/tread; high-precision simulation & virtual validation; lifecycle carbon management;
-  curb blind capacity. **2030 output target ≈ 1.025 billion tires** (858m PCR, 141m TBR, 26m bias;
-  CAGRs ≈ +4.7% PCR / +0.5% TBR / −4.3% bias).
+- **《中国制造 2025》**：智能制造、自动化。
+- **《“十四五”智能制造发展规划》（2021 年 12 月）**：示范工厂、智能装备、工业软件、标准；2025 年目标 + 2035 年远景。
+- **智能工厂梯度培育（2024）**：基础级／先进级／卓越级／领航级。2025 年报道：**基础级 30,000 余家、先进级 1,200 家、卓越级 230 家。**
+- **国家“人工智能+”方向（2026 年规划纲要草案）**：数字经济与实体经济更深度融合。
+- **中国橡胶工业协会“十五五”轮胎建议（2026 年 3 月）**：从**规模 → 质量／价值**、从**成本优势 → 创新优势**转变；全链条智能化转型；材料／胎面中的 AI 应用；高精度仿真与虚拟验证；全生命周期碳管理；遏制盲目扩产。**2030 年产量目标约 10.25 亿条**（乘用胎 8.58 亿、卡客车胎 1.41 亿、斜交胎 0.26 亿；年均复合增速约为乘用胎 +4.7%／卡客车胎 +0.5%／斜交胎 −4.3%）。
 
 ---
 
-## 9. Major Barriers
+## 九、主要障碍
 
-**Technology / software gap (most important)** — CRIA: strong hardware, weaker **industrial
-software, large models, agents**; plus data security/privacy, integration across heterogeneous
-systems, and shortage of talent who understand *both* rubber processes *and* AI.
+**技术／软件差距（最重要）**：中国橡胶工业协会指出，硬件强，**工业软件、大模型、智能体**弱；此外还有数据安全与隐私、异构系统集成，以及*同时*懂橡胶工艺和 AI 的人才短缺。
 
-**Evidence gap** — many sources use "intelligent / unmanned / lights-out" without publishing
-baseline OEE, scrap, first-pass yield, changeover, energy-per-tire, or cost-per-tire. The most
-defensible ranking is **not** the same as the publicity ranking.
+**证据差距**：许多来源使用“智能／无人／黑灯”等说法，却不公布基准 OEE、废品率、一次合格率、换型时间、单胎能耗或单胎成本。最站得住脚的排名**并不**等于宣传热度的排名。
 
-**Economic** — margin pressure, high CAPEX, long ROI; **overcapacity and price competition** could
-undermine automation returns (CRIA urges reducing low-end capacity).
+**经济因素**：利润率压力、高资本开支、投资回收期长；**产能过剩和价格竞争**可能侵蚀自动化回报（中国橡胶工业协会呼吁削减低端产能）。
 
-**Trade (now concrete, not theoretical)** — On **July 7, 2026** the European Commission imposed
-definitive anti-dumping duties of **4.3%–45.3%** on passenger-car and light-lorry tyres from China;
-a parallel anti-subsidy probe was ongoing (conclusion scheduled Dec 2026). Chinese imports were
-~93m tires and ~28% of EU consumption in 2024. This raises the strategic value of higher-value
-products, brand upgrading, market diversification, and overseas manufacturing.
+**贸易（已成现实，不再是理论）**：**2026 年 7 月 7 日**，欧盟委员会对来自中国的乘用车和轻卡轮胎征收 **4.3%–45.3%** 的最终反倾销税；同步进行的反补贴调查仍在进行（计划 2026 年 12 月结案）。2024 年中国进口轮胎约 9,300 万条，约占欧盟消费量的 28%。这提高了高价值产品、品牌升级、市场多元化和海外制造的战略价值。
 
-**Implementation gap** — many announced projects remain planned / under construction; some
-cancelled or delayed (e.g., Linglong Brazil, Linglong Shaanxi).
+**落地差距**：许多已宣布的项目仍处于规划／在建状态；部分项目取消或推迟（如玲珑巴西、玲珑陕西）。
 
 ---
 
-## 10. Benchmark Tiers
+## 十、标杆分层
 
-**Tier 1 — validated leaders**
-- **Guizhou Tyre** — WEF Lighthouse; strongest independently validated KPIs.
-- **ZC Rubber** — Future Factory v2.0; AI-agent deployment; MIIT recognition; strong quantified
-  (if company-sourced) economics.
+**第一梯队：经验证的领先者**
+- **贵州轮胎**：世界经济论坛灯塔工厂；独立验证最充分的 KPI。
+- **中策橡胶**：未来工厂 2.0；AI 智能体部署；工信部认定；量化经济效益充分（尽管为企业来源）。
 
-**Tier 2 — advanced, less independently verified**
-- **Prinx Chengshan** — quantified efficiency/cost gains (medium confidence).
-- **Sailun** — industrial Internet + EcoPoint³ + best-documented **green** metrics.
-- **Linglong** — sophisticated integrated stack + OEM validation; deployment strong, economic
-  magnitude unproven.
-- **Sentury** — five-module architecture + supplier-verified logistics uplift.
+**第二梯队：先进，但独立验证较少**
+- **浦林成山**：量化的效率／成本收益（可信度中）。
+- **赛轮**：工业互联网 + EcoPoint³ + 文档最完备的**绿色**指标。
+- **玲珑**：复杂的集成系统栈 + 整车厂验证；部署强，经济效益幅度未经证明。
+- **森麒麟**：五模块架构 + 供应商验证的物流提升。
 
-**Tier 3 — strong specialized benchmarks**
-- **Doublestar** (Industry 4.0, lower verification) · **Triangle** (aerospace-grade QMS) ·
-  **Aeolus** (giant OTR).
+**第三梯队：有特色的专项标杆**
+- **双星**（工业 4.0，验证程度较低）· **三角**（航空级质量管理体系）· **风神**（巨型工程胎）。
 
 ---
 
-## 11. Outlook 2026–2031
+## 十一、2026–2031 年展望
 
-| Development | Direction | Evidence strength |
+| 发展方向 | 走向 | 证据强度 |
 |---|---|---|
-| Automation → **semi-autonomous** manufacturing | Connected lines, increasingly unattended cells | High for automation; medium for factory-wide lights-out |
-| MES → **AI above MES** | AI scheduling, quality prediction, maintenance agents | Medium-high directionally; medium/low on industry-wide maturity |
-| Physical prototyping → **simulation-first engineering** | CAE, digital twins, virtual validation, AI materials/tread | High as strategy; company-specific on realized savings |
-| Energy monitoring → **closed-loop carbon optimization** | Process-level energy/carbon/production/material data | High (standards + explicit corporate targets) |
-| Capacity expansion → **value-oriented replacement** | Investment shifts to PCR/NEV/OTR/aviation/advanced | High as policy; medium for execution |
-| Chinese equipment → **Chinese integrated solutions** | Whole-line solutions, incl. overseas | High for machinery; medium for software |
-| Factory data → **lifecycle data** | Carbon footprints, sustainable materials, recycling, DPP | Medium-high |
+| 自动化 → **半自主**制造 | 互联生产线，越来越多的无人单元 | 自动化方面高；全厂黑灯方面中 |
+| MES → **MES 之上的 AI** | AI 排产、质量预测、维护智能体 | 方向上中高；全行业成熟度中／低 |
+| 实物样件 → **仿真优先的工程** | CAE、数字孪生、虚拟验证、AI 材料／胎面 | 作为战略高；实际节省因企业而异 |
+| 能耗监测 → **闭环碳优化** | 工序级能耗／碳／生产／物料数据 | 高（标准 + 明确的企业目标） |
+| 产能扩张 → **面向价值的置换** | 投资转向乘用胎／新能源／工程胎／航空／高端 | 作为政策高；执行层面中 |
+| 中国装备 → **中国整体解决方案** | 整线方案，包括海外 | 机械方面高；软件方面中 |
+| 工厂数据 → **全生命周期数据** | 碳足迹、可持续材料、回收、数字产品护照 | 中高 |
 
-**On "2031" specifically:** No official Chinese tire-industry *2031* manufacturing plan was
-identified. The principal plan sets **2030** targets; CRIA machinery analysis contains a 2031
-*market forecast* (not a policy target). Treat 2031 as an **outlook horizon**, not an official plan.
+**关于“2031 年”：**未发现任何官方的中国轮胎工业 *2031 年*制造规划。主要规划设定的是 **2030 年**目标；中国橡胶工业协会的橡机分析包含一个 2031 年*市场预测*（不是政策目标）。应把 2031 年视为**展望时点**，而不是官方规划。
 
 ---
 
-## 12. Overall Assessment
+## 十二、总体评估
 
-China's tire manufacturing is evolving through **five stages**:
+中国轮胎制造正在经历**五个阶段**：
 
-**low-cost labor-intensive scale → automated scale → integrated digital/smart factories →
-flexible data-driven factories → emerging AI-assisted, low-carbon, high-value manufacturing.**
+**低成本劳动密集型规模 → 自动化规模 → 集成的数字化／智能工厂 → 柔性的数据驱动工厂 → 新兴的 AI 辅助、低碳、高价值制造。**
 
-Evidence for the first four stages is now substantial at leading firms. The **fifth stage is the
-strategic destination for 2026–2031 — emerging, not accomplished.** The key thing to monitor over
-the next five years is **not** the number of factories labeled "smart," but whether Chinese
-manufacturers can **reproduce Guizhou/ZC/Prinx-type measurable gains across many plants** while
-simultaneously **closing the industrial-software gap**, making more high-value tires, lowering
-lifecycle carbon, and **exporting their manufacturing systems — not merely their tire capacity —**
-to global production bases.
+前四个阶段的证据在领先企业已相当充分。**第五阶段是 2026–2031 年的战略目的地，仍在形成中，尚未实现。**未来五年真正需要观察的，**不是**被冠以“智能”之名的工厂数量，而是中国制造商能否在**许多工厂中复制贵州轮胎、中策、浦林成山式的可测量收益**，同时**弥合工业软件差距**、制造更多高价值轮胎、降低全生命周期碳排放，并把**制造体系本身，而不仅仅是轮胎产能**，输出到全球生产基地。
 
 ---
 
-## Appendix A — Timeline & Evidence Register
+## 附录 A：时间线与证据登记
 
-| Year | Milestone | Status / interpretation |
+| 年份 | 里程碑 | 状态／解读 |
 |---|---|---|
-| 2021 | 14th FYP for Intelligent Manufacturing (demo factories, equipment, software, standards) | Policy enacted (enabling framework) |
-| 2022 | Tire green-factory & green-supply-chain standards approved; Sentury MIIT demo recognition | Standards + capability recognition |
-| 2023 | Full-process industrial-Internet integration; capacity reallocates to higher-performance | Scaling / integration phase |
-| 2024 | ZC Future Factory quantified economics; GB/T 45018-2024 data dictionary (Nov) | Demonstrated economics + data standardization |
-| 2025 | Guizhou WEF Lighthouse; Linglong MIIT selections; suppliers commercialize unmanned/lights-out | Shift to validated 4IR/AI use cases |
-| 2026 | CRIA 15th-FYP tire recommendations; national "AI+" emphasis | Plan/outlook, not achieved result |
-| 2027–2029 | Agents, predictive/autonomous optimization, virtual validation, low-labor workshops | Inference from current deployments |
-| 2030 | CRIA full-chain transformation targets; Sailun 40% materials / −30% energy & carbon | Industry/company targets — not yet outcomes |
-| 2031 | No official tire "2031" target; machinery market forecast only | Outlook only |
+| 2021 | “十四五”智能制造发展规划（示范工厂、装备、软件、标准） | 政策出台（赋能框架） |
+| 2022 | 轮胎绿色工厂和绿色供应链标准获批；森麒麟获工信部示范认定 | 标准 + 能力认定 |
+| 2023 | 全流程工业互联网集成；产能向更高性能产品重新配置 | 规模化／集成阶段 |
+| 2024 | 中策未来工厂量化经济效益；GB/T 45018-2024 数据字典（11 月） | 已证明的经济效益 + 数据标准化 |
+| 2025 | 贵州轮胎入选世界经济论坛灯塔工厂；玲珑入选工信部名单；供应商将无人／黑灯方案商业化 | 转向经验证的 4IR/AI 用例 |
+| 2026 | 中国橡胶工业协会“十五五”轮胎建议；国家“人工智能+”导向 | 规划／展望，不是已实现的结果 |
+| 2027–2029 | 智能体、预测性／自主优化、虚拟验证、少人化车间 | 基于当前部署的推断 |
+| 2030 | 中国橡胶工业协会全链条转型目标；赛轮 40% 材料／−30% 能耗与碳 | 行业／企业目标，尚非结果 |
+| 2031 | 无官方轮胎“2031”目标；仅有橡机市场预测 | 仅为展望 |
 
-## Appendix B — Source Register (for verification)
+## 附录 B：来源登记（供核验）
 
-| Source | Organization / type | Date | Main evidence |
+| 来源 | 机构／类型 | 日期 | 主要证据 |
 |---|---|---|---|
-| 奋进"十五五"·轮胎篇 — [cria.org.cn](https://cria.org.cn/a/2036719595742662657) | CRIA / planning | Mar 25 2026 | 2030 objectives; high-end/intelligent/green; capacity policy |
-| "十四五"智能制造发展规划 — [ndrc.gov.cn](https://www.ndrc.gov.cn/fzggw/jgsj/cys/sjdt/202112/t20211231_1311203.html) | NDRC / govt | Dec 31 2021 | National smart-manufacturing framework |
-| "十五五"规划纲要草案摘要 — [nda.gov.cn](https://www.nda.gov.cn/sjj/swdt/xwfb/0308/20260308145749918872055_mobile.html) | National Data Admin | Mar 8 2026 | "AI+", digital-real integration |
-| 2022中国橡胶工业大事记 — [cria.org.cn](https://www.cria.org.cn/a/1766986937847037953) | CRIA | 2022 | HG/T 6061-2022 & 6062-2022 green standards |
-| Global Lighthouse Network 2025 — [weforum.org](https://www.weforum.org/press/2025/01/global-lighthouse-network-2025-world-economic-forum-recognizes-companies-transforming-manufacturing-through-innovation/) | WEF / independent | Jan 2025 | Guizhou: defects −57%, productivity +68%, inventory −34% |
-| ZC Future Factory report — [hangzhou.com.cn](https://ori.hangzhou.com.cn/ornews/content/2024-04/09/content_8713121.htm) | Local media | Apr 9 2024 | ZC investment, staffing, yield, twin, cycle time |
-| 玲珑数智化工厂入围工信部名单 — [linglong.cn](https://www.linglong.cn/content/details34_298018.html) | Linglong / company | Jan 6 2025 | AI platform, MES/APS/QMS/WMS, MIIT selections |
-| 赛轮轮胎2024年报 — [finance.sina](https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=11047953&stockid=601058) | Sailun / filing | Apr 29 2025 | Intelligent-manufacturing strategy |
-| Sailun Ecological Excellence — [sailungroup.com](https://www.sailungroup.com/develop/ecology.html) | Sailun / company | Accessed Aug 14 2026 | 2030 energy/carbon/material targets + 2025 results |
-| 成山集团"智造"加持 — [whnews.cn](https://www.whnews.cn/news/node/2025-02/17/content_7351655.htm) | Local media | Feb 17 2025 | Prinx capex, +23.4% efficiency, −30% labor cost |
-| Doublestar case — [catsi.cn](https://www.catsi.cn/view-c285904a196b4104be660db504eb829a-3e970fc9c86e446eb5e0be44118402eb.html) | Industry assoc | Jan 2026 | MEP/APS; ~3× efficiency, >80% defect cut |
-| 森麒麟2025半年报 — [finance.sina](https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=11424729&stockid=002984) | Sentury / filing | Aug 30 2025 | Five-module model, product mix |
-| Sentury Qingdao material flow — [cimcorp.com](https://cimcorp.com/case-study/sentury-tire/) | Cimcorp / supplier | Undated | Utilization 72%→96.5%, +3,800 tires/day |
-| 三角轮胎山东省先进级智能工厂 — [triangle.com.cn](https://www.triangle.com.cn/cn/index/pageview/catid/11/id/562.html) | Triangle / company | Jun 30 2025 | APS/MES/ERP/PLM/EAM/CRM integration |
-| MESNAC intelligent equipment — [en.mesnac.com](https://en.mesnac.com/1163.html) | MESNAC / supplier | Aug 8 2025 | Unmanned building, lights-out curing, 35-sec cycle |
-| 2026全球橡胶机械趋势报告 — [xjmj.cria.org.cn](https://xjmj.cria.org.cn/a/1992832922533597185) | CRIA machinery | Nov 24 2025 | Chinese machinery share, 2031 market outlook |
-| 智能体助力橡胶工业智能制造 — [cria.org.cn](https://www.cria.org.cn/a/2001927176820199425) | CRIA / analysis | Dec 16 2025 | AI/agent direction, GB/T 45018-2024, software gaps |
-| 2025中国橡胶工业十大新闻 — [xjmj.cria.org.cn](https://xjmj.cria.org.cn/a/2008007717483024386) | CRIA | Jan 5 2026 | Structural transition, trade pressure, anti-price-competition |
-| EU anti-dumping duties on China tyres — [ec.europa.eu](https://policy.trade.ec.europa.eu/news/commission-imposes-anti-dumping-duties-passenger-car-and-light-lorry-tyres-china-2026-07-09_en) | European Commission | Jul 9 2026 | Definitive 4.3–45.3% duties; parallel anti-subsidy probe |
-| Digital Twin in Automotive Industry — [sciltp.com](https://www.sciltp.com/journals/ijamm/articles/2504000125) | Liu et al. / academic | Mar 24 2025 | Basis for digital twins, sensor-driven manufacturing |
+| 奋进"十五五"·轮胎篇 — [cria.org.cn](https://cria.org.cn/a/2036719595742662657) | 中国橡胶工业协会／规划 | 2026 年 3 月 25 日 | 2030 年目标；高端化、智能化、绿色化；产能政策 |
+| "十四五"智能制造发展规划 — [ndrc.gov.cn](https://www.ndrc.gov.cn/fzggw/jgsj/cys/sjdt/202112/t20211231_1311203.html) | 国家发改委／政府 | 2021 年 12 月 31 日 | 国家智能制造框架 |
+| "十五五"规划纲要草案摘要 — [nda.gov.cn](https://www.nda.gov.cn/sjj/swdt/xwfb/0308/20260308145749918872055_mobile.html) | 国家数据局 | 2026 年 3 月 8 日 | “人工智能+”、数实融合 |
+| 2022中国橡胶工业大事记 — [cria.org.cn](https://www.cria.org.cn/a/1766986937847037953) | 中国橡胶工业协会 | 2022 年 | HG/T 6061-2022 与 6062-2022 绿色标准 |
+| Global Lighthouse Network 2025 — [weforum.org](https://www.weforum.org/press/2025/01/global-lighthouse-network-2025-world-economic-forum-recognizes-companies-transforming-manufacturing-through-innovation/) | 世界经济论坛／独立机构 | 2025 年 1 月 | 贵州轮胎：缺陷 −57%、生产率 +68%、库存 −34% |
+| 中策未来工厂报道 — [hangzhou.com.cn](https://ori.hangzhou.com.cn/ornews/content/2024-04/09/content_8713121.htm) | 地方媒体 | 2024 年 4 月 9 日 | 中策投资、用工、合格率、孪生、周期 |
+| 玲珑数智化工厂入围工信部名单 — [linglong.cn](https://www.linglong.cn/content/details34_298018.html) | 玲珑／企业 | 2025 年 1 月 6 日 | AI 平台、MES/APS/QMS/WMS、工信部入选 |
+| 赛轮轮胎2024年报 — [finance.sina](https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=11047953&stockid=601058) | 赛轮／公告 | 2025 年 4 月 29 日 | 智能制造战略 |
+| 赛轮生态卓越（Ecological Excellence） — [sailungroup.com](https://www.sailungroup.com/develop/ecology.html) | 赛轮／企业 | 2026 年 8 月 14 日访问 | 2030 年能耗／碳／材料目标 + 2025 年结果 |
+| 成山集团"智造"加持 — [whnews.cn](https://www.whnews.cn/news/node/2025-02/17/content_7351655.htm) | 地方媒体 | 2025 年 2 月 17 日 | 浦林成山资本开支、效率 +23.4%、人工成本 −30% |
+| 双星案例 — [catsi.cn](https://www.catsi.cn/view-c285904a196b4104be660db504eb829a-3e970fc9c86e446eb5e0be44118402eb.html) | 行业协会 | 2026 年 1 月 | MEP/APS；效率约 3 倍，缺陷降低 >80% |
+| 森麒麟2025半年报 — [finance.sina](https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=11424729&stockid=002984) | 森麒麟／公告 | 2025 年 8 月 30 日 | 五模块模式、产品结构 |
+| 森麒麟青岛物料流 — [cimcorp.com](https://cimcorp.com/case-study/sentury-tire/) | Cimcorp／供应商 | 未注明日期 | 利用率 72%→96.5%，+3,800 条／天 |
+| 三角轮胎山东省先进级智能工厂 — [triangle.com.cn](https://www.triangle.com.cn/cn/index/pageview/catid/11/id/562.html) | 三角／企业 | 2025 年 6 月 30 日 | APS/MES/ERP/PLM/EAM/CRM 集成 |
+| 软控智能装备 — [en.mesnac.com](https://en.mesnac.com/1163.html) | 软控／供应商 | 2025 年 8 月 8 日 | 无人成型、黑灯硫化、35 秒节拍 |
+| 2026全球橡胶机械趋势报告 — [xjmj.cria.org.cn](https://xjmj.cria.org.cn/a/1992832922533597185) | 中国橡胶工业协会橡机分析 | 2025 年 11 月 24 日 | 中国橡机份额、2031 年市场展望 |
+| 智能体助力橡胶工业智能制造 — [cria.org.cn](https://www.cria.org.cn/a/2001927176820199425) | 中国橡胶工业协会／分析 | 2025 年 12 月 16 日 | AI／智能体方向、GB/T 45018-2024、软件差距 |
+| 2025中国橡胶工业十大新闻 — [xjmj.cria.org.cn](https://xjmj.cria.org.cn/a/2008007717483024386) | 中国橡胶工业协会 | 2026 年 1 月 5 日 | 结构转型、贸易压力、反“内卷”式价格竞争 |
+| 欧盟对华轮胎反倾销税 — [ec.europa.eu](https://policy.trade.ec.europa.eu/news/commission-imposes-anti-dumping-duties-passenger-car-and-light-lorry-tyres-china-2026-07-09_en) | 欧盟委员会 | 2026 年 7 月 9 日 | 4.3–45.3% 最终税率；同步反补贴调查 |
+| Digital Twin in Automotive Industry — [sciltp.com](https://www.sciltp.com/journals/ijamm/articles/2504000125) | Liu 等／学术 | 2025 年 3 月 24 日 | 数字孪生与传感器驱动制造的基础 |
 
 ---
+
+## 附录 C：合并时的改动（审阅者说明）
+
+- **采用**提纲稿的 12 节骨架，便于浏览。
+- **注入**报告稿的四态成熟度模型，并为每项企业说法标注可信度等级。
+- **调和**中策橡胶的用工数据（生产线层面 450→140 与全厂层面 10,000→2,000），两者都标注，而不是悄悄选一个。
+- **补充**提纲稿遗漏的重要内容：欧盟反倾销裁定、中国橡胶工业协会“硬件强、软件弱”的判断、GB/T 45018-2024 数据字典、森麒麟／Cimcorp，以及 **2030 与 2031** 的区分。
+- **删除**报告稿中嘈杂的内联引用标记，替换为干净、可点击的来源登记（附录 B）。
+- **降权**宣传级数字（双星 3 倍、中策全厂 10,000→2,000），使其不再与世界经济论坛验证的数据具有同等视觉权重。

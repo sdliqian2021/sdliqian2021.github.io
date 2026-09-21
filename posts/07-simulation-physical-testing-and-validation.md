@@ -10,9 +10,9 @@ permalink: /posts/07-simulation-physical-testing-and-validation.html
 nav: essays
 page_class: article-page
 topics:
-  - Engineering simulation
-  - Physical testing
-  - Model validation
+  - 工程仿真
+  - 物理测试
+  - 模型验证
 ---
 
 # 工程仿真与物理测试：为什么它们不是敌人

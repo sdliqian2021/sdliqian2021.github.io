@@ -1,234 +1,245 @@
 ---
 layout: default
 title: "工业 AI 与数字孪生：如何构建可治理的 AI 代理"
-description: "A practical framework for Industrial AI, process digital twins, connected data, controlled execution, and governable industrial agents."
+description: "从工业 AI、流程数字孪生和互联数据出发，讨论如何构建具备受控执行、自我修复与治理能力的 AI 代理。"
 content_type: essay
 display_order: 30
 published: 2026-09-01
-updated: 2026-09-18
+updated: 2026-09-21
 topics:
-  - Industrial AI
-  - Digital twins
-  - AI agents
+  - 工业 AI
+  - 数字孪生
+  - AI 代理
 permalink: /posts/industrial-ai-and-digital-twins.html
 nav: essays
 page_class: article-page
 ---
+
 # 工业 AI 与数字孪生：如何构建可治理的 AI 代理
 
-_Last updated: 2026-07-09 12:40 America/New_York (UTC-04:00)_
+## 写在前面
+-我的核心论点: Indutrial AI = AI + Digital Twin, 不像消费者级别AI和办公室AI，有一定的容错率，工业级别的AI要求极低的出错率以及出错之后的立马纠正的能力，不然带来的是极大的损失。
+- 我对AI代理的三个要求：
+  - end to end 完成任务的能力
+  - on cost
+  - 自我修复和进化的能力
 
-Industrial AI, or Industry AI, is artificial intelligence applied to engineered physical systems and industrial operations. Its purpose is to improve how products, processes, assets, and lifecycle decisions perform in the real world.
 
-It is not simply "AI used by an industrial company." A chatbot that helps a manufacturing company write emails or summarize HR policies may be useful, but it is still Business AI. An AI system that estimates machine health, detects product defects, guides simulation cases, optimizes process settings, or supports engineering design decisions is much closer to Industrial AI.
+# 什么是工业人工智能？
 
-The difference is the object of the decision.
+_最后更新：2026-07-09 12:40 America/New_York (UTC-04:00)_
 
-> Industrial AI is AI connected to engineered physical systems: products, materials, machines, processes, production lines, fleets, infrastructure, and the decisions that govern their lifecycle.
+工业人工智能（Industrial AI），也称 Industry AI，是应用于工程化物理系统与工业运营的人工智能。它的目的，是提升产品、流程、资产以及全生命周期决策在真实世界中的表现。
 
-## 1. AI Application Framework
+它并不简单等同于“工业企业在用的人工智能”。一个帮助制造企业写邮件或总结人事政策的聊天机器人也许有用，但它仍然属于业务人工智能（Business AI）。而一个能估计设备健康状态、检测产品缺陷、指导仿真工况、优化工艺参数或支持工程设计决策的人工智能系统，则更接近工业人工智能。
 
-AI applications can be classified by deployment context and application domain.
+区别在于决策所针对的对象。
+
+> 工业人工智能是与工程化物理系统相连接的人工智能：产品、材料、机器、工艺、生产线、车队、基础设施，以及主导这些系统全生命周期的各项决策。
+
+## 1. 人工智能应用框架
+
+人工智能应用可以按部署场景和应用领域来分类。
 
 ```text
-AI by Deployment Context
+按部署场景划分的人工智能
 
-Consumer AI
-  AI for individuals and personal tasks
+消费级人工智能（Consumer AI）
+  面向个人与个人事务的人工智能
 
-Enterprise AI
-  AI for organizations
-  - Business AI
-    AI for administrative, commercial, financial, legal, HR,
-    customer, knowledge-work, and management workflows
-  - Industrial AI
-    AI for engineered physical systems, product design, simulation,
-    manufacturing, operations, maintenance, assets, and lifecycle performance
+企业级人工智能（Enterprise AI）
+  面向组织的人工智能
+  - 业务人工智能（Business AI）
+    面向行政、商务、财务、法务、人力资源、
+    客户、知识型工作以及管理工作流的人工智能
+  - 工业人工智能（Industrial AI）
+    面向工程化物理系统、产品设计、仿真、
+    制造、运营、维护、资产以及全生命周期性能的人工智能
 ```
 
-## 2. Core Definitions
+## 2. 核心定义
 
-**Consumer AI** serves individuals in personal, educational, lifestyle, productivity, entertainment, or wellness contexts.
+**消费级人工智能（Consumer AI）** 服务于个人，涵盖个人生活、教育、生活方式、效率、娱乐或健康等场景。
 
-Examples include personal AI assistants, AI tutoring tools, photo or video editing tools, personal finance assistants, smart home assistants, travel planning tools, and wellness apps.
+例子包括个人 AI 助手、AI 辅导工具、照片或视频编辑工具、个人理财助手、智能家居助手、旅行规划工具以及健康类应用。
 
-**Enterprise AI** serves organizations. It is the broader organizational category that includes both Business AI and Industrial AI.
+**企业级人工智能（Enterprise AI）** 服务于组织。它是更宽泛的组织层面类别，同时包含业务人工智能和工业人工智能。
 
-**Business AI** improves how organizations think, decide, communicate, document, manage, sell, and operate as businesses. It focuses on administrative, commercial, financial, legal, HR, customer, knowledge-work, and management processes.
+**业务人工智能（Business AI）** 提升组织作为一家企业在思考、决策、沟通、记录、管理、销售与运营方面的能力。它聚焦于行政、商务、财务、法务、人力资源、客户、知识型工作以及管理流程。
 
-Examples include finance AI, HR AI, legal and contract AI, sales and marketing AI, customer service AI, business process automation, knowledge management AI, and management decision-support AI.
+例子包括财务 AI、人力资源 AI、法务与合同 AI、销售与营销 AI、客户服务 AI、业务流程自动化、知识管理 AI，以及管理决策支持 AI。
 
-**Industrial AI** improves how physical products, assets, processes, and operations perform in the real world. It focuses on engineered physical systems, product design, simulation, manufacturing, operations, maintenance, and lifecycle performance.
+**工业人工智能（Industrial AI）** 提升物理产品、资产、工艺和运营在真实世界中的表现。它聚焦于工程化物理系统、产品设计、仿真、制造、运营、维护以及全生命周期性能。
 
-Examples include product design AI, engineering simulation AI, virtual calibration, manufacturing process optimization, quality inspection AI, predictive maintenance, asset health monitoring, fleet optimization, industrial digital twins, and operational safety AI.
+例子包括产品设计 AI、工程仿真 AI、虚拟标定、制造工艺优化、质量检测 AI、预测性维护、资产健康状态监测、车队优化、工业数字孪生，以及运营安全 AI。
 
-## 3. Business AI Versus Industrial AI
+## 3. 业务人工智能与工业人工智能的对比
 
-Business AI and Industrial AI are both part of Enterprise AI, but they serve different domains.
+业务人工智能和工业人工智能都属于企业级人工智能，但服务的领域不同。
 
-| Category | Main Focus | Typical Examples |
+| 类别 | 主要关注点 | 典型例子 |
 |---|---|---|
-| **Business AI** | Business, administrative, knowledge, and management workflows | HR AI, finance AI, legal AI, sales AI, customer service AI, business process AI |
-| **Industrial AI** | Physical systems, engineering, manufacturing, assets, and operations | Tire digital twin, predictive maintenance, manufacturing quality AI, simulation AI, design optimization |
+| **业务人工智能（Business AI）** | 业务、行政、知识与管理工作流 | 人力资源 AI、财务 AI、法务 AI、销售 AI、客户服务 AI、业务流程 AI |
+| **工业人工智能（Industrial AI）** | 物理系统、工程、制造、资产与运营 | 轮胎数字孪生、预测性维护、制造质量 AI、仿真 AI、设计优化 |
 
-Simple distinction:
+简单的区分方式：
 
-> Business AI improves business processes. Industrial AI improves engineered physical systems and industrial operations.
+> 业务人工智能改进业务流程。工业人工智能改进工程化物理系统与工业运营。
 
-This distinction matters because the evidence standard changes. In Business AI, the main concerns may be productivity, retrieval quality, workflow speed, privacy, and accountability. In Industrial AI, those concerns still matter, but additional questions become central:
+这一区分之所以重要，是因为证据标准发生了变化。在业务人工智能中，主要关注点可能是生产效率、检索质量、工作流速度、隐私与责任归属。在工业人工智能中，这些关注点依然重要，但还有一些额外的问题会成为核心：
 
-- What physical system is being represented?
-- What operating conditions does the data actually cover?
-- Which physics, material, process, safety, or reliability constraints apply?
-- What happens if the model is wrong?
-- How will the recommendation be validated before it affects a real system?
-- Who owns the decision when model output and engineering judgment disagree?
+- 被表示的是什么物理系统？
+- 数据实际覆盖了哪些运行工况？
+- 适用哪些物理、材料、工艺、安全或可靠性约束？
+- 如果模型错了会发生什么？
+- 在建议影响真实系统之前，将如何对其进行验证？
+- 当模型输出与工程判断相冲突时，决策权归谁？
 
-## 4. Design Belongs in Industrial AI
+## 4. 设计属于工业人工智能
 
-The design process is part of Industrial AI when AI supports engineering decisions for physical products, assets, or systems under performance, physics, safety, reliability, and manufacturing constraints.
+当人工智能在性能、物理、安全、可靠性和制造约束之下，为物理产品、资产或系统的工程决策提供支持时，设计过程就是工业人工智能的一部分。
 
-Industrial AI is not limited to manufacturing or field operations. It can cover the full lifecycle:
-
-```text
-Design -> Simulation -> Calibration -> Validation -> Manufacturing -> Operation -> Maintenance -> Feedback
-```
-
-Examples of design-related Industrial AI include:
-
-- tread pattern design
-- compound design
-- product architecture optimization
-- finite element simulation automation
-- design space exploration
-- virtual calibration
-- virtual validation
-- performance trade-off optimization
-- manufacturability assessment
-
-In design, AI may help engineers explore alternatives, screen concepts, balance trade-offs, or predict performance before physical testing.
-
-In simulation, AI may automate model setup, select cases, accelerate expensive calculations, or build surrogate models that approximate physics-based simulations.
-
-In validation, AI may compare test results with model expectations, detect disagreement between assumptions and evidence, or prioritize additional experiments.
-
-In manufacturing, AI may inspect quality, detect process drift, recommend process windows, forecast scrap risk, or support control decisions.
-
-In operation and maintenance, AI may monitor performance, detect abnormal behavior, estimate asset health, forecast remaining useful life, and connect field evidence back to engineering and manufacturing decisions.
-
-## 5. Enabling Paradigms Are Not Application Categories
-
-Digital twins, AI agents, RAG systems, knowledge graphs, simulation models, optimization engines, workflow orchestration, and governance layers should not be treated as separate application domains.
-
-Business AI and Industrial AI describe application domains. Digital twins, agents, RAG, knowledge graphs, simulation, optimization, orchestration, and governance describe technical architectures or enabling paradigms.
-
-A cleaner structure is:
+工业人工智能并不局限于制造或现场运营。它可以覆盖完整的生命周期：
 
 ```text
-Application / Deployment Classification
-
-Consumer AI
-Enterprise AI
-  - Business AI
-  - Industrial AI
+设计 -> 仿真 -> 标定 -> 验证 -> 制造 -> 运行 -> 维护 -> 反馈
 ```
 
-Separately:
+与设计相关的工业人工智能例子包括：
+
+- 胎面花纹设计
+- 胶料配方设计
+- 产品架构优化
+- 有限元仿真自动化
+- 设计空间探索
+- 虚拟标定
+- 虚拟验证
+- 性能权衡优化
+- 可制造性评估
+
+在设计环节，人工智能可以帮助工程师探索备选方案、筛选概念、平衡取舍，或在物理测试之前预测性能。
+
+在仿真环节，人工智能可以自动完成模型搭建、选择工况、加速昂贵的计算，或构建近似基于物理仿真的代理模型。
+
+在验证环节，人工智能可以将试验结果与模型预期进行比对，发现假设与证据之间的不一致，或对补充实验进行优先级排序。
+
+在制造环节，人工智能可以进行质量检测、发现工艺漂移、推荐工艺窗口、预测废品风险，或支持控制决策。
+
+在运行与维护环节，人工智能可以监测性能、发现异常行为、估计资产健康状态、预测剩余使用寿命，并将现场证据反馈到工程与制造决策中。
+
+## 5. 使能范式不是应用类别
+
+数字孪生、AI 代理、检索增强生成（RAG）系统、知识图谱、仿真模型、优化引擎、工作流编排以及治理层，不应被当作各自独立的应用领域。
+
+业务人工智能和工业人工智能描述的是应用领域。数字孪生、代理、RAG、知识图谱、仿真、优化、编排和治理描述的是技术架构或使能范式。
+
+更清晰的结构是：
 
 ```text
-Enabling Paradigms
+应用／部署分类
 
-Digital twins
-AI agents
-Knowledge graphs
-RAG systems
-Simulation models
-Optimization engines
-Workflow orchestration
-Governance / safety / validation layers
+消费级人工智能
+企业级人工智能
+  - 业务人工智能
+  - 工业人工智能
 ```
 
-These enabling paradigms can support Consumer AI, Business AI, or Industrial AI depending on the system being represented, governed, or optimized.
+另外单列：
 
-The architecture is not the definition. The represented system and the decision consequence are the definition.
+```text
+使能范式
 
-## 6. Digital Twins as a Cross-Domain Paradigm
+数字孪生
+AI 代理
+知识图谱
+RAG 系统
+仿真模型
+优化引擎
+工作流编排
+治理／安全／验证层
+```
 
-A digital twin should not be treated as only part of Industrial AI.
+这些使能范式可以支撑消费级人工智能、业务人工智能或工业人工智能，取决于它所表示、治理或优化的是哪个系统。
 
-Digital twins are cross-domain modeling and orchestration paradigms. They can represent physical assets, business processes, customer journeys, supply chains, organizations, or personal systems.
+架构不是定义。被表示的系统与决策后果才是定义。
 
-| Digital Twin Type | Domain |
+## 6. 数字孪生是跨领域范式
+
+数字孪生不应被视为只属于工业人工智能。
+
+数字孪生是跨领域的建模与编排范式。它可以表示物理资产、业务流程、客户旅程、供应链、组织，也可以表示个人系统。
+
+| 数字孪生类型 | 领域 |
 |---|---|
-| Personal health twin | Consumer AI |
-| Learning twin | Consumer AI |
-| Customer journey twin | Business AI |
-| Claims process twin | Business AI |
-| Supply-chain twin | Business AI and/or Industrial AI |
-| Tire wear twin | Industrial AI |
-| Manufacturing process twin | Industrial AI |
-| Product design twin | Industrial AI |
+| 个人健康孪生 | 消费级人工智能 |
+| 学习孪生 | 消费级人工智能 |
+| 客户旅程孪生 | 业务人工智能 |
+| 理赔流程孪生 | 业务人工智能 |
+| 供应链孪生 | 业务人工智能和／或工业人工智能 |
+| 轮胎磨损孪生 | 工业人工智能 |
+| 制造流程孪生 | 工业人工智能 |
+| 产品设计孪生 | 工业人工智能 |
 
-The same logic applies to AI agents and RAG systems. An agent can support industrial operations, but it can also automate document handling. RAG can help engineers search technical knowledge, but it can also help a legal team search contracts.
+同样的逻辑也适用于 AI 代理和 RAG 系统。一个代理可以支持工业运营，也可以自动处理文档。RAG 可以帮助工程师检索技术知识，也可以帮助法务团队检索合同。
 
-> Digital twins, AI agents, RAG, and knowledge graphs are not application domains by themselves. They are enabling paradigms whose domain depends on what system they represent and what decision they influence.
+> 数字孪生、AI 代理、RAG 和知识图谱本身不是应用领域。它们是使能范式，其所属领域取决于它们表示什么系统、影响什么决策。
 
-## 7. Why Industrial AI Is Harder Than Generic AI
+## 7. 为什么工业人工智能比通用人工智能更难
 
-Industrial systems rarely produce clean, complete, balanced data. Data may come from lab tests, finite element simulations, production sensors, inspection records, operator notes, maintenance logs, fleet records, and field measurements. Each source has different noise, bias, resolution, latency, and traceability.
+工业系统很少产出干净、完整、均衡的数据。数据可能来自实验室测试、有限元仿真、生产传感器、检测记录、操作员笔记、维护日志、车队记录和现场测量。每个来源的噪声、偏差、分辨率、时延和可追溯性都不相同。
 
-The model also has to respect physical constraints. In many industrial settings, correlation is not enough. A model may look accurate on historical data while failing under a new material, geometry, operating temperature, load condition, supplier change, or process window.
+模型还必须遵守物理约束。在许多工业场景中，仅有相关性是不够的。一个模型可能在历史数据上看起来很准确，却在面对新材料、新几何、新运行温度、新载荷工况、供应商变更或新工艺窗口时失效。
 
-That is why Industrial AI usually needs hybrid thinking:
+因此，工业人工智能通常需要混合式思维：
 
-- physics-based modeling where mechanisms are known
-- data-driven modeling where patterns are observable but difficult to derive
-- simulation where controlled exploration is cheaper or safer than physical experimentation
-- uncertainty quantification where decisions depend on confidence
-- optimization where multiple constraints compete
-- human engineering judgment where model boundaries are not yet reliable
+- 在机理已知之处，采用基于物理的建模
+- 在模式可观测但难以推导之处，采用数据驱动的建模
+- 在受控探索比物理实验更便宜或更安全之处，采用仿真
+- 在决策依赖置信度之处，进行不确定性量化
+- 在多重约束相互竞争之处，进行优化
+- 在模型边界尚不可靠之处，依靠人的工程判断
 
-For example, in tire and rubber applications, decisions may involve geometry, material behavior, contact mechanics, fatigue, wear, temperature, hysteresis, rolling resistance, manufacturability, and field variability. Some relationships can be represented with physics-based models. Some require empirical correction. Some are best handled with data-driven surrogates. Some remain uncertain until test or field evidence arrives.
+以轮胎与橡胶应用为例，决策可能涉及几何、材料行为、接触力学、疲劳、磨损、温度、滞后损耗、滚动阻力、可制造性以及现场变异性。有些关系可以用基于物理的模型表示；有些需要经验修正；有些最适合用数据驱动的代理模型处理；还有一些在试验或现场证据到来之前始终是不确定的。
 
-The key question is not only whether the AI is accurate.
+关键问题不只是人工智能是否准确。
 
-The better question is:
+更好的问题是：
 
-> Accurate for which decision, in which operating regime, with which uncertainty, and under which consequence?
+> 对哪个决策准确，在哪个运行区间内，带着多大的不确定性，又承担着怎样的后果？
 
-## 8. What Good Industrial AI Requires
+## 8. 好的工业人工智能需要什么
 
-Useful Industrial AI needs more than a trained model. It needs a trustworthy decision system around the model.
+有用的工业人工智能需要的不只是一个训练好的模型。它需要围绕模型建立一个值得信赖的决策系统。
 
-Important requirements include:
+重要的要求包括：
 
-- a clear physical decision or operational target
-- traceable data sources and assumptions
-- validation against relevant real-world conditions
-- a known domain of validity
-- uncertainty handling and escalation rules
-- human accountability for consequential decisions
-- integration into the actual engineering or operational workflow
-- feedback from deployment back into the model, process, or design system
+- 清晰的物理决策或运营目标
+- 可追溯的数据来源与假设
+- 针对相关真实工况的验证
+- 已知的有效域
+- 不确定性处理与上报规则
+- 对重大决策的人类责任归属
+- 融入实际的工程或运营工作流
+- 从部署结果反馈到模型、流程或设计系统
 
-Without these, Industrial AI can become a fast way to make unsupported technical decisions. A digital twin without validated boundaries is mostly an integration or visualization layer. An autonomous agent without authority limits can become an automation risk. A surrogate model without domain-of-validity checks can make wrong engineering decisions faster.
+缺少这些，工业人工智能可能沦为一种快速做出缺乏依据的技术决策的方式。没有经过验证的边界的数字孪生，大多只是一个集成层或可视化层。没有权限限制的自主代理，可能变成自动化风险。缺少有效域检查的代理模型，只会更快地做出错误的工程决策。
 
 
-## 10. Post-Ready Summary
+## 10. 可发布摘要
 
-AI applications can be classified by deployment context and application domain. **Consumer AI** serves individuals in personal, educational, lifestyle, and entertainment contexts. **Enterprise AI** refers to AI systems deployed within organizations. Within Enterprise AI, **Business AI** focuses on administrative, commercial, financial, legal, HR, customer, knowledge-work, and management processes, while **Industrial AI** focuses on engineered physical systems, product design, simulation, manufacturing, assets, operations, maintenance, and lifecycle performance.
+人工智能应用可以按部署场景和应用领域来分类。**消费级人工智能（Consumer AI）** 服务于个人，涵盖个人生活、教育、生活方式和娱乐场景。**企业级人工智能（Enterprise AI）** 指部署在组织内部的人工智能系统。在企业级人工智能之中，**业务人工智能（Business AI）** 聚焦于行政、商务、财务、法务、人力资源、客户、知识型工作和管理流程，而 **工业人工智能（Industrial AI）** 聚焦于工程化物理系统、产品设计、仿真、制造、资产、运营、维护和全生命周期性能。
 
-The practical distinction is the object of the decision. If the AI improves document flow, communication, administration, or business decision speed, it is usually Business AI. If it improves a decision about a physical product, material, asset, process, production system, or lifecycle behavior, it is Industrial AI.
+实践中的区分标准是决策所针对的对象。如果人工智能改进的是文档流转、沟通、行政或业务决策速度，它通常是业务人工智能。如果它改进的是关于物理产品、材料、资产、工艺、生产系统或生命周期行为的决策，它就是工业人工智能。
 
-Separately, **digital twins**, **AI agents**, **knowledge graphs**, **RAG systems**, **simulation models**, **optimization engines**, **workflow orchestration**, and **governance layers** should be viewed as enabling architectures or technical paradigms rather than application categories. These paradigms can support consumer, business, or industrial AI depending on the system being represented, governed, and optimized.
+另外，**数字孪生**、**AI 代理**、**知识图谱**、**RAG 系统**、**仿真模型**、**优化引擎**、**工作流编排** 和 **治理层** 应被视为使能架构或技术范式，而非应用类别。这些范式可以支撑消费级、业务或工业人工智能，取决于所表示、治理和优化的系统。
 
-> Enterprise AI is the broad organizational category; Business AI and Industrial AI are two major application domains within it; and digital twins, AI agents, RAG, knowledge graphs, simulation, optimization, and orchestration are enabling paradigms rather than application categories.
+> 企业级人工智能是宽泛的组织层面类别；业务人工智能和工业人工智能是其中的两大应用领域；数字孪生、AI 代理、RAG、知识图谱、仿真、优化和编排是使能范式，而不是应用类别。
 
-## 13. Sources And Context
+## 13. 来源与背景
 
-This discussion uses a practical classification rather than a formal standard taxonomy. The Consumer AI, Enterprise AI, Business AI, and Industrial AI distinction is a working framework for separating business workflows from engineered physical-system decisions.
+本文使用的是一种实用分类，而不是正式的标准分类体系。消费级人工智能、企业级人工智能、业务人工智能与工业人工智能的区分，是一个用来把业务工作流与工程化物理系统决策分开的工作框架。
 
-Useful references for the industrial AI, digital twin, trustworthy AI, physics-informed modeling, and rubber engineering context include:
+关于工业人工智能、数字孪生、可信人工智能、融入物理规律的建模以及橡胶工程背景，有用的参考文献包括：
 
 1. National Institute of Standards and Technology. *Industrial Artificial Intelligence Management and Metrology (IAIMM).* https://www.nist.gov/programs-projects/industrial-artificial-intelligence-management-and-metrology-iaimm
 2. ISO. *ISO 23247-1:2021, Automation systems and integration - Digital twin framework for manufacturing - Part 1: Overview and general principles.* https://www.iso.org/standard/75066.html
@@ -240,349 +251,349 @@ Useful references for the industrial AI, digital twin, trustworthy AI, physics-i
 
 
 
-# Why Industrial AI Struggles to Scale
+# 为什么工业人工智能难以规模化
 
-_Last updated: 2026-07-09 12:40 America/New_York (UTC-04:00)_
+_最后更新：2026-07-09 12:40 America/New_York (UTC-04:00)_
 
-**Purpose:** This note frames the central problem of current Industrial AI and the main reasons behind it.
+**目的：** 本文梳理当前工业人工智能的核心问题及其背后的主要原因。
 
-**Core thesis:** Industrial AI can perform well in a controlled proof of concept, but it often fails to scale into production and deliver repeatable ROI. The scaling gap is the visible problem. The deeper reasons are weak industrial data foundations, insufficient trust for operational use, and the fact that industrial systems evolve over time.
-
----
-
-## Main Problem: Proof of Concept Does Not Become Production Value
-
-Industrial AI is often easier to prove in a bounded experiment than to sustain in real operations. A proof of concept can use a selected dataset, a stable operating window, expert support, and a narrow success metric. Production requires the AI system to work across messy data flows, changing equipment and materials, plant workflows, frontline users, risk controls, and business metrics.
-
-McKinsey's 2025 AI survey reports broad AI adoption but says only about one-third of respondents report scaling AI programs across their organizations.[1] In manufacturing, this matters because an AI model has value only when it changes real decisions and produces measurable results such as lower downtime, lower scrap, better yield, safer maintenance, or better cost performance.
-
-**Concrete example.** Novelis already had predictive-analytics use cases, but Deloitte reports that it lacked a strategy to scale them across manufacturing facilities before creating a Plant of the Future roadmap.[8]
-
-**Analysis.** The example shows the difference between having industrial AI use cases and having an industrial AI capability. Scaling requires more than model success: it requires repeatable deployment, workflow ownership, data access, governance, and a value case that survives outside the pilot environment.
+**核心论点：** 工业人工智能可以在受控的概念验证（PoC）中表现良好，却常常无法规模化进入生产环境并带来可重复的投资回报（ROI）。规模化鸿沟是表面可见的问题。更深层的原因在于薄弱的工业数据基础、不足以支撑运营使用的信任，以及工业系统本身会随时间演变这一事实。
 
 ---
 
-## Three Root Reasons
+## 主要问题：概念验证没有转化为生产价值
 
-## 1. Weak Industrial Data and System Foundations
+工业人工智能往往在有边界的实验中容易证明，却难以在真实运营中持续。概念验证可以使用精选的数据集、稳定的运行窗口、专家的支持和狭窄的成功指标。而生产环境要求人工智能系统在杂乱的数据流、不断变化的设备与材料、工厂工作流、一线用户、风险控制和业务指标之间都能正常工作。
 
-Industrial AI depends on data that are reliable, contextualized, and connected to the physical process. In practice, industrial data may be missing, noisy, poorly labeled, trapped in legacy systems, or detached from the asset, batch, material, operating condition, or maintenance event that gives the data meaning.
+麦肯锡 2025 年的人工智能调查报告显示，人工智能已被广泛采用，但只有约三分之一的受访者表示已在整个组织内规模化推广人工智能项目。[1] 在制造业，这一点尤为重要，因为一个人工智能模型只有在改变了真实决策、并产生诸如更少停机时间、更少废品、更高良率、更安全的维护或更好的成本表现等可衡量结果时，才算有价值。
 
-The Manufacturing Leadership Council reports that 65% of manufacturers lack the right data for AI applications and 62% cite unstructured or poorly formatted data.[2] PwC reports that poor data quality has affected value from digital initiatives for many operations leaders.[3] MIT Sloan similarly argues that industrial AI needs the right data at the right time, not simply more data.[4]
+**具体案例。** Novelis 早已拥有预测分析类的用例，但据德勤报告，在制定“未来工厂”（Plant of the Future）路线图之前，该公司缺乏把这些用例推广到各制造基地的策略。[8]
 
-**Concrete example 1.** McKinsey describes an iron ore company building an optimizer for a palletization process that discovered a critical project sensor had been broken for six months before the work started.[9]
-
-**Analysis.** This is a basic data-readiness failure. The optimizer may be mathematically strong, but it cannot learn from a critical signal that was never measured correctly.
-
-**Concrete example 2.** Belden describes its Richmond factory as a brownfield environment with machines and devices of different vintages and makes; its predictive-maintenance work first had to connect equipment and capture contextualized OT data without replacing all legacy equipment.[10]
-
-**Analysis.** Industrial AI cannot scale when every asset and plant requires a new data rescue project. Fragmented IT/OT systems turn deployment effort into integration effort.
-
-**Concrete example 3.** At the same Belden plant, a predictive-maintenance pilot collected about 300 GB of data from 150 sensors and used those data to identify at-risk components such as abnormal vibration linked to belt-alignment issues.[10]
-
-**Analysis.** Data volume becomes useful only when it is converted into decision-relevant information. The value was not collecting sensor streams; it was producing a maintenance finding someone could act on.
+**分析。** 这个例子说明了“拥有工业人工智能用例”与“拥有工业人工智能能力”之间的差别。规模化需要的不只是模型成功：它需要可重复的部署、工作流的归属、数据访问、治理，以及一个在试点环境之外依然成立的价值论证。
 
 ---
 
-## 2. Insufficient Trust for Operational Use
+## 三个根本原因
 
-Industrial AI must be trusted before it can influence production, maintenance, quality, safety, or engineering decisions. Trust is broader than model accuracy. It includes validation, explainability, reliability, cybersecurity, intellectual-property protection, human acceptance, and clear authority boundaries between AI recommendations and human decisions.
+## 1. 薄弱的工业数据与系统基础
 
-NIST's AI Risk Management Framework treats trustworthiness as a lifecycle requirement for AI systems.[5] NIST's industrial AI evaluation work also asks whether AI tools reduce manufacturing risk and create system-level value, not only whether the model looks accurate in isolation.[11]
+工业人工智能依赖于可靠、具备上下文、并与物理过程相连接的数据。实际中，工业数据可能缺失、有噪声、标注不良、被困在遗留系统里，或者与赋予数据意义的资产、批次、材料、运行工况或维护事件相脱节。
 
-**Concrete example 1.** Siemens reports that false calls from automated optical inspection in PCB manufacturing can accumulate into alarm fatigue for human inspectors and increase inspection mistakes.[13]
+制造业领导力委员会（Manufacturing Leadership Council）报告称，65% 的制造商缺乏适用于人工智能应用的合适数据，62% 提到数据是非结构化的或格式不佳。[2] 普华永道报告称，数据质量差已影响了许多运营负责人从数字化举措中获取价值。[3] 麻省理工斯隆管理学院同样指出，工业人工智能需要的是在正确的时间获得正确的数据，而不仅仅是更多的数据。[4]
 
-**Analysis.** Trust can fail at the human-machine interface. If AI or automation repeatedly burdens users with false alarms, operators learn to discount it even when a real issue appears.
+**具体案例 1。** 麦肯锡描述了一家铁矿石公司为球团工艺构建优化器的经历：在工作启动之前，一个关键的项目传感器已经损坏了六个月，直到项目开始才被发现。[9]
 
-**Concrete example 2.** Siemens positions its Industrial Copilot for tasks such as maintenance configuration and remediation, while Reuters reports that manufacturers have expressed concern about response accuracy and hallucinations in generative AI rollouts.[6][12]
+**分析。** 这是一个基本的数据就绪度失败。优化器在数学上可能很强，但它无法从一个从未被正确测量的关键信号中学习。
 
-**Analysis.** In industrial work, a fluent answer is not enough. If generated guidance can affect troubleshooting or maintenance, users need approved knowledge sources, evidence, review rules, and escalation when uncertainty is high.
+**具体案例 2。** Belden 将其里士满工厂描述为一个既有（棕地）工厂环境，机器和设备的年代与品牌各不相同；其预测性维护工作首先必须把设备连接起来，并在不更换全部遗留设备的前提下采集具备上下文的 OT 数据。[10]
 
-**Concrete example 3.** In 2023, Samsung semiconductor staff reportedly entered sensitive source code and in-development semiconductor information into ChatGPT while seeking work help.[14]
+**分析。** 如果每一项资产、每一座工厂都需要一个新的数据抢救项目，工业人工智能就无法规模化。碎片化的 IT／OT 系统会把部署工作变成集成工作。
 
-**Analysis.** Trust also includes governance. Industrial AI cannot scale responsibly if using it exposes proprietary code, process knowledge, yield evidence, or operational data outside approved controls.
+**具体案例 3。** 在同一座 Belden 工厂，一个预测性维护试点从 150 个传感器采集了约 300 GB 的数据，并利用这些数据识别出了存在风险的部件，例如与皮带对中问题相关的异常振动。[10]
 
-**Concrete example 4.** NIST's industrial AI work explicitly includes human-agent communication and human-in-the-loop learning, and its AI-enhanced manufacturing monitoring work emphasizes operator interactivity and input in intelligent automation.[17][18]
-
-**Analysis.** Production use requires authority boundaries. A plant must define when AI may observe, recommend, schedule, change parameters, stop a process, or require human approval.
+**分析。** 数据量只有在被转化为与决策相关的信息时才有用。价值不在于采集传感器数据流，而在于产出一个有人可以据此行动的维护发现。
 
 ---
-## The Problem Has Moved Beyond Data Collection
 
-A common statement in Industrial AI is:
+## 2. 不足以支撑运营使用的信任
 
-> The AI model is not the main problem. The data is the problem.
+工业人工智能必须先获得信任，才能影响生产、维护、质量、安全或工程决策。信任的范围比模型准确率更广。它包括验证、可解释性、可靠性、网络安全、知识产权保护、人的接受度，以及人工智能建议与人类决策之间清晰的权限边界。
 
-This is directionally correct, but it no longer goes far enough.
+美国国家标准与技术研究院（NIST）的人工智能风险管理框架将可信性视为人工智能系统全生命周期的要求。[5] NIST 的工业人工智能评估工作也会追问：人工智能工具是否降低了制造风险、是否创造了系统层面的价值，而不只是模型孤立地看起来是否准确。[11]
 
-Modern machines already generate large volumes of sensor readings, alarms, production records, quality results, maintenance histories, images, engineering files, simulation outputs, and operator observations. Mature organizations have spent years collecting this information in historians, manufacturing systems, laboratory databases, engineering repositories, cloud platforms, and data lakes.
+**具体案例 1。** 西门子报告称，在 PCB 制造中，自动光学检测的误报会逐渐累积成人工检验员的告警疲劳，并增加检验错误。[13]
 
-The data exists. Yet much of it produces little value beyond dashboards, retrospective reports, and carefully prepared proof-of-concept demonstrations.
+**分析。** 信任可能在人机界面处失效。如果人工智能或自动化反复用误报给用户增加负担，操作员就会学会忽视它，即便真正的问题出现时也是如此。
 
-Why?
+**具体案例 2。** 西门子将其 Industrial Copilot 定位于维护配置和故障修复等任务，而路透社报道称，制造商对生成式人工智能推广中的回答准确性和幻觉问题表达了担忧。[6][12]
 
-Because the data is **dead**.
+**分析。** 在工业工作中，一个流畅的回答是不够的。如果生成的指导可能影响故障排查或维护，用户就需要经过批准的知识来源、证据、审核规则，以及在不确定性较高时的上报机制。
 
-“Dead data” does not mean incorrect or useless data. It means data that is stored but remains disconnected from the context, relationships, workflows, and decisions that give it operational meaning.
+**具体案例 3。** 2023 年，据报道三星半导体的员工在寻求工作帮助时，将敏感源代码和在研半导体信息输入了 ChatGPT。[14]
+
+**分析。** 信任也包括治理。如果使用工业人工智能会把专有代码、工艺知识、良率证据或运营数据暴露在经批准的控制之外，它就无法负责任地规模化。
+
+**具体案例 4。** NIST 的工业人工智能工作明确包含人与代理之间的沟通以及人在回路的学习，其 AI 增强型制造监控工作也强调智能自动化中操作员的交互性与输入。[17][18]
+
+**分析。** 生产使用需要权限边界。工厂必须定义人工智能在何时可以观察、建议、排程、更改参数、停止工艺，或者必须获得人工批准。
+
+---
+## 问题已经超越了数据采集本身
+
+工业人工智能领域有一句常见的说法：
+
+> 人工智能模型不是主要问题。数据才是问题。
+
+方向上这是对的，但已经不够深入。
+
+现代机器早已产生大量的传感器读数、告警、生产记录、质量结果、维护历史、图像、工程文件、仿真输出和操作员观察。成熟的组织已经花了多年时间，把这些信息收集在历史数据库、制造系统、实验室数据库、工程资料库、云平台和数据湖中。
+
+数据是存在的。然而其中的大部分，除了仪表盘、回顾性报告和精心准备的概念验证演示之外，几乎没有产生什么价值。
+
+为什么？
+
+因为这些数据是**死**的。
+
+“死数据”并不是指错误或无用的数据。它指的是那些虽然被存储下来，却与赋予其运营意义的上下文、关系、工作流和决策相脱节的数据。
 
 ```text
-Collected data is not necessarily connected data.
-Connected data is not necessarily contextualized data.
-Contextualized data is not necessarily live data.
-Live data is not necessarily actionable data.
+采集到的数据未必是连接起来的数据。
+连接起来的数据未必是具备上下文的数据。
+具备上下文的数据未必是活数据。
+活数据未必是可行动的数据。
 ```
 
-Industrial AI creates value only when this chain is completed.
+只有当这条链完整闭合时，工业人工智能才能创造价值。
 
 ---
 
-## What Makes Industrial Data Dead?
+## 是什么让工业数据变成死数据？
 
-### 1. The Data Is Separated by Organizational Boundaries
+### 1. 数据被组织边界分隔
 
-Design, simulation, testing, manufacturing, quality, maintenance, supply chain, and field service often use different systems. Each function may have useful data, but the systems do not understand their relationship to one another.
+设计、仿真、测试、制造、质量、维护、供应链和现场服务往往使用不同的系统。每个职能都可能拥有有用的数据，但这些系统并不理解彼此之间的关系。
 
-A test result may not be linked to the exact design revision. A manufacturing deviation may not be connected to the material batch, machine condition, process settings, and downstream performance. Field failures may not flow back to the simulation assumptions or design decisions that preceded them.
+一条试验结果可能没有关联到确切的设计版本。一次制造偏差可能没有与材料批次、机器状态、工艺设定和下游性能连接起来。现场失效可能无法回流到先于它们的仿真假设或设计决策。
 
-The organization has data, but it does not have a connected memory of how the product or process evolved.
+组织拥有数据，却没有一份关于产品或流程如何演变的连贯记忆。
 
-### 2. The Data Has No Shared Identity or Context
+### 2. 数据没有共享的身份标识或上下文
 
-Industrial records are frequently difficult to connect because they use different:
+工业记录之所以经常难以连接，是因为它们使用了不同的：
 
-- asset and product identifiers;
-- naming conventions;
-- timestamps and sampling rates;
-- units and coordinate systems;
-- revision and configuration definitions;
-- quality rules;
-- process boundaries;
-- model versions.
+- 资产与产品标识符；
+- 命名规范；
+- 时间戳与采样率；
+- 单位与坐标系；
+- 版本与配置定义；
+- 质量规则；
+- 工艺边界；
+- 模型版本。
 
-An AI model cannot reliably infer these relationships from disconnected tables. Before advanced reasoning is possible, the organization needs a governed way to answer basic questions:
+人工智能模型无法从彼此脱节的表格中可靠地推断这些关系。在高级推理成为可能之前，组织需要一种受治理的方式来回答一些基本问题：
 
 ```text
-What physical object or process does this record describe?
-Which version, state, and operating condition does it represent?
-What happened before and after it?
-Which other records, models, and decisions are related to it?
+这条记录描述的是哪个物理对象或流程？
+它代表的是哪个版本、哪种状态、哪种运行工况？
+在它之前和之后发生了什么？
+哪些其他记录、模型和决策与它相关？
 ```
 
-Without this context, more data can create more ambiguity rather than more intelligence.
+缺少这些上下文，更多的数据带来的可能是更多的模糊，而不是更多的智能。
 
-### 3. The Data Is Passive
+### 3. 数据是被动的
 
-Many industrial data platforms are designed primarily to store, visualize, and retrieve information. They show what happened, but they are not embedded in the workflow that decides what should happen next.
+许多工业数据平台的设计初衷主要是存储、可视化和检索信息。它们展示发生了什么，却没有嵌入到决定“接下来应该发生什么”的工作流中。
 
-A dashboard may identify an abnormal trend. It does not necessarily determine:
+一个仪表盘也许能识别出异常趋势。但它未必能确定：
 
-- who owns the response;
-- which engineering rule applies;
-- whether the signal is valid;
-- what model should be run;
-- what action is permitted;
-- what approval is required;
-- whether the action improved the result.
+- 谁负责响应；
+- 适用哪条工程规则；
+- 信号是否有效；
+- 应该运行哪个模型；
+- 允许采取什么行动；
+- 需要什么审批；
+- 行动是否改善了结果。
 
-If data does not participate in a decision-and-feedback loop, it remains observational rather than operational.
+如果数据不参与决策与反馈闭环，它就始终停留在观察层面，而非运营层面。
 
-### 4. The Data Does Not Know Its Relationships
+### 4. 数据不知道自己的关系
 
-Industrial performance is created by relationships:
+工业性能是由关系创造的：
 
 ```text
-material + design + process + machine + environment + use = outcome
+材料 + 设计 + 工艺 + 机器 + 环境 + 使用 = 结果
 ```
 
-Traditional databases may store each element while losing the causal and temporal structure connecting them. This is especially damaging in engineering, where the value often lies not in one variable but in understanding how configurations, conditions, interventions, and outcomes interact.
+传统数据库可能存储了每一个要素，却丢失了把它们连接起来的因果结构和时间结构。这在工程领域尤为有害，因为价值往往不在于某一个变量，而在于理解配置、条件、干预和结果之间如何相互作用。
 
-The missing layer is not merely another database. It is an operational model of the system and its relationships.
-
----
-
-## Why Proofs of Concept Often Look Better Than Production Systems
-
-A small Industrial AI proof of concept can succeed because a dedicated team manually reconstructs the missing context. The team selects a clean dataset, aligns timestamps, resolves identifiers, excludes invalid operating conditions, interviews domain experts, and defines a narrow target.
-
-The model appears successful because human effort temporarily makes the dead data live.
-
-But this invisible integration work is rarely converted into permanent organizational infrastructure. When the company tries to scale the use case to another machine, product, site, or workflow, the same reconstruction must be repeated.
-
-This explains an important pattern:
-
-> Many Industrial AI pilots demonstrate model capability, but fail to create a reusable organizational capability.
-
-The pilot answers, “Can an AI model produce a useful result from this prepared dataset?”
-
-The scaling question is different:
-
-> “Can the organization continuously assemble valid context, run the right models, support a governed decision, learn from the outcome, and reuse that capability elsewhere?”
-
-That is primarily an architecture and workflow problem, not a model-selection problem.
+缺失的那一层并不只是又一个数据库。它是关于系统及其关系的运营模型。
 
 ---
 
-## The Strategic Response: Build Connected Data Flow End to End
+## 为什么概念验证往往看起来比生产系统更好
 
-Organizations should stop treating isolated proofs of concept as the primary unit of Industrial AI progress. A successful demonstration is evidence, not transformation.
+一个小型的工业人工智能概念验证之所以能够成功，是因为有一支专职团队手工重建了缺失的上下文。团队挑选干净的数据集、对齐时间戳、解决标识符问题、排除无效运行工况、访谈领域专家，并定义一个狭窄的目标。
 
-The strategic unit should be the **end-to-end value stream and its decision loops**.
+模型看起来成功了，是因为人力投入暂时让死数据活了起来。
 
-For a physical product, that flow may include:
+但这种看不见的集成工作很少被转化为组织的永久性基础设施。当公司试图把这个用例推广到另一台机器、另一款产品、另一个基地或另一条工作流时，同样的重建工作必须再做一遍。
+
+这解释了一个重要的现象：
+
+> 许多工业人工智能试点展示了模型能力，却未能形成可复用的组织能力。
+
+试点回答的是：“人工智能模型能否从这份准备好的数据集中得出有用的结果？”
+
+而规模化的问题则不同：
+
+> “组织能否持续地组装有效的上下文、运行正确的模型、支撑一个受治理的决策、从结果中学习，并在其他地方复用这一能力？”
+
+这首先是一个架构与工作流的问题，而不是一个模型选择的问题。
+
+---
+
+## 战略应对：端到端构建连通的数据流
+
+组织应当不再把孤立的概念验证当作工业人工智能进展的主要单位。一次成功的演示是证据，而不是转型。
+
+战略单位应该是**端到端价值流及其决策闭环**。
+
+对于一个物理产品而言，这条流可能包括：
 
 ```text
-requirements
-→ design
-→ simulation
-→ testing
-→ manufacturing
-→ quality
-→ field performance
-→ feedback to the next design
+需求
+→ 设计
+→ 仿真
+→ 测试
+→ 制造
+→ 质量
+→ 现场性能
+→ 反馈到下一代设计
 ```
 
-The goal is not to centralize every byte of data in one enormous system. The goal is to make the relevant data, models, states, relationships, and decisions interoperable across this flow.
+目标不是把每一个字节的数据都集中到一个庞大的系统里。目标是让相关的数据、模型、状态、关系和决策在这条流中实现互操作。
 
-There are two main transformation paths.
-
----
-
-## Path 1: Redesign the Workflow as AI-Native
-
-An AI-native workflow is designed from the beginning so that work products are machine-readable, states are explicit, models and tools can be called programmatically, validation is built in, and feedback is captured automatically.
-
-In this approach:
-
-- design intent is structured rather than buried in documents;
-- simulation and analysis are reproducible;
-- data lineage is preserved;
-- approvals and constraints are executable;
-- AI agents operate through governed tools;
-- outcomes automatically update organizational memory.
-
-This is the cleanest architecture because connectivity is designed into the workflow rather than added afterward.
-
-However, redesigning mature industrial operations from scratch is expensive and disruptive. Existing equipment, software, regulatory requirements, supplier interfaces, and decades of working practices cannot always be replaced.
+有两条主要的转型路径。
 
 ---
 
-## Path 2: Build Process Digital Twins Around Existing Workflows
+## 路径一：把工作流重新设计为 AI 原生
 
-For mature organizations, the practical path is often to create process digital twins that connect existing systems without requiring immediate replacement of every tool and workflow.
+AI 原生的工作流从一开始就被设计成：工作产出是机器可读的，状态是显式的，模型与工具可以被程序化调用，验证是内建的，反馈是自动捕获的。
 
-A process digital twin should not be another visualization dashboard. It should represent:
+在这种方式下：
 
-- the current state of the process;
-- the entities moving through it;
-- the relationships among data, models, equipment, people, and decisions;
-- the history of changes and interventions;
-- the rules, constraints, and validity limits;
-- the expected and observed outcomes;
-- the feedback required for learning.
+- 设计意图是结构化的，而不是埋在文档里；
+- 仿真与分析是可复现的；
+- 数据血缘得以保留；
+- 审批和约束是可执行的；
+- AI 代理通过受治理的工具运行；
+- 结果自动更新组织记忆。
 
-The organization can then build a federated network of process twins around critical value streams:
+这是最干净的架构，因为连通性是设计进工作流的，而不是事后添加的。
+
+然而，从零开始重新设计成熟的工业运营既昂贵又具破坏性。现有设备、软件、法规要求、供应商接口以及数十年的工作实践并不总是可以被替换。
+
+---
+
+## 路径二：围绕现有工作流构建流程数字孪生
+
+对于成熟的组织，务实的路径往往是创建流程数字孪生，把现有系统连接起来，而无需立刻替换每一个工具和工作流。
+
+流程数字孪生不应是又一个可视化仪表盘。它应当表示：
+
+- 流程的当前状态；
+- 在流程中流转的实体；
+- 数据、模型、设备、人员与决策之间的关系；
+- 变更与干预的历史；
+- 规则、约束与有效性边界；
+- 预期结果与观测结果；
+- 学习所需的反馈。
+
+然后，组织可以围绕关键价值流构建一个联邦式的流程孪生网络：
 
 ```text
-design twin
-↔ simulation twin
-↔ test twin
-↔ manufacturing twin
-↔ product or asset twin
-↔ field-performance twin
+设计孪生
+↔ 仿真孪生
+↔ 测试孪生
+↔ 制造孪生
+↔ 产品或资产孪生
+↔ 现场性能孪生
 ```
 
-This connected twin network becomes the operational context layer for Industrial AI. AI models and agents can reason over it, but the twins maintain the governed state, relationships, traceability, and feedback loops.
+这个连通的孪生网络成为工业人工智能的运营上下文层。人工智能模型和代理可以在其上进行推理，而孪生则维护受治理的状态、关系、可追溯性和反馈闭环。
 
-The ambition may eventually cover the enterprise, but implementation should begin with the processes and interfaces that control the most important decisions. Building a disconnected “digital twin” for every activity would reproduce the same fragmentation under a new name.
+这一雄心最终或许可以覆盖整个企业，但实施应当从控制着最重要决策的流程和接口开始。为每一项活动都建一个互不连通的“数字孪生”，只会以新的名字复制同样的碎片化。
 
 ---
 
-## Example: Tire Product Development
+## 案例：轮胎产品开发
 
-A tire company may already possess compound data, finite-element simulation results, drum and vehicle test results, manufacturing parameters, uniformity measurements, inspection images, warranty records, and fleet data.
+一家轮胎公司可能早已拥有胶料数据、有限元仿真结果、转鼓与整车试验结果、制造参数、均匀性测量、检测图像、质保记录和车队数据。
 
-The technical opportunity does not come merely from putting all these records in a data lake.
+技术上的机会并不仅仅来自把这些记录全部放进一个数据湖。
 
-The opportunity appears when the organization can trace:
+机会出现在组织能够追溯以下链条之时：
 
 ```text
-design intent
-→ material and geometry revision
-→ simulation assumptions and predictions
-→ manufactured configuration
-→ process deviations
-→ test conditions and measured performance
-→ field operating conditions
-→ wear, durability, or failure outcome
-→ updated model and next design decision
+设计意图
+→ 材料与几何版本
+→ 仿真假设与预测
+→ 制造配置
+→ 工艺偏差
+→ 试验条件与实测性能
+→ 现场运行工况
+→ 磨损、耐久或失效结果
+→ 更新后的模型与下一个设计决策
 ```
 
-At that point, the data is no longer a collection of historical artifacts. It becomes a living engineering system.
+到那时，数据不再是一堆历史遗物的集合。它变成了一个活的工程系统。
 
-AI can then do more than predict an isolated target. It can help identify mismatches between simulation and test, connect manufacturing variation to product performance, recommend the next experiment, expose uncertainty, and preserve learning across product generations.
+人工智能能做的也就不止于预测一个孤立的目标。它可以帮助识别仿真与试验之间的不匹配，把制造变异与产品性能关联起来，推荐下一次实验，揭示不确定性，并在产品世代之间保留学习成果。
 
 ---
 
-## Proposed Maturity Model
+## 拟议的成熟度模型
 
 ```text
-Level 0: Data is generated but not systematically retained
-Level 1: Data is collected in local systems
-Level 2: Data is accessible across the organization
-Level 3: Data is contextualized with identity, time, configuration, and lineage
-Level 4: Data is connected across process and lifecycle boundaries
-Level 5: Data is live inside governed decision and feedback loops
-Level 6: AI agents operate across a network of process digital twins
+Level 0：数据被产生但未被系统性地保留
+Level 1：数据被采集到本地系统中
+Level 2：数据可在组织范围内访问
+Level 3：数据具备身份标识、时间、配置和数据血缘等上下文
+Level 4：数据跨流程与生命周期边界连接起来
+Level 5：数据活在受治理的决策与反馈闭环之中
+Level 6：AI 代理在流程数字孪生网络上运行
 ```
 
-Most organizations overestimate their maturity because they confuse Level 1 or Level 2 data infrastructure with Level 5 operational intelligence.
+大多数组织会高估自己的成熟度，因为它们把 Level 1 或 Level 2 的数据基础设施误认为 Level 5 的运营智能。
 
 ---
 
-## Sharp Takeaway
+## 一句话结论
 
-The real Industrial AI divide will not be between companies with better foundation models and companies with worse ones. Comparable models will be available to everyone.
+真正的工业人工智能分水岭，不会出现在拥有更好基础模型的公司与拥有更差基础模型的公司之间。可比的模型人人都能获得。
 
-The divide will be between:
+分水岭将出现在：
 
-- organizations whose data remains stored in disconnected systems; and
-- organizations that turn data into a live, contextualized, end-to-end operational flow.
+- 数据依然存放在互不连通的系统中的组织；以及
+- 把数据转化为活的、具备上下文的、端到端运营流的组织。
 
-The first group will continue producing impressive pilots. The second will build a compounding industrial intelligence system.
+前者会继续产出令人印象深刻的试点。后者则会建立一个持续复利的工业智能系统。
 
-> If an organization already has years of industrial data but still cannot scale AI, should it invest in another model—or redesign the connected decision system that makes the data alive?
+> 如果一个组织已经拥有多年的工业数据，却仍然无法规模化人工智能，它应该再投资一个模型，还是重新设计那个让数据活起来的连通决策系统？
 
-## 3. Industrial Systems Evolve
+## 3. 工业系统会演变
 
-Industrial AI is deployed into physical systems that change. Machines wear, sensors drift, suppliers and materials change, methods are revised, products evolve, operators intervene, and operating conditions shift. A model that performed well in a controlled proof of concept may therefore become inaccurate, physically weak, or unsafe in production.
+工业人工智能被部署到不断变化的物理系统中。机器会磨损，传感器会漂移，供应商和材料会更换，方法会修订，产品会演进，操作员会干预，运行工况会变化。因此，一个在受控概念验证中表现良好的模型，在生产环境中可能变得不准确、物理上站不住脚，甚至不安全。
 
-NIST notes that industrial AI data have to cover real operating scenarios and physical understanding, not only convenient historical samples.[7] This problem grows after deployment because the system being modeled does not stay fixed.
+NIST 指出，工业人工智能的数据必须覆盖真实运行场景和物理认知，而不只是方便取得的历史样本。[7] 这个问题在部署之后会进一步加剧，因为被建模的系统不会保持不变。
 
-**Concrete example 1.** Omron describes manufacturing defect-prediction use cases where 4M changes - man, machine, material, and method - can induce concept drift that must be detected separately from defect signs.[15]
+**具体案例 1。** 欧姆龙（Omron）描述了制造缺陷预测的用例，其中 4M（人、机、料、法）的变化可能诱发概念漂移，而这种漂移必须与缺陷征兆分开检测。[15]
 
-**Analysis.** This is why production behavior cannot be assumed to match the pilot dataset. A change in people, equipment, material, or method can shift the process and quietly invalidate model assumptions.
+**分析。** 这就是为什么不能假定生产环境中的行为与试点数据集一致。人员、设备、材料或方法的变化都可能使工艺发生偏移，并悄无声息地使模型假设失效。
 
-**Concrete example 2.** In tool-wear and remaining-useful-life prediction, recent physics-informed work explicitly models wear dynamics and interpretable physical aspects instead of relying only on a black-box fit to historical data.[16]
+**具体案例 2。** 在刀具磨损和剩余使用寿命预测中，近期融入物理规律的研究明确地对磨损动力学和可解释的物理特性进行建模，而不是仅依赖对历史数据的黑箱拟合。[16]
 
-**Analysis.** Evolving systems still obey engineering constraints. Scaling needs models that remain physically meaningful under wear, changing loads, new operating regimes, and extrapolation beyond the proof-of-concept data.
-
----
-
-## Short Synthesis
-
-The main problem of current Industrial AI is the gap between **proof-of-concept performance** and **production-scale ROI**.
-
-That gap is driven by three root problems:
-
-1. **Data:** industrial data are often unreliable, fragmented, and insufficiently contextualized.
-2. **Trust:** AI outputs must be valid, secure, understandable, governable, and usable by people in real workflows.
-3. **Evolving systems:** physical assets, materials, processes, and operating conditions change, so model validity cannot be assumed to persist.
-
-This framing keeps scaling as the central concern while explaining why scaling fails. An Industrial AI system does not scale just because its algorithm works in a controlled environment; it scales when data, trust, and engineering validity survive production reality.
+**分析。** 演变中的系统依然遵守工程约束。规模化需要的模型，是在磨损、载荷变化、新的运行区间以及超出概念验证数据范围的外推情形下，仍然保持物理意义的模型。
 
 ---
 
-## References
+## 简要综合
+
+当前工业人工智能的主要问题，是**概念验证表现**与**生产规模投资回报**之间的鸿沟。
+
+这一鸿沟由三个根本问题驱动：
+
+1. **数据：** 工业数据往往不可靠、碎片化，且上下文不足。
+2. **信任：** 人工智能输出必须有效、安全、可理解、可治理，并且能被真实工作流中的人所使用。
+3. **系统演变：** 物理资产、材料、工艺和运行工况都会变化，因此不能假定模型的有效性会一直持续。
+
+这一框架把规模化保留为核心关切，同时解释了规模化为何失败。一个工业人工智能系统不会仅因其算法在受控环境中有效就能规模化；只有当数据、信任和工程有效性都经受住生产现实的考验时，它才能规模化。
+
+---
+
+## 参考文献
 
 [1] McKinsey & Company. (2025). *The State of AI: Global Survey 2025.* https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai
 
@@ -620,310 +631,312 @@ This framing keeps scaling as the central concern while explaining why scaling f
 
 [18] National Institute of Standards and Technology. (2024). *NIST Explores AI-Enhanced Monitoring in Manufacturing Processes.* https://www.nist.gov/blogs/manufacturing-innovation-blog/nist-explores-ai-enhanced-monitoring-manufacturing-processes
 
+---
+publication_status: not_published
+---
+
+# 面向工业人工智能的受控系统
+
+_最后更新：2026-07-09 12:40 America/New_York (UTC-04:00)_
+
+这里我们讨论构建工业人工智能的三个步骤，而工业人工智能必须是一个受控 AI 系统。
+
+## 第一步：选定一个工作流，而不是搞“AI 转型”
+
+**数字孪生的价值很容易证明，但引入人工智能的收益却不容易证明。我的核心观点是：没有一个像样的数字孪生，引入人工智能（工业人工智能）几乎没有什么收益。说实话，我不确定轮胎磨耗性能监测是不是这里最合适的例子，但它是离我最近的一个。**
+
+例子包括：
+
+- 轮胎磨耗性能监测
+- 仿真结果对比
 
 
-# Controlled Systems for industiral AI
+这个工作流应当具有可衡量的价值，例如：
 
-_Last updated: 2026-07-09 12:40 America/New_York (UTC-04:00)_
+- 减少工程师工时
+- 更快完成试验周期
+- 减少重复试验
+- 更好的数据可追溯性
+- 更快生成报告
+- 减少人为错误
+- 更好地利用历史知识
 
-Here we discuss the three steps to build the industrial AI, which must be a controlled AI system.
-
-## Step 1: Pick one workflow, not “AI transformation”
-
-**it is easy to demostrate the values of digital twin, but not easy to demonstrate the benefits of adding AI, my whole point is without a proper digital twin, there is almost no benefits of introducing AI (industrial AI), to be honest, I am not sure if tire wear performane monitoring is a good choice here, but is something closest to me**
-
-Examples include:
-
-- tire wear performance monitoring
-- simulation result comparison
-
-
-The workflow should have measurable value, such as:
-
-- fewer engineering hours
-- faster test-cycle completion
-- fewer repeated tests
-- better data traceability
-- faster report generation
-- fewer manual errors
-- better use of historical knowledge
-
-A controlled AI system should be judged by workflow improvement, not by how impressive the demo looks.
+评判一个受控 AI 系统，应该看它对工作流的改进，而不是看演示有多惊艳。
 
 ---
 
-## Step 2: Build the ontology or digital-twin context
+## 第二步：构建本体或数字孪生上下文
 
-The second step is to organize the company’s operational knowledge into a structure the AI system can use.
+第二步是把公司的运营知识组织成 AI 系统能够使用的结构。
 
-This is where many companies fail. They have data, but the data is fragmented across reports, spreadsheets, databases, PLM systems, test systems, SharePoint folders, simulation tools, and expert memory.
+很多公司正是在这里失败的。它们有数据，但数据分散在报告、电子表格、数据库、PLM 系统、试验系统、SharePoint 文件夹、仿真工具以及专家的记忆里。
 
-The AI system needs a domain context layer.
+AI 系统需要一个领域上下文层。
 
-In industrial AI, this layer can be an ontology, a knowledge graph, or a digital twin.
+在工业人工智能中，这一层可以是本体、知识图谱，或者数字孪生。
 
-For tire engineering, the ontology may include:
+对轮胎工程而言，本体可以包括：
 
 ```text
-Tire
- ├── size
- ├── construction
- ├── compound
- ├── tread pattern
- ├── stiffness data
- ├── footprint data
- ├── lab abradability
- ├── road-wear result
- ├── vehicle application
- ├── simulation model
- └── validation status
+轮胎
+ ├── 规格
+ ├── 结构
+ ├── 胶料
+ ├── 胎面花纹
+ ├── 刚度数据
+ ├── 接地印痕数据
+ ├── 实验室磨耗性
+ ├── 道路磨耗结果
+ ├── 车辆应用
+ ├── 仿真模型
+ └── 验证状态
 
-Vehicle
- ├── platform
- ├── axle load
- ├── alignment
- ├── duty cycle
- ├── route
- └── sensor data
+车辆
+ ├── 平台
+ ├── 轴荷
+ ├── 四轮定位
+ ├── 工况循环
+ ├── 路线
+ └── 传感器数据
 
-Test
- ├── protocol
- ├── date
- ├── location
- ├── engineer
- ├── raw data
- ├── processed data
- ├── quality flag
- └── approved conclusion
+试验
+ ├── 试验规程
+ ├── 日期
+ ├── 地点
+ ├── 工程师
+ ├── 原始数据
+ ├── 处理后数据
+ ├── 质量标记
+ └── 已批准结论
 ```
 
-The LLM should not guess what the company’s data means. It should retrieve information through this structured operational context.
+大语言模型（LLM）不应该去猜测公司的数据是什么意思。它应该通过这个结构化的运营上下文来检索信息。
 
-This is also where the company’s competitive advantage begins to appear. The foundation model may be generic, but the ontology is company-specific.
+这也是公司竞争优势开始显现的地方。基础模型可以是通用的，但本体是公司特有的。
 
 ---
 
-## Step 3: Design the controlled execution boundary
+## 第三步：设计受控执行边界
 
-This is the core design step.
+这是核心的设计步骤。
 
-A controlled AI system must define how work is divided among the LLM, the hardcoded system, the human, and the model infrastructure.
-
-```text
-
-Hardcoded system = rules, permissions, tools, validation, execution, and logging
-
-Human = judgment, accountability, and high-consequence approval
-
-LLM = reasoning, language, synthesis, and interaction
-
-- Model gateway = model selection based on risk, cost, latency, privacy, and data sensitivity
-
-- Permissioned APIs = controlled tool access based on model choice, user role, data sensitivity, and task risk
-```
-
-This step includes four related design decisions:
+一个受控 AI 系统必须明确定义：工作如何在 LLM、硬编码系统、人以及模型基础设施之间划分。
 
 ```text
-1. Classify the task by risk level.
 
-2. Decide what the LLM, hardcoded system, and human are each allowed to do.
+硬编码系统 = 规则、权限、工具、验证、执行和日志记录
 
-3. Route the task to the right model through a model gateway.
+人 = 判断、责任归属，以及高后果事项的审批
 
-4. Expose tools to the selected model only through permissioned APIs.
+LLM = 推理、语言、综合和交互
+
+- 模型网关 = 基于风险、成本、时延、隐私和数据敏感度选择模型
+
+- 受权限控制的 API = 基于模型选择、用户角色、数据敏感度和任务风险，对工具访问进行控制
 ```
 
-These should not be treated as separate design problems. They are one system-design problem:
-
-**Who is allowed to do what, using which model, under what conditions, with what evidence, and with what approval?**
-
-The model gateway should come before permissioned APIs because the selected model determines the trust boundary.
-
-An external frontier model should not receive the same tool access as a local or enterprise-controlled model. A public-data model call may only access sanitized information. A local model running inside the company boundary may be allowed to access more sensitive internal data, but still only through controlled APIs.
-
-A useful pattern is:
+这一步包含四个相互关联的设计决策：
 
 ```text
-Task risk level
-→ human / system / LLM responsibility boundary
-→ model gateway selects the allowed model
-→ permissioned APIs expose only the tools and data allowed for that model, user, and task
+1. 按风险等级对任务分类。
+
+2. 决定 LLM、硬编码系统和人各自被允许做什么。
+
+3. 通过模型网关把任务路由到合适的模型。
+
+4. 只通过受权限控制的 API 向选定的模型开放工具。
 ```
 
-### 3.1 Classify tasks by risk level
+这些不应被当作彼此独立的设计问题。它们是同一个系统设计问题：
 
-The responsibility boundary depends on the consequence level of the task.
+**谁被允许做什么，使用哪个模型，在什么条件下，依据什么证据，经过谁的审批？**
+
+模型网关应该排在受权限控制的 API 之前，因为选定的模型决定了信任边界。
+
+外部前沿模型不应获得与本地模型或企业可控模型相同的工具访问权限。面向公开数据的模型调用只能访问经过脱敏的信息。运行在公司边界之内的本地模型可以被允许访问更敏感的内部数据，但仍然只能通过受控的 API。
+
+一个实用的模式是：
 
 ```text
-Low-risk task:
-LLM can summarize, classify, draft, or organize automatically.
-
-Medium-risk task:
-LLM can recommend or draft, but human review is required.
-
-High-risk task:
-LLM can provide evidence and options, but hardcoded rules and human approval control the final decision.
-
-Safety-critical task:
-LLM can support analysis or explanation, but validated deterministic models and human authority control the action.
+任务风险等级
+→ 人／系统／LLM 的职责边界
+→ 模型网关选择允许使用的模型
+→ 受权限控制的 API 只开放该模型、该用户、该任务被允许使用的工具和数据
 ```
 
-For example:
+### 3.1 按风险等级对任务分类
 
-| Risk level | Example | LLM role | Hardcoded system role | Human role |
+职责边界取决于任务的后果等级。
+
+```text
+低风险任务：
+LLM 可以自动进行摘要、分类、起草或整理。
+
+中风险任务：
+LLM 可以给出建议或起草，但必须经过人工审核。
+
+高风险任务：
+LLM 可以提供证据和选项，但最终决定由硬编码规则和人工审批控制。
+
+安全关键任务：
+LLM 可以辅助分析或解释，但行动由经过验证的确定性模型和人的权限控制。
+```
+
+例如：
+
+| 风险等级 | 示例 | LLM 的角色 | 硬编码系统的角色 | 人的角色 |
 |---|---|---|---|---|
-| Low | Summarize a public paper | Summarize and organize | Optional source check | Usually not needed |
-| Medium | Draft an internal test report | Draft and explain | Check source, format, and data quality | Review before use |
-| High | Recommend changing a test plan | Provide evidence and options | Validate inputs, enforce rules, log decision | Approve final action |
-| Safety-critical | Control vehicle braking or factory equipment | Explain or support analysis only | Deterministic validated control | Own final authority |
+| 低风险 | 摘要一篇公开论文 | 摘要与整理 | 可选的来源核查 | 通常不需要 |
+| 中风险 | 起草一份内部试验报告 | 起草与解释 | 检查来源、格式和数据质量 | 使用前审核 |
+| 高风险 | 建议修改试验计划 | 提供证据和选项 | 验证输入、执行规则、记录决策 | 批准最终行动 |
+| 安全关键 | 控制车辆制动或工厂设备 | 仅做解释或辅助分析 | 经过验证的确定性控制 | 拥有最终决定权 |
 
-### 3.2 Decouple the LLM, hardcoded system, and human
+### 3.2 解耦 LLM、硬编码系统与人
 
-The LLM should not become the control system.
-The hardcoded software should not try to imitate flexible reasoning.
-The human should not be forced to manually do work that software can reliably automate.
+LLM 不应该变成控制系统。  
+硬编码软件不应该试图模仿灵活的推理。  
+人不应该被迫手工去做软件能够可靠自动完成的工作。
 
-A good controlled AI system assigns each responsibility to the right layer.
+一个好的受控 AI 系统会把每项职责分配到合适的层。
 
-The LLM should handle:
+LLM 应该负责：
 
-- natural-language understanding
-- summarization
-- comparison
-- synthesis
-- hypothesis generation
-- report drafting
-- explanation
-- user interaction
+- 自然语言理解
+- 摘要
+- 对比
+- 综合
+- 生成假设
+- 起草报告
+- 解释
+- 用户交互
 
-The hardcoded system should handle:
+硬编码系统应该负责：
 
-- permission checks
-- data access
-- deterministic calculations
-- validated simulation execution
-- tool calling
-- data-quality rules
-- logging
-- audit trails
-- cost controls
-- safety constraints
-- approval workflow enforcement
+- 权限检查
+- 数据访问
+- 确定性计算
+- 执行经过验证的仿真
+- 工具调用
+- 数据质量规则
+- 日志记录
+- 审计记录
+- 成本控制
+- 安全约束
+- 强制执行审批工作流
 
-The human should handle:
+人应该负责：
 
-- judgment
-- accountability
-- exception handling
-- technical approval
-- business approval
-- safety-sensitive decisions
-- final signoff for high-consequence actions
+- 判断
+- 责任归属
+- 异常处理
+- 技术审批
+- 业务审批
+- 涉及安全的决策
+- 高后果行动的最终签核
 
-### 3.3 Use a model gateway, not a single hardwired model
+### 3.3 使用模型网关，而不是单一硬绑定的模型
 
-The company should not tie every workflow to one model provider.
+公司不应该把每一个工作流都绑死在一家模型供应商上。
 
-A model gateway routes tasks based on:
+模型网关根据以下因素对任务进行路由：
 
-- risk level
-- data sensitivity
-- cost
-- latency
-- required reasoning quality
-- privacy requirement
-- deployment environment
-- regulatory or customer constraint
+- 风险等级
+- 数据敏感度
+- 成本
+- 时延
+- 所需的推理质量
+- 隐私要求
+- 部署环境
+- 法规或客户约束
 
-For example:
-
-```text
-Public information task
-→ external frontier model
-
-Internal but non-sensitive task
-→ enterprise cloud model
-
-Confidential engineering task
-→ local open-weight model, private cloud model, or on-prem model
-
-Routine structured task
-→ smaller cheaper model
-
-Domain-specific technical task
-→ fine-tuned model, adapter-based model, or local domain model
-
-High-risk decision task
-→ LLM can assist, but hardcoded validation and human approval are required
-
-Safety-critical task
-→ LLM cannot directly act
-```
-
-The model gateway makes the model replaceable.
-
-The company should own the architecture, not just subscribe to one model. The LLM is a component inside the system, not the system itself.
-
-#### Where a local open-weight LLM fits
-
-A local open-weight LLM fits inside the model gateway.
-
-It is useful when the task involves:
-
-- confidential engineering data
-- internal test results
-- proprietary simulation results
-- compound or construction information
-- customer-sensitive fleet data
-- cost-sensitive high-volume tasks
-- routine summarization or classification
-- domain-specific terminology
-- private RAG over internal documents
-
-A local model gives the company stronger control over:
+例如：
 
 ```text
-Data boundary
-Deployment environment
-Logging
-Access control
-Model version
-Fine-tuning / adapters
-Cost for repeated tasks
-Integration with internal tools
+公开信息任务
+→ 外部前沿模型
+
+内部但非敏感任务
+→ 企业云模型
+
+机密工程任务
+→ 本地开放权重模型、私有云模型或本地部署模型
+
+常规结构化任务
+→ 更小、更便宜的模型
+
+领域专属技术任务
+→ 微调模型、基于适配器的模型或本地领域模型
+
+高风险决策任务
+→ LLM 可以辅助，但必须有硬编码验证和人工审批
+
+安全关键任务
+→ LLM 不能直接采取行动
 ```
 
-But a local model does not automatically make the system controlled.
+模型网关让模型变得可替换。
 
-A weak architecture with a local model is still weak:
+公司应该拥有的是架构，而不只是订阅某一个模型。LLM 是系统中的一个组件，而不是系统本身。
+
+#### 本地开放权重 LLM 的位置
+
+本地开放权重 LLM 位于模型网关之内。
+
+当任务涉及以下内容时，它非常有用：
+
+- 机密工程数据
+- 内部试验结果
+- 专有的仿真结果
+- 胶料或结构信息
+- 涉及客户敏感信息的车队数据
+- 对成本敏感的大批量任务
+- 常规的摘要或分类
+- 领域专属术语
+- 基于内部文档的私有 RAG
+
+本地模型让公司对以下方面有更强的控制：
 
 ```text
-Internal data + local chatbot
+数据边界
+部署环境
+日志记录
+访问控制
+模型版本
+微调／适配器
+重复任务的成本
+与内部工具的集成
 ```
 
-That is not enough.
+但本地模型并不会自动让系统变成受控的。
 
-The local model still needs to operate inside:
+架构薄弱的系统，即使用了本地模型，依然薄弱：
 
 ```text
-Ontology / digital twin context
-+ risk classification
-+ hardcoded rules
-+ permissioned APIs
-+ logging
-+ human approval
+内部数据 + 本地聊天机器人
 ```
 
-The local model protects data better, but the hardcoded boundary remains the real control system.
+这远远不够。
 
-### 3.4 Expose tools only through permissioned APIs
+本地模型仍然需要运行在以下框架之内：
 
-The LLM becomes useful when it can call tools, but those tools must be controlled by the hardcoded system.
+```text
+本体／数字孪生上下文
++ 风险分类
++ 硬编码规则
++ 受权限控制的 API
++ 日志记录
++ 人工审批
+```
 
-The LLM should not freely access databases, simulations, production systems, or official records. It should call approved APIs.
+本地模型能更好地保护数据，但硬编码的边界才是真正的控制系统。
 
-Examples:
+### 3.4 只通过受权限控制的 API 开放工具
+
+LLM 在能够调用工具时才变得有用，但这些工具必须由硬编码系统控制。
+
+LLM 不应该随意访问数据库、仿真、生产系统或正式记录。它应该调用经过批准的 API。
+
+示例：
 
 ```text
 read_test_data(test_id)
@@ -934,443 +947,449 @@ search_prior_validation_cases(tire_size, vehicle_platform)
 create_engineering_review_ticket(issue_type, evidence_ids)
 ```
 
-Each API should include:
+每个 API 都应包含：
 
-- input schema
-- permission check
-- data-sensitivity rule
-- validation logic
-- logging
-- rollback mechanism if needed
-- human approval rule if needed
+- 输入模式（schema）
+- 权限检查
+- 数据敏感度规则
+- 验证逻辑
+- 日志记录
+- 必要时的回滚机制
+- 必要时的人工审批规则
 
-The API permissions should depend on:
+API 的权限应取决于：
 
-- selected model
-- user role
-- task risk level
-- data sensitivity
-- action consequence
-- regulatory or customer constraint
+- 选定的模型
+- 用户角色
+- 任务风险等级
+- 数据敏感度
+- 行动的后果
+- 法规或客户约束
 
-For example:
-
-```text
-Public information task
-→ external frontier model
-→ public search / citation APIs only
-
-Internal but non-sensitive task
-→ enterprise cloud model
-→ restricted internal document APIs
-
-Confidential engineering task
-→ local or private model
-→ approved test-data and simulation APIs
-
-High-risk engineering task
-→ controlled model
-→ read-only APIs plus human approval workflow
-
-Safety-critical task
-→ LLM cannot directly act
-→ deterministic validated system and human authority control the action
-```
-
-The key pattern is:
+例如：
 
 ```text
-The LLM decides what information or tool may be useful.
-The model gateway decides which model is allowed to reason over the task.
-The hardcoded system decides whether the tool call is allowed.
-The permissioned API performs the actual operation.
-The human approves when the risk level requires it.
+公开信息任务
+→ 外部前沿模型
+→ 仅限公开搜索／引用 API
+
+内部但非敏感任务
+→ 企业云模型
+→ 受限的内部文档 API
+
+机密工程任务
+→ 本地或私有模型
+→ 经批准的试验数据和仿真 API
+
+高风险工程任务
+→ 受控模型
+→ 只读 API，外加人工审批工作流
+
+安全关键任务
+→ LLM 不能直接采取行动
+→ 由经过验证的确定性系统和人的权限控制行动
 ```
 
-### 3.5 Example in tire engineering
+关键模式是：
 
 ```text
-Engineer asks:
-“Compare the predicted wear performance of Tire A and Tire B on Model Y.”
-
-
-
-Hardcoded system role:
-Check permissions, retrieve approved test data, run validated wear algorithms, enforce data-quality rules, calculate error metrics, expose approved tool APIs, route model calls, and log all actions.
-
-LLM role:
-Understand the question, retrieve relevant context, summarize differences, identify missing data, and draft the comparison.
-
-- Model gateway:Choose the proper model based on data sensitivity and task risk. Public background information may use an external model. Confidential tire test data may require a local or enterprise-controlled model.
-
-- Permissioned API:
-Expose only the approved test-data, simulation, comparison, and reporting tools that are allowed for the selected model, user, and risk level.
-
-Human role:
-Review the evidence, judge whether the conclusion is technically sound, and approve the final recommendation.
+LLM 决定哪些信息或工具可能有用。
+模型网关决定哪个模型被允许对该任务进行推理。
+硬编码系统决定该工具调用是否被允许。
+受权限控制的 API 执行实际操作。
+在风险等级要求时，由人进行审批。
 ```
 
-This is the real controlled-AI boundary.
-- The hardcoded system owns the control logic.
-- The LLM is placed in the right position: The model gateway controls model exposure; Permissioned APIs control tool access.
-- The human owns final accountability where consequence requires it.
+### 3.5 轮胎工程中的示例
+
+```text
+工程师提问：
+“对比轮胎 A 和轮胎 B 在 Model Y 上的预测磨耗性能。”
+
+
+
+硬编码系统的角色：
+检查权限、检索经批准的试验数据、运行经过验证的磨耗算法、执行数据质量规则、计算误差指标、开放经批准的工具 API、路由模型调用，并记录所有操作。
+
+LLM 的角色：
+理解问题、检索相关上下文、总结差异、识别缺失数据，并起草对比结果。
+
+- 模型网关：根据数据敏感度和任务风险选择合适的模型。公开的背景信息可以使用外部模型；机密的轮胎试验数据可能需要本地模型或企业可控的模型。
+
+- 受权限控制的 API：
+只开放该选定模型、用户和风险等级被允许使用的、经批准的试验数据、仿真、对比和报告工具。
+
+人的角色：
+审阅证据，判断结论在技术上是否站得住，并批准最终建议。
+```
+
+这才是真正的受控 AI 边界。
+- 硬编码系统掌握控制逻辑。  
+- LLM 被放在正确的位置上：模型网关控制模型的暴露范围；受权限控制的 API 控制工具访问。  
+- 在后果要求的地方，由人承担最终责任。
 
 ---
 
-## Entrepreneurial opportunity — vertical AI ontology builders
+## 创业机会——垂直领域 AI 本体构建者
 
-The most attractive entrepreneurial opportunity is not building another generic chatbot. It is building **vertical AI ontology systems** for specific industries.
+最有吸引力的创业机会不是再做一个通用聊天机器人，而是为特定行业构建**垂直领域 AI 本体系统**。
 
-Many companies already have valuable data, but they do not have a usable operational ontology. Their data is scattered across documents, databases, spreadsheets, engineering tools, test systems, and expert memory.
+很多公司已经拥有有价值的数据，但没有一个可用的运营本体。它们的数据散落在文档、数据库、电子表格、工程工具、试验系统和专家的记忆里。
 
-A startup could help companies convert fragmented domain knowledge into an AI-ready operational structure.
+初创公司可以帮助企业把碎片化的领域知识转化为可供人工智能使用的运营结构。
 
-For industrial companies, this means building the layer that connects:
-
-```text
-Domain objects
-+ historical data
-+ engineering rules
-+ test results
-+ simulation models
-+ workflow context
-+ human approval logic
-```
-
-For tire engineering, a vertical AI ontology could connect:
+对工业企业而言，这意味着构建一个把以下内容连接起来的层：
 
 ```text
-Tire specifications
-+ compound data
-+ tread patterns
-+ simulation models
-+ test protocols
-+ vehicle platforms
-+ road-wear results
-+ fleet duty cycles
-+ claims data
-+ validation status
-+ approved conclusions
+领域对象
++ 历史数据
++ 工程规则
++ 试验结果
++ 仿真模型
++ 工作流上下文
++ 人工审批逻辑
 ```
 
-This ontology becomes the foundation for controlled AI agents.
-
-Instead of asking a generic chatbot:
+对轮胎工程而言，一个垂直领域 AI 本体可以连接：
 
 ```text
-“Why did this tire wear faster?”
+轮胎规格
++ 胶料数据
++ 胎面花纹
++ 仿真模型
++ 试验规程
++ 车辆平台
++ 道路磨耗结果
++ 车队工况循环
++ 索赔数据
++ 验证状态
++ 已批准结论
 ```
 
-The engineer could ask a controlled AI system:
+这个本体成为受控 AI 代理的基础。
+
+工程师不再是向一个通用聊天机器人提问：
 
 ```text
-“Compare this tire’s wear result against similar compounds, vehicle platforms, routes, lab abradability, footprint data, and historical validation cases. Show the evidence and identify the most likely contributing factors.”
+“为什么这条轮胎磨得更快？”
 ```
 
-The value is not just the answer. The value is that the answer is grounded in the company’s own structured knowledge, permission rules, tools, and engineering workflow.
+而是可以向一个受控 AI 系统提问：
 
-This is a strong opportunity because every industrial sector has its own complex domain objects and decision logic.
+```text
+“把这条轮胎的磨耗结果与相似的胶料、车辆平台、路线、实验室磨耗性、接地印痕数据以及历史验证案例进行对比。给出证据，并找出最可能的影响因素。”
+```
 
-Examples include:
+价值不只在于答案本身。价值在于答案扎根于公司自己的结构化知识、权限规则、工具和工程工作流。
 
-- tire engineering ontology
-- battery testing ontology
-- automotive validation ontology
-- manufacturing quality ontology
-- fleet maintenance ontology
-- industrial safety ontology
-- lab test management ontology
-- supply chain risk ontology
+这是一个很有分量的机会，因为每个工业领域都有自己复杂的领域对象和决策逻辑。
 
-The company that owns the ontology owns the workflow context.
-The company that owns the workflow context controls how AI creates value.
-That is where enterprise AI becomes defensible.
+例子包括：
+
+- 轮胎工程本体
+- 电池测试本体
+- 汽车验证本体
+- 制造质量本体
+- 车队维护本体
+- 工业安全本体
+- 实验室试验管理本体
+- 供应链风险本体
+
+谁拥有本体，谁就拥有工作流上下文。  
+谁拥有工作流上下文，谁就掌控了人工智能创造价值的方式。  
+这正是企业级人工智能建立起护城河的地方。
 
 
+---
+publication_status: not_published
+---
 
-# The Industrial AI Bottleneck Is Not Data Scarcity. It Is Dead Data.
+# 工业人工智能的瓶颈不是数据稀缺，而是死数据
 
-_Last updated: 2026-07-09 12:40 America/New_York (UTC-04:00)_
+_最后更新：2026-07-09 12:40 America/New_York (UTC-04:00)_
 
-## Painpoints
-- many processes are manual,
+## 痛点
+- 许多流程仍是手工的，
 
-**Purpose:** Develop the argument that many mature industrial organizations already possess large amounts of useful data, but receive limited enterprise value because the data remains fragmented, passive, and disconnected from operational decisions.
+**目的：** 阐述这样一个论点：许多成熟的工业组织其实已经拥有大量有用的数据，但从中获得的企业价值却十分有限，因为这些数据仍然是碎片化的、被动的，并且与运营决策脱节。
 
-**Core thesis:** The next bottleneck for Industrial AI is not simply collecting more data or selecting a better AI model. It is turning existing data into a live, connected, contextualized flow across the full industrial value stream. Organizations can achieve this through AI-native workflow redesign or through a connected network of process digital twins that progressively transforms existing workflows.
+**核心论点：** 工业人工智能的下一个瓶颈，并不只是收集更多数据或选择更好的 AI 模型，而是把现有数据转变为一条贯穿整个工业价值流的、活的、互联的、情境化的数据流。组织可以通过 AI 原生的工作流重构来实现这一点，也可以通过一个由流程数字孪生构成的互联网络，逐步改造现有的工作流。
 
 ---
 
+---
+publication_status: not_published
+---
 
-# What Is a Process Digital Twin?
+# 什么是流程数字孪生？
 
-_Last updated: 2026-07-09 12:40 America/New_York (UTC-04:00)_
+_最后更新：2026-07-09 12:40 America/New_York (UTC-04:00)_
 
-**Purpose:** Establish a precise, practical definition of a process digital twin before discussing its role in Industrial AI.
+**目的：** 在讨论流程数字孪生在工业人工智能中的角色之前，先给出一个精确且可操作的定义。
 
-**Core thesis:** A process digital twin is not a dashboard, a simulation, or a machine-learning model. It is a continuously updated and executable representation of an industrial process that connects process state, history, models, constraints, decisions, and measured outcomes.
+**核心论点：** 流程数字孪生不是仪表盘，不是仿真，也不是机器学习模型。它是对一个工业流程的持续更新的、可执行的表示，把流程状态、历史、模型、约束、决策以及实测结果连接在一起。
 
 ---
 
-## Digital Twin Is Becoming Too Broad to Be Useful
+## “数字孪生”正变得过于宽泛而失去意义
 
-The phrase “digital twin” is now applied to many different things:
+“数字孪生”这个词如今被用来指很多不同的东西：
 
-- a three-dimensional visualization of a factory;
-- a dashboard displaying live sensor signals;
-- a physics-based simulation;
-- a machine-learning model;
-- a digital record of an asset;
-- a complete virtual representation of a production system.
+- 工厂的三维可视化；
+- 显示实时传感器信号的仪表盘；
+- 基于物理的仿真；
+- 机器学习模型；
+- 一项资产的数字记录；
+- 一个生产系统的完整虚拟表示。
 
-Each may be useful, but calling all of them digital twins removes the distinctions engineers need when designing real systems.
+这些东西各有其用，但把它们统统称为数字孪生，就抹去了工程师在设计真实系统时所需要的区分。
 
-The first question should therefore not be:
+因此，第一个问题不应该是：
 
-> How do we build a digital twin?
+> 我们如何构建一个数字孪生？
 
-It should be:
+而应该是：
 
-> What physical or operational decision must this twin improve?
+> 这个孪生必须改进哪一项物理决策或运营决策？
 
-This question changes the unit of analysis. Instead of attempting to reproduce an entire factory digitally, the organization identifies a bounded process, its important states, and the decisions that determine its outcome.
+这个问题改变了分析的单位。组织不再试图把整座工厂在数字世界里复制一遍，而是识别出一个有边界的流程、它的关键状态，以及决定其结果的那些决策。
 
 ---
 
-## Product, Asset, and Process Twins Are Different
+## 产品孪生、资产孪生与流程孪生各不相同
 
-A **product digital twin** represents the engineering definition and expected behavior of a product. It may include geometry, materials, requirements, simulations, configurations, and validation evidence.
+**产品数字孪生**表示一个产品的工程定义及其预期行为。它可以包含几何、材料、需求、仿真、配置以及验证证据。
 
-An **asset digital twin** represents a specific physical instance in operation. It may track usage, condition, maintenance history, degradation, and remaining life.
+**资产数字孪生**表示一个正在运行的特定物理实例。它可以跟踪使用情况、状态、维护历史、劣化以及剩余寿命。
 
-A **process digital twin** represents how work transforms inputs into an outcome.
+**流程数字孪生**表示工作如何把输入转化为结果。
 
-That process may be physical:
+这个流程可以是物理流程：
 
 ```text
-raw material
-→ mixing
-→ forming
-→ curing
-→ inspection
-→ finished product
+原材料
+→ 混炼
+→ 成型
+→ 硫化
+→ 检验
+→ 成品
 ```
 
-It may also be an engineering process:
+它也可以是工程流程：
 
 ```text
-requirements
-→ design
-→ simulation
-→ prototype
-→ test
-→ validation
-→ design update
+需求
+→ 设计
+→ 仿真
+→ 样件
+→ 试验
+→ 验证
+→ 设计更新
 ```
 
-The process twin does not merely describe equipment. It represents the state transitions, dependencies, rules, interventions, and evidence that connect one stage to the next.
+流程孪生不只是描述设备。它表示的是把一个阶段与下一个阶段连接起来的状态转换、依赖关系、规则、干预以及证据。
 
 ---
 
-## A Practical Definition
+## 一个可操作的定义
 
-> A process digital twin is a continuously updated, executable representation of an industrial process that connects its current state, operating history, inputs, models, constraints, decisions, and measured outcomes.
+> 流程数字孪生是对一个工业流程的持续更新的、可执行的表示，它把该流程的当前状态、运行历史、输入、模型、约束、决策以及实测结果连接在一起。
 
-Every part of this definition matters.
+这个定义的每一部分都很重要。
 
-### Continuously Updated
+### 持续更新的
 
-The twin must reflect the relevant state of the real process. “Continuous” does not always mean millisecond streaming. A laboratory workflow may update once per test, while a curing process may update many times per second.
+孪生必须反映真实流程的相关状态。“持续”并不总是意味着毫秒级的流式更新。一个实验室工作流可能每做一次试验才更新一次，而一个硫化过程可能每秒更新多次。
 
-The required update rate is determined by the decision latency.
+所需的更新频率由决策时延决定。
 
-### Executable
+### 可执行的
 
-The twin must support some form of computation. It should be able to estimate an unmeasured state, evaluate a rule, predict an outcome, compare alternatives, or run a what-if scenario.
+孪生必须支持某种形式的计算。它应当能够估计一个未被测量的状态、评估一条规则、预测一个结果、比较多个备选方案，或者运行一次假设情景分析。
 
-A static process map is useful documentation, but it is not yet an operational twin.
+静态的流程图是有用的文档，但它还不是一个可运行的孪生。
 
-### Process Context
+### 流程上下文
 
-A temperature value has little meaning by itself. Its interpretation may depend on:
+一个温度值本身几乎没有意义。对它的解读可能取决于：
 
-- the product and revision;
-- the material batch;
-- the machine and tool;
-- the process stage;
-- the operating recipe;
-- the previous state;
-- the sensor location and calibration;
-- the environmental condition.
+- 产品及其版本；
+- 物料批次；
+- 设备与工装；
+- 流程阶段；
+- 运行配方；
+- 前一状态；
+- 传感器位置与校准；
+- 环境条件。
 
-The process twin organizes signals around these relationships.
+流程孪生围绕这些关系来组织信号。
 
-### Constraints
+### 约束
 
-Industrial decisions operate inside safety limits, equipment capabilities, product specifications, engineering rules, regulatory requirements, and approval authorities.
+工业决策是在安全限值、设备能力、产品规范、工程规则、法规要求以及审批权限之内进行的。
 
-A prediction without these constraints is not enough for operational use.
+缺少这些约束的预测，还不足以投入运营使用。
 
-### Decisions and Outcomes
+### 决策与结果
 
-The twin must connect information to an action or recommendation and then capture what happened afterward.
+孪生必须把信息与一项行动或建议连接起来，然后记录随后发生了什么。
 
-Without this final connection, the organization has monitoring—not learning.
+没有这最后一环，组织拥有的只是监控，而不是学习。
 
 ---
 
-## The Minimum Process-Twin Architecture
+## 流程孪生的最小架构
 
-A useful process twin contains at least six layers:
+一个有用的流程孪生至少包含六个层次：
 
 ```text
-1. Identity and configuration
-   What product, batch, machine, model, recipe, and revision are involved?
+1. 标识与配置
+   涉及哪些产品、批次、设备、模型、配方和版本？
 
-2. Process state
-   What is happening now, and which stage is active?
+2. 流程状态
+   现在正在发生什么，哪个阶段处于活动状态？
 
-3. History and lineage
-   What happened previously, and how did the current state arise?
+3. 历史与血缘
+   之前发生了什么，当前状态是如何形成的？
 
-4. Behavioral models
-   What should happen, what is likely to happen, and with what uncertainty?
+4. 行为模型
+   应该发生什么，可能发生什么，不确定性有多大？
 
-5. Rules and decision logic
-   What actions are permitted, required, or prohibited?
+5. 规则与决策逻辑
+   哪些行动是允许的、必需的或禁止的？
 
-6. Outcome feedback
-   What action was taken, and did it improve the result?
+6. 结果反馈
+   采取了什么行动，它是否改善了结果？
 ```
 
-The behavioral model may be physics-based, data-driven, rule-based, or hybrid. A digital twin does not require the most sophisticated model available. It requires a model that is valid for the decision being supported.
+行为模型可以是基于物理的、数据驱动的、基于规则的，或是混合的。数字孪生并不要求使用最先进的模型，它要求的是一个对所支持的决策而言有效的模型。
 
 ---
 
-## Example: A Tire-Curing Process Twin
+## 示例：轮胎硫化流程孪生
 
-Consider a tire-curing process.
+考虑一个轮胎硫化过程。
 
-A conventional dashboard may display mold temperature, bladder pressure, cure time, alarms, and press status. This can help an operator see what is happening.
+传统仪表盘可以显示模具温度、胶囊压力、硫化时间、报警和硫化机状态。这能帮助操作员看到正在发生什么。
 
-A process digital twin connects those signals to the product and decision context:
+而流程数字孪生会把这些信号与产品和决策上下文连接起来：
 
 ```text
-material batch
-→ green-tire configuration
-→ tire specification and revision
-→ press and mold identity
-→ cure recipe
-→ temperature and pressure history
-→ estimated cure state
-→ process deviation
-→ inspection and uniformity results
-→ disposition decision
-→ feedback to the process model
+物料批次
+→ 生胎配置
+→ 轮胎规格及版本
+→ 硫化机与模具标识
+→ 硫化工艺配方
+→ 温度与压力历史
+→ 估计的硫化状态
+→ 工艺偏差
+→ 检验与均匀性结果
+→ 处置决定
+→ 反馈至流程模型
 ```
 
-The twin might estimate whether the material reached the required cure state throughout critical regions. It could identify that a temperature deviation matters for one construction but remains inside the validated process window for another. It could recommend inspection, recipe adjustment, or engineering review.
+孪生可以估计材料在各关键区域是否都达到了所要求的硫化状态。它可以识别出某一温度偏差对一种结构而言很重要，而对另一种结构而言仍处于已验证的工艺窗口之内。它可以建议进行检验、调整配方或提交工程评审。
 
-The decision could remain completely human-controlled. The system still qualifies as a process twin if it maintains the state, runs valid models, provides traceable decision support, and learns from the observed outcome.
+决策可以完全由人来掌控。只要系统维护着状态、运行着有效的模型、提供可追溯的决策支持，并从观测到的结果中学习，它就仍然算得上是一个流程孪生。
 
-Autonomy is optional. A closed information-and-learning loop is not.
+自主性是可选的。封闭的信息与学习闭环则不是。
 
 ---
 
-## What a Process Digital Twin Is Not
+## 流程数字孪生不是什么
 
-The following distinctions are important:
+以下区分十分重要：
 
 ```text
-Dashboard ≠ process digital twin
-Historical database ≠ process digital twin
-Simulation model ≠ process digital twin
-Machine-learning prediction ≠ process digital twin
-3D visualization ≠ process digital twin
+仪表盘 ≠ 流程数字孪生
+历史数据库 ≠ 流程数字孪生
+仿真模型 ≠ 流程数字孪生
+机器学习预测 ≠ 流程数字孪生
+3D 可视化 ≠ 流程数字孪生
 ```
 
-Each can be a component of the twin.
+它们每一个都可以成为孪生的组成部分。
 
-A dashboard becomes part of a twin when it displays contextualized process state and supports a governed response.
+当仪表盘显示情境化的流程状态并支持受治理的响应时，它就成为孪生的一部分。
 
-A simulation becomes part of a twin when it is synchronized with the relevant process configuration, updated or calibrated using observations, and used inside a decision loop.
+当仿真与相关的流程配置保持同步、利用观测数据进行更新或校准，并被用于决策闭环之中时，它就成为孪生的一部分。
 
-A machine-learning model becomes part of a twin when its inputs, validity domain, uncertainty, recommended response, and outcome are managed as part of the process.
+当机器学习模型的输入、有效域、不确定性、推荐响应和结果都作为流程的一部分被管理时，它就成为孪生的一部分。
 
-The distinction is architectural, not cosmetic.
+这种区分是架构层面的，而不是表面上的。
 
 ---
 
-## Start with the Decision, Not the Factory
+## 从决策出发，而不是从工厂出发
 
-Attempting to build a complete factory twin often produces a large integration program with an unclear operational payoff.
+试图构建一个完整的工厂孪生，往往会变成一个庞大的集成项目，而运营回报却并不清晰。
 
-A more disciplined starting point is:
+一个更有纪律的起点是：
 
 ```text
-Decision:
-What recurring decision creates measurable value or risk?
+决策：
+哪一项反复出现的决策会带来可衡量的价值或风险？
 
-Boundary:
-Which process stages influence that decision?
+边界：
+哪些流程阶段会影响这项决策？
 
-State:
-What must be known when the decision is made?
+状态：
+做出决策时必须知道什么？
 
-Models:
-What calculation or prediction improves the decision?
+模型：
+哪种计算或预测能够改进这项决策？
 
-Constraints:
-What rules and validation limits apply?
+约束：
+适用哪些规则和验证限值？
 
-Feedback:
-How will the outcome update future decisions?
+反馈：
+结果将如何更新未来的决策？
 ```
 
-This approach gives the twin a testable purpose. It also prevents the project from becoming an attempt to collect every available data stream.
+这种方法赋予孪生一个可检验的目的。它也能防止项目演变成一场收集所有可用数据流的尝试。
 
 ---
 
-## A Simple Qualification Test
+## 一个简单的合格性测试
 
-Before calling a system a process digital twin, ask whether it can answer:
+在把一个系统称为流程数字孪生之前，先问问它能否回答：
 
-1. What is happening now?
-2. How did the process reach this state?
-3. What outcome is likely?
-4. What intervention is possible?
-5. What constraints and validity limits apply?
-6. Who is authorized to decide?
-7. Did the intervention improve the outcome?
+1. 现在正在发生什么？
+2. 流程是如何到达这一状态的？
+3. 可能出现什么结果？
+4. 可以采取什么干预？
+5. 适用哪些约束和有效性限值？
+6. 谁有权做出决定？
+7. 干预是否改善了结果？
 
-If the system answers only the first question, it is probably a monitoring system.
+如果系统只能回答第一个问题，它很可能是一个监控系统。
 
-If it answers the first three, it may be a strong analytical system.
+如果它能回答前三个问题，它可能是一个强大的分析系统。
 
-When it connects all seven in a traceable loop, it begins to function as a process digital twin.
+当它把全部七个问题连接成一个可追溯的闭环时，它才开始作为流程数字孪生发挥作用。
 
 ---
 
-## Sharp Takeaway
+## 一句话结论
 
-A process digital twin should not be judged by how completely it reproduces a factory on a screen.
+评判一个流程数字孪生，不应看它在屏幕上把工厂复制得多么完整。
 
-It should be judged by whether it creates a valid, traceable, and continuously improving connection between:
+而应看它是否在以下环节之间建立了有效的、可追溯的、持续改进的连接：
 
 ```text
-process state
-→ prediction
-→ decision
-→ intervention
-→ measured outcome
-→ updated knowledge
+流程状态
+→ 预测
+→ 决策
+→ 干预
+→ 实测结果
+→ 更新后的知识
 ```
 
-> If a proposed digital twin cannot identify the decision it improves and the feedback it captures, is it really a twin—or only another way to visualize industrial data?
+> 如果一个拟议的数字孪生说不清它要改进哪一项决策、要捕获哪些反馈，它真的是孪生吗——还是只是把工业数据可视化的又一种方式？
 
 ---
 
-## Sources and Further Reading
+## 来源与延伸阅读
 
 - ISO, [ISO 23247-1:2021 — Digital twin framework for manufacturing](https://www.iso.org/standard/75066.html).
 - J. J. Downs and E. F. Vogel, [“A Plant-Wide Industrial Process Control Problem,” *Computers & Chemical Engineering*, 1993](https://doi.org/10.1016/0098-1354(93)80018-I).
@@ -1378,556 +1397,562 @@ process state
 - Open Source Modelica Consortium, [OpenModelica](https://openmodelica.org/).
 
 
+---
+publication_status: not_published
+---
 
-# Why Industrial AI Should Build the Process Digital Twin First
+# 为什么工业人工智能应当先构建流程数字孪生
 
-_Last updated: 2026-07-09 12:40 America/New_York (UTC-04:00)_
+_最后更新：2026-07-09 12:40 America/New_York (UTC-04:00)_
 
-**Purpose:** Explain why scalable Industrial AI requires a process representation and decision infrastructure before it requires more isolated AI models.
+**目的：** 解释为什么可规模化的工业人工智能首先需要的是流程表示和决策基础设施，而不是更多彼此孤立的 AI 模型。
 
-**Core thesis:** Industrial AI pilots often succeed because people manually reconstruct process context around a prepared dataset. Building the process digital twin first makes that context persistent, governed, executable, and reusable.
+**核心论点：** 工业人工智能试点之所以经常成功，是因为人们围绕一份准备好的数据集手工重建了流程上下文。先构建流程数字孪生，可以让这种上下文变得持久、可治理、可执行且可复用。
 
 ---
 
-## The Usual Industrial AI Sequence Is Backward
+## 通常的工业人工智能顺序是倒过来的
 
-Many Industrial AI initiatives begin with the same sequence:
+许多工业人工智能项目都以同样的顺序开始：
 
 ```text
-find available data
-→ select a prediction target
-→ train a model
-→ build a dashboard
-→ search for operational adoption
+找到可用数据
+→ 选择一个预测目标
+→ 训练一个模型
+→ 构建一个仪表盘
+→ 寻找运营侧的采用
 ```
 
-This sequence can produce an impressive proof of concept. It often fails to produce a durable operational capability.
+这个顺序可以产出令人印象深刻的概念验证（PoC），却往往无法形成持久的运营能力。
 
-The model may detect defects, predict downtime, classify process faults, or estimate product performance. But deployment exposes questions that were not visible in the prepared dataset:
+模型也许能够检测缺陷、预测停机、分类工艺故障，或估计产品性能。但一到部署阶段，就会暴露出在准备好的数据集中看不到的问题：
 
-- Which product revision does the prediction describe?
-- Was the machine operating inside the conditions represented in training?
-- Did the material, recipe, tooling, or control logic change?
-- Is the sensor valid and correctly calibrated?
-- What action should follow the prediction?
-- Who is authorized to take that action?
-- What happens when physics, historical data, and operator judgment disagree?
-- How will the outcome be captured and used to improve the system?
+- 这个预测描述的是哪个产品版本？
+- 设备当时是否运行在训练数据所覆盖的工况之内？
+- 材料、配方、工装或控制逻辑是否发生了变化？
+- 传感器是否有效且校准正确？
+- 预测之后应当采取什么行动？
+- 谁有权采取这一行动？
+- 当物理规律、历史数据和操作员的判断相互矛盾时，该怎么办？
+- 结果将如何被记录并用于改进系统？
 
-These are not secondary implementation details. They define whether the model can participate safely and repeatably in an industrial decision.
-
----
-
-## Why Pilots Often Look Better Than Production Systems
-
-A proof-of-concept team usually performs large amounts of invisible integration work.
-
-The team may:
-
-- align timestamps;
-- resolve asset and product identifiers;
-- remove invalid operating periods;
-- identify stable process windows;
-- reconstruct maintenance events;
-- interview process experts;
-- interpret undocumented fields;
-- select representative cases;
-- define the target and evaluation metric.
-
-This human effort temporarily turns fragmented data into coherent process context.
-
-The model appears to have learned from the raw industrial data. In reality, the project team constructed a temporary process representation around the model.
-
-When the use case moves to another product, machine, site, or operating condition, the context must be reconstructed again. The organization has demonstrated model capability without creating a reusable operating capability.
+这些不是次要的实施细节。它们决定了模型能否安全、可重复地参与一项工业决策。
 
 ---
 
-## The Process Twin Is the Missing Middle Layer
+## 为什么试点往往看起来比生产系统更好
 
-A process digital twin provides a persistent representation of:
+概念验证团队通常会做大量看不见的集成工作。
+
+团队可能会：
+
+- 对齐时间戳；
+- 消解资产与产品标识符；
+- 剔除无效运行时段；
+- 识别稳定的工艺窗口；
+- 重建维护事件；
+- 访谈工艺专家；
+- 解读未加文档说明的字段；
+- 挑选有代表性的案例；
+- 定义目标和评估指标。
+
+这些人力投入把碎片化的数据暂时转变成了连贯的流程上下文。
+
+模型看起来像是从原始工业数据中学到了东西。实际上，是项目团队围绕模型搭建了一个临时的流程表示。
+
+当用例转移到另一种产品、另一台设备、另一个工厂或另一种运行工况时，这套上下文又得重建一遍。组织展示了模型能力，却没有形成可复用的运营能力。
+
+---
+
+## 流程孪生是缺失的中间层
+
+流程数字孪生提供了一种持久的表示，涵盖：
 
 ```text
-process identity and configuration
-+ current state and history
-+ material and product lineage
-+ physics-based and data-driven models
-+ operating rules and constraints
-+ decisions, interventions, and approvals
-+ measured outcomes
+流程标识与配置
++ 当前状态与历史
++ 物料与产品血缘
++ 基于物理的模型与数据驱动的模型
++ 运行规则与约束
++ 决策、干预与审批
++ 实测结果
 ```
 
-AI models can then operate through this context instead of receiving disconnected tables.
+这样，AI 模型就可以通过这个上下文来运行，而不是接收一堆彼此脱节的表格。
 
-The process twin does not replace AI. It gives AI a governed environment in which its predictions can be interpreted, tested, and acted upon.
+流程孪生并不取代人工智能。它为人工智能提供了一个受治理的环境，让其预测能够在其中被解读、被检验、被付诸行动。
 
-This produces a more defensible implementation sequence:
+这就形成了一个更站得住脚的实施顺序：
 
 ```text
-define the operational decision
-→ represent the process and its states
-→ connect identity, configuration, and history
-→ encode constraints and validation limits
-→ establish the outcome-feedback loop
-→ add AI where it improves the decision
+定义运营决策
+→ 表示流程及其状态
+→ 连接标识、配置与历史
+→ 编码约束与验证限值
+→ 建立结果反馈闭环
+→ 在能改进决策之处加入人工智能
 ```
 
-The important difference is that the decision system exists before the model is asked to influence it.
+关键区别在于：在模型被要求影响决策之前，决策系统就已经存在了。
 
 ---
 
-## What “Build the Twin First” Actually Means
+## “先构建孪生”到底意味着什么
 
-It does not mean creating a perfect virtual factory before developing any AI.
+它并不意味着在开发任何 AI 之前先造出一座完美的虚拟工厂。
 
-It means establishing the minimum operational structure required for one valuable decision:
+它意味着为一项有价值的决策建立起所需的最小运营结构：
 
-1. A bounded process and clear objective.
-2. Shared identities for the relevant product, material, equipment, and configuration.
-3. An explicit process-state model.
-4. Traceable links between inputs, events, models, and outcomes.
-5. Rules defining valid operating regions and permitted actions.
-6. A mechanism for recording the decision and its result.
+1. 一个有边界的流程和明确的目标。
+2. 相关产品、材料、设备和配置的共享标识。
+3. 一个显式的流程状态模型。
+4. 输入、事件、模型与结果之间可追溯的链接。
+5. 定义有效运行区域和允许行动的规则。
+6. 记录决策及其结果的机制。
 
-The first twin may cover one process stage and one decision. It should be small enough to validate, but structured so that additional models and adjacent processes can connect later.
+第一个孪生可以只覆盖一个流程阶段和一项决策。它应当小到足以验证，但结构上要让后续的模型和相邻流程能够接入。
 
-This is different from launching a large enterprise integration program with no defined decision loop.
+这与启动一个没有明确决策闭环的大型企业集成项目截然不同。
 
 ---
 
-## Example: Predicting Tire Quality After Curing
+## 示例：预测硫化后的轮胎质量
 
-Suppose a machine-learning model predicts a downstream tire-quality metric from curing signals.
+假设一个机器学习模型根据硫化信号预测下游的某项轮胎质量指标。
 
-An isolated model might use:
+一个孤立的模型可能使用：
 
 ```text
-temperature
-+ pressure
-+ cure duration
-+ machine identifier
-→ predicted quality
+温度
++ 压力
++ 硫化时长
++ 设备标识
+→ 预测的质量
 ```
 
-That prediction may perform well on a historical test set. Operationally, however, the same signals can have different meanings depending on:
+这一预测在历史测试集上可能表现良好。然而在实际运营中，同样的信号可能有不同的含义，这取决于：
 
-- tire construction and revision;
-- compound and material batch;
-- mold geometry;
-- sensor location;
-- press maintenance state;
-- target cure specification;
-- ambient and initial conditions;
-- upstream manufacturing variation.
+- 轮胎结构及其版本；
+- 胶料与物料批次；
+- 模具几何；
+- 传感器位置；
+- 硫化机维护状态；
+- 目标硫化规范；
+- 环境条件与初始条件；
+- 上游制造环节的波动。
 
-A process twin supplies this context and checks whether the model is being used inside its validated domain.
+流程孪生提供这些上下文，并检查模型是否在其已验证的有效域之内被使用。
 
-The twin may combine:
+孪生可以组合：
 
-- a thermal or cure-state model;
-- a data-driven quality estimator;
-- process-window rules;
-- uncertainty thresholds;
-- inspection requirements;
-- operator and engineering approval logic.
+- 热模型或硫化状态模型；
+- 数据驱动的质量估计器；
+- 工艺窗口规则；
+- 不确定性阈值；
+- 检验要求；
+- 操作员与工程审批逻辑。
 
-The resulting decision might be:
+由此得出的决策可能是：
 
 ```text
-continue normally
-inspect before release
-hold the product
-adjust the next cycle within an approved range
-escalate for engineering review
+正常继续
+放行前检验
+暂扣产品
+在批准范围内调整下一周期
+上报工程评审
 ```
 
-The measured inspection or test result then returns to the twin. This closes the loop and creates evidence about whether the model and intervention were effective.
+随后，实测的检验或试验结果回到孪生之中。这就闭合了闭环，并形成了关于模型和干预是否有效的证据。
 
-The value does not come from prediction alone. It comes from connecting prediction to a valid decision and learning from the result.
+价值并非仅来自预测本身，而是来自把预测与一项有效的决策连接起来，并从结果中学习。
 
 ---
 
-## Why This Matters for Industrial Agents
+## 为什么这对工业 AI 代理很重要
 
-Large language models and AI agents can interact with databases, engineering tools, simulation codes, maintenance systems, and workflow applications. This increases their usefulness, but it also increases the consequence of missing context.
+大语言模型（LLM）和 AI 代理可以与数据库、工程工具、仿真程序、维护系统和工作流应用交互。这提升了它们的实用性，但也放大了上下文缺失的后果。
 
-An industrial agent needs to know:
+一个工业 AI 代理需要知道：
 
-- which process state is current;
-- which product and configuration are active;
-- which tools and models are approved;
-- which assumptions and units apply;
-- which actions are reversible;
-- which limits must not be crossed;
-- which person must approve a recommendation;
-- what evidence must be recorded.
+- 当前处于哪个流程状态；
+- 哪种产品和配置处于活动状态；
+- 哪些工具和模型已获批准；
+- 适用哪些假设和单位；
+- 哪些行动是可逆的；
+- 哪些限值绝不能越过；
+- 哪个人必须批准建议；
+- 必须记录哪些证据。
 
-The process twin can function as the agent’s operational harness.
+流程孪生可以充当代理的运行支撑装置。
 
-The agent may reason, search, summarize, call models, and propose actions. The twin maintains governed state, traceability, constraints, and feedback.
+代理可以推理、搜索、总结、调用模型并提出行动建议。孪生则维护受治理的状态、可追溯性、约束和反馈。
 
-In simple terms:
+简单地说：
 
 ```text
-AI provides flexible reasoning.
-The process twin provides industrial memory and boundaries.
+人工智能提供灵活的推理。
+流程孪生提供工业记忆与边界。
 ```
 
-Without that separation, an agent may be powerful but operationally unreliable.
+没有这种分离，一个代理可能很强大，但在运营上并不可靠。
 
 ---
 
-## Advantages of Building the Process Twin First
+## 先构建流程孪生的优势
 
-### Reusable Context
+### 可复用的上下文
 
-Identity, lineage, process stages, and validity rules are created once and reused across multiple analytical models.
+标识、血缘、流程阶段和有效性规则只需创建一次，即可在多个分析模型中复用。
 
-### Better Model Validation
+### 更好的模型验证
 
-Performance can be evaluated by product, machine, operating regime, material, and process state rather than through one aggregate accuracy score.
+可以按产品、设备、运行工况、材料和流程状态来评估性能，而不是只看一个汇总的准确率分数。
 
-### Clearer Human Responsibility
+### 更清晰的人员责任
 
-The system can distinguish between automated calculations, recommendations, operator actions, and engineering approvals.
+系统可以区分自动计算、建议、操作员操作和工程审批。
 
-### Safer Scaling
+### 更安全的规模化
 
-Deployment to another asset or site becomes a comparison of process definitions, interfaces, and validity domains—not merely a software copy.
+部署到另一台资产或另一个工厂，变成了对流程定义、接口和有效域的比较，而不只是软件的复制。
 
-### Compounding Learning
+### 不断累积的学习
 
-Decisions and outcomes remain connected, allowing the organization to learn which interventions work under which conditions.
+决策与结果始终保持连接，使组织能够学到哪些干预在哪些条件下有效。
 
 ---
 
-## Costs and Trade-Offs
+## 成本与权衡
 
-Building the process twin first is not free.
+先构建流程孪生并非没有代价。
 
-It requires process mapping, identifier reconciliation, data contracts, model governance, subject-matter expertise, and agreement about ownership. These activities can appear slower than training an isolated model.
+它需要流程映射、标识符对齐、数据契约、模型治理、领域专业知识，以及关于所有权的共识。这些活动看起来可能比训练一个孤立模型要慢。
 
-There is also a risk of overengineering. A team can spend years building a universal ontology or enterprise twin without improving a single decision.
+此外还有过度工程化的风险。一个团队可能花费数年构建一套通用本体或企业级孪生，却没有改进任何一项决策。
 
-The correct response is not to skip the process architecture. It is to constrain it:
+正确的应对不是跳过流程架构，而是对它加以约束：
 
 ```text
-one decision
-one bounded process
-one accountable owner
-one measurable outcome
-one feedback loop
+一项决策
+一个有边界的流程
+一位负责的所有者
+一个可衡量的结果
+一个反馈闭环
 ```
 
-Expand only after the first loop works.
+等第一个闭环跑通之后再扩展。
 
 ---
 
-## A Better Measure of Progress
+## 更好的进度衡量方式
 
-Industrial AI programs often count:
+工业人工智能项目常常统计：
 
-- models trained;
-- pilots launched;
-- data connected;
-- dashboards deployed;
-- users enrolled.
+- 训练了多少模型；
+- 启动了多少试点；
+- 接入了多少数据；
+- 部署了多少仪表盘；
+- 注册了多少用户。
 
-A more meaningful maturity measure is the number of operational decision loops that are:
+一个更有意义的成熟度指标，是满足以下条件的运营决策闭环的数量：
 
-- contextualized;
-- model-supported;
-- governed;
-- traceable;
-- outcome-measured;
-- continuously improved.
+- 情境化的；
+- 有模型支持的；
+- 受治理的；
+- 可追溯的；
+- 结果可衡量的；
+- 持续改进的。
 
-This changes Industrial AI from a collection of analytics projects into an accumulating operational system.
-
----
-
-## Sharp Takeaway
-
-The main bottleneck in Industrial AI is often not the absence of an accurate model. It is the absence of a persistent process context around the model.
-
-> Build the process digital twin first—not as a massive virtual replica, but as the minimum governed decision system that makes data, models, people, and outcomes work together.
-
-If an organization must manually reconstruct the process context every time it deploys an AI model, it is not scaling Industrial AI. It is repeating the proof of concept.
+这把工业人工智能从一堆分析项目的集合，转变为一个不断累积的运营系统。
 
 ---
 
-## Sources and Further Reading
+## 一句话结论
+
+工业人工智能的主要瓶颈，往往不是缺少一个准确的模型，而是缺少围绕模型的持久流程上下文。
+
+> 先构建流程数字孪生——不是作为一个庞大的虚拟复制品，而是作为让数据、模型、人员和结果协同运作的最小受治理决策系统。
+
+如果一个组织每次部署 AI 模型都必须手工重建流程上下文，那它并不是在规模化工业人工智能，而是在重复概念验证。
+
+---
+
+## 来源与延伸阅读
 
 - ISO, [ISO 23247-1:2021 — Digital twin framework for manufacturing](https://www.iso.org/standard/75066.html).
 - J. J. Downs and E. F. Vogel, [“A Plant-Wide Industrial Process Control Problem,” *Computers & Chemical Engineering*, 1993](https://doi.org/10.1016/0098-1354(93)80018-I).
 - NASA Prognostics Center of Excellence, [C-MAPSS Jet Engine Simulated Data](https://data.nasa.gov/dataset/cmapss-jet-engine-simulated-data).
 - Singapore University of Technology and Design iTrust, [Public Cyber-Physical-System Datasets](https://www.sutd.edu.sg/itrust/itrust-labs/datasets/).
+---
+publication_status: not_published
+---
 
-_Last updated: 2026-07-09 12:40 America/New_York (UTC-04:00)_
+_最后更新：2026-07-09 12:40 America/New_York (UTC-04:00)_
 
-LLM = reasoning engine
-Digital Twin RAG = engineering context
-Digital Twin Harness = engineering operating system
-Industrial AI Agent = LLM + Digital Twin Harness
+LLM = 推理引擎
+数字孪生 RAG = 工程上下文
+数字孪生支撑装置 = 工程操作系统
+工业 AI 代理 = LLM + 数字孪生支撑装置
 
-Level 0: LLM only
-Level 1: LLM + document RAG
-Level 2: LLM + digital twin RAG
-Level 3: LLM + digital twin tools/simulation
-Level 4: LLM + digital twin harness
-Level 5: LLM + network of digital twins
+Level 0：仅 LLM
+Level 1：LLM + 文档 RAG
+Level 2：LLM + 数字孪生 RAG
+Level 3：LLM + 数字孪生工具／仿真
+Level 4：LLM + 数字孪生支撑装置
+Level 5：LLM + 数字孪生网络
 
-Level 0: LLM only
-Level 1: LLM + prompt harness
-Level 2: LLM + context/RAG harness
-Level 3: LLM + tool harness
-Level 4: LLM + controlled harness
-Level 5: LLM + persistent harness
-Level 6: LLM + orchestrated harness
+Level 0：仅 LLM
+Level 1：LLM + 提示词支撑装置
+Level 2：LLM + 上下文／RAG 支撑装置
+Level 3：LLM + 工具支撑装置
+Level 4：LLM + 受控支撑装置
+Level 5：LLM + 持久支撑装置
+Level 6：LLM + 编排支撑装置
 
-Level 0: LLM only
+Level 0：仅 LLM
 
-Level 1: LLM + prompt harness
+Level 1：LLM + 提示词支撑装置
 
-Level 2: LLM + context/RAG harness
-         → Digital twin as engineering RAG
+Level 2：LLM + 上下文／RAG 支撑装置
+         → 数字孪生作为工程 RAG
 
-Level 3: LLM + tool harness
-         → Digital twin as engineering tool harness
+Level 3：LLM + 工具支撑装置
+         → 数字孪生作为工程工具支撑装置
 
-Level 4: LLM + controlled harness
-         → Digital twin as validation/control harness
+Level 4：LLM + 受控支撑装置
+         → 数字孪生作为验证／控制支撑装置
 
-Level 5: LLM + persistent harness
-         → Digital twin as persistent engineering memory/state
+Level 5：LLM + 持久支撑装置
+         → 数字孪生作为持久的工程记忆／状态
 
-Level 6: LLM + orchestrated harness
-         → Digital twin as network of connected twins
+Level 6：LLM + 编排支撑装置
+         → 数字孪生作为互联孪生网络
 
-# Industrial Agent = LLM + Digital-Twin Harness
+# 工业 AI 代理 = LLM + 数字孪生支撑装置
 
-**Purpose:** This note explains why industrial agents need more than an LLM, tools, memory, and guardrails. It frames the digital twin as the harness that makes agentic AI governable in industrial systems.
+**目的：** 本文解释为什么工业 AI 代理需要的不只是一个 LLM、工具、记忆和护栏。它把数字孪生定位为让代理式人工智能在工业系统中变得可治理的支撑装置（harness）。
 
-**Core thesis:** A generic AI agent can reason, plan, call tools, summarize evidence, and coordinate workflows. But an industrial agent must also operate inside a governed decision loop with operational truth, model validity, safety constraints, permissions, uncertainty handling, human escalation, and auditability. The practical architecture is therefore: **Industrial Agent = LLM + Digital-Twin Harness**.
+**核心论点：** 通用 AI 代理可以推理、规划、调用工具、总结证据并协调工作流。但工业 AI 代理还必须运行在一个受治理的决策闭环之中，具备运行真值、模型有效性、安全约束、权限、不确定性处理、人工上报以及可审计性。因此，切实可行的架构是：**工业 AI 代理 = LLM + 数字孪生支撑装置**。
 
 ---
 
-## Main Problem: Generic Agents Are Executable, But Industrial Decisions Must Be Governable
+## 核心问题：通用 AI 代理是可执行的，但工业决策必须是可治理的
 
-Modern LLM agents are becoming useful because they can manage multi-step workflows. They can choose tools, retrieve information, inspect data, write summaries, generate reports, and interact with humans. This is already powerful.
+现代 LLM 代理之所以变得有用，是因为它们能够管理多步工作流。它们可以选择工具、检索信息、检查数据、撰写摘要、生成报告，并与人交互。这已经很强大了。
 
-But industrial work is different from ordinary workflow automation. In an industrial setting, an agent may influence maintenance, quality, process control, testing, warranty decisions, fleet operation, safety review, or customer-facing technical claims. The risk is not only that the answer may be wrong. The deeper risk is that the answer may not be grounded in the governed state of the asset, process, product, or fleet.
+但工业工作不同于普通的工作流自动化。在工业场景中，代理可能影响维护、质量、过程控制、试验、保修决策、车队运营、安全评审，或面向客户的技术声明。风险不仅在于答案可能出错。更深层的风险在于，答案可能没有建立在资产、流程、产品或车队的受治理状态之上。
 
-A generic agent harness can answer:
+通用的代理支撑装置能够回答：
 
 ```text
-Did the agent call the tool correctly?
-Did it follow the workflow?
-Did it produce a plausible answer?
+代理是否正确调用了工具？
+它是否遵循了工作流？
+它是否给出了看似合理的答案？
 ```
 
-An industrial agent harness must also answer:
+工业 AI 代理的支撑装置还必须回答：
 
 ```text
-Was the data valid?
-Was the sensor calibrated?
-Was the model inside its validity envelope?
-Was the action allowed for this asset, site, role, state, and risk level?
-Were safety constraints checked outside the LLM?
-Was uncertainty exposed?
-Can the decision be reconstructed later?
+数据是否有效？
+传感器是否经过校准？
+模型是否处于其有效域之内？
+对于该资产、工厂、角色、状态和风险等级，这一行动是否被允许？
+安全约束是否在 LLM 之外得到了检查？
+不确定性是否被揭示出来？
+这一决策事后能否被重建？
 ```
 
-That is the gap. Generic agent frameworks make the agent executable. Industrial systems need the decision loop to be governable.
+差距就在这里。通用代理框架让代理变得可执行。而工业系统需要的是让决策闭环变得可治理。
 
-**Concrete example.** An agent is asked: "Compressor C-204 shows abnormal vibration. Should we schedule maintenance now?"
+**具体示例。** 有人问代理：“压缩机 C-204 出现异常振动。我们现在就应该安排维护吗？”
 
-A generic agent might retrieve vibration data, call an anomaly model, check maintenance history, and recommend inspection. That may sound reasonable. But it may not know whether the sensor is calibrated, whether the compressor is operating outside its normal speed range, whether the model applies to this load condition, whether maintenance lockouts apply, or whether the user has authority to schedule downtime.
+一个通用 AI 代理可能会检索振动数据、调用异常检测模型、查看维护历史，然后建议进行检查。这听起来似乎合理。但它可能并不知道传感器是否经过校准、压缩机是否运行在正常转速范围之外、模型是否适用于当前的负载工况、是否存在维护锁定，也不知道提问者是否有权安排停机。
 
-**Analysis.** The LLM can help reason through the situation. It should not own the operational truth. The digital twin harness should own the governed state, model validity, constraints, permissions, and traceability that make the recommendation usable.
-
----
-
-# Three Root Reasons
-
-## 1. Tool Use Gives Access, Not Authority
-
-Agent frameworks are good at exposing tools. A tool can retrieve telemetry, query a database, run a model, search documents, create a work order, or call an external system. But tool access is not the same as industrial authority.
-
-In industrial AI, a tool result needs context:
-
-- Is the data raw, inferred, calibrated, stale, disputed, or authoritative?
-- Which asset, site, process state, and time window does it describe?
-- Which unit system, sampling rate, timestamp convention, and sensor-quality rule applies?
-- Which model version or calibration state produced the prediction?
-- Is the tool read-only, record-changing, reversible, or connected to physical operation?
-- Does the current user have permission to act on the result?
-
-A generic tool schema can describe how to call a function. It usually does not decide whether the result is valid for a specific industrial state.
-
-**Concrete example.** A vibration-anomaly tool returns a high anomaly score for a rotating asset.
-
-**Analysis.** The score is not enough. The industrial system must know whether the vibration sensor is healthy, whether the asset is in a normal operating regime, whether the model was trained for that regime, whether recent process changes explain the signal, and whether the anomaly exceeds a maintenance or safety threshold. That authority should live in the digital-twin harness, not in the LLM prompt.
+**分析。** LLM 可以帮助推理这一情形，但它不应该掌握运行真值。数字孪生支撑装置应当掌握受治理的状态、模型有效性、约束、权限以及可追溯性，正是这些让建议变得可用。
 
 ---
 
-## 2. Industrial Memory Is Not Agent Memory
+# 三个根本原因
 
-Agent memory often means conversation history, retrieved documents, embeddings, summaries, prior tool results, or reflections. That helps an LLM continue a task.
+## 1. 工具使用提供的是访问权，而不是授权
 
-Industrial memory is different. It must preserve the governed history of the system:
+代理框架善于暴露工具。一个工具可以获取遥测数据、查询数据库、运行模型、搜索文档、创建工单，或调用外部系统。但拥有工具访问权并不等于拥有工业授权。
 
-- asset topology and lifecycle state;
-- telemetry, alarms, events, and operating history;
-- configuration and process-parameter changes;
-- maintenance history and work orders;
-- model versions, calibration state, and validity envelopes;
-- experiments, interventions, approvals, and overrides;
-- exceptions, failures, outcomes, and incident records.
+在工业人工智能中，工具返回的结果需要上下文：
 
-This memory cannot be a loose text summary inside an agent. It has to be time-aligned, versioned, auditable, and tied to the physical system.
+- 数据是原始的、推断的、经校准的、过时的、有争议的，还是权威的？
+- 它描述的是哪台资产、哪个工厂、哪个流程状态、哪个时间窗口？
+- 适用哪种单位制、采样率、时间戳约定和传感器质量规则？
+- 这个预测是由哪个模型版本或哪种校准状态产生的？
+- 该工具是只读的、会更改记录的、可逆的，还是与物理运行相连的？
+- 当前用户是否有权对该结果采取行动？
 
-**Concrete example.** A tire-manufacturing quality agent sees a change in defect rate after a process adjustment.
+通用的工具模式可以描述如何调用一个函数，但通常不会判断该结果对某一特定工业状态是否有效。
 
-**Analysis.** The important question is not only "what does the agent remember?" The important question is what changed in machine, material, method, operator behavior, supplier input, sensor calibration, model version, and operating condition. A digital twin can preserve that operational memory. The LLM can reason over it, but the twin must govern it.
+**具体示例。** 一个振动异常检测工具对某台旋转设备返回了很高的异常分数。
 
----
-
-## 3. Guardrails Are Not Safety Constraints
-
-LLM guardrails are useful. They can block unsafe text, enforce output formats, reduce hallucinations, and route uncertain cases to review. But industrial systems need constraints that are deterministic, tested, and outside the LLM.
-
-Examples include:
-
-- operating envelopes;
-- equipment limits;
-- process windows;
-- material compatibility rules;
-- quality thresholds;
-- maintenance lockouts;
-- safety interlocks;
-- approval gates;
-- customer, legal, or regulatory constraints.
-
-The LLM should not infer these constraints from a prompt when the system can encode and enforce them directly.
-
-**Concrete example.** An agent recommends increasing a process parameter to improve yield.
-
-**Analysis.** A plausible recommendation is not enough. The harness must check whether the new value stays inside the process window, whether it violates equipment limits, whether it changes product quality risk, whether the model is valid in that region, and whether human approval is required. This is why the digital twin is not just context for the LLM. It is the authority boundary around the agent.
+**分析。** 光有分数是不够的。工业系统必须知道振动传感器是否健康、资产是否处于正常运行工况、模型是否针对该工况训练过、近期的工艺变更能否解释这一信号，以及异常是否超过了维护阈值或安全阈值。这种授权应当存在于数字孪生支撑装置之中，而不是 LLM 的提示词里。
 
 ---
 
-# What the Digital-Twin Harness Adds
+## 2. 工业记忆不是代理记忆
 
-A digital-twin harness is a governed operational substrate that mediates how an AI agent observes, reasons, simulates, verifies, acts, escalates, and records decisions in an industrial system.
+代理记忆通常指对话历史、检索到的文档、嵌入向量、摘要、先前的工具结果或反思。这有助于 LLM 继续完成一项任务。
 
-It should own:
+工业记忆则不同。它必须保存系统的受治理历史：
 
-- governed asset, process, product, test, or fleet state;
-- sensor health and data-quality metadata;
-- physics-based and data-driven models;
-- model registry, model versions, calibration state, and validity envelopes;
-- uncertainty estimates and model-disagreement signals;
-- simulation and what-if execution;
-- deterministic operating constraints and safety rules;
-- role-, asset-, site-, state-, and risk-based permissions;
-- human escalation and approval workflows;
-- provenance, audit logs, and decision traces;
-- evaluation records that connect recommendations to outcomes.
+- 资产拓扑与生命周期状态；
+- 遥测数据、报警、事件与运行历史；
+- 配置与工艺参数的变更；
+- 维护历史与工单；
+- 模型版本、校准状态与有效域；
+- 实验、干预、审批与人工覆盖；
+- 异常、故障、结果与事件记录。
 
-The LLM remains valuable. It can ask the next diagnostic question, compare hypotheses, explain tradeoffs, draft recommendations, summarize evidence, and coordinate work. But the LLM should reason through the twin, not around it.
+这种记忆不能是代理内部一段松散的文本摘要。它必须是时间对齐的、有版本的、可审计的，并且与物理系统绑定。
 
-The twin does not need to be a full factory twin. It can be a factory twin, line twin, process twin, asset twin, product twin, test twin, or fleet twin. For a first proof of concept, a small mature process twin may be better than a large factory twin because the state, constraints, uncertainty, and authority boundary are easier to make explicit.
+**具体示例。** 一个轮胎制造质量代理发现，在一次工艺调整之后缺陷率发生了变化。
 
-The architectural split is simple:
+**分析。** 重要的问题不只是“代理记住了什么”，而是设备、材料、方法、操作员行为、供应商来料、传感器校准、模型版本和运行工况中到底哪些发生了变化。数字孪生可以保存这种运营记忆。LLM 可以基于它进行推理，但必须由孪生来治理它。
+
+---
+
+## 3. 护栏不是安全约束
+
+LLM 护栏是有用的。它们可以拦截不安全的文本、强制输出格式、减少幻觉，并把不确定的情况转交人工审核。但工业系统需要的约束必须是确定性的、经过测试的，并且位于 LLM 之外。
+
+例如：
+
+- 运行包线；
+- 设备限值；
+- 工艺窗口；
+- 材料相容性规则；
+- 质量阈值；
+- 维护锁定；
+- 安全联锁；
+- 审批关口；
+- 客户、法律或法规方面的约束。
+
+当系统能够直接编码并强制执行这些约束时，就不应让 LLM 从提示词中去推断它们。
+
+**具体示例。** 代理建议提高某个工艺参数以改善良率。
+
+**分析。** 一条看似合理的建议是不够的。支撑装置必须检查新值是否仍在工艺窗口之内、是否违反设备限值、是否改变了产品质量风险、模型在该区域是否有效，以及是否需要人工审批。这就是为什么数字孪生不只是 LLM 的上下文，它是围绕代理的授权边界。
+
+---
+
+# 数字孪生支撑装置带来了什么
+
+数字孪生支撑装置是一个受治理的运行基底，它调节着 AI 代理在工业系统中如何观察、推理、仿真、验证、行动、上报以及记录决策。
+
+它应当掌握：
+
+- 受治理的资产、流程、产品、试验或车队状态；
+- 传感器健康状况与数据质量元数据；
+- 基于物理的模型与数据驱动的模型；
+- 模型注册表、模型版本、校准状态与有效域；
+- 不确定性估计与模型间分歧信号；
+- 仿真与假设情景分析的执行；
+- 确定性的运行约束与安全规则；
+- 基于角色、资产、工厂、状态和风险的权限；
+- 人工上报与审批工作流；
+- 溯源、审计日志与决策轨迹；
+- 把建议与结果连接起来的评估记录。
+
+LLM 依然有价值。它可以提出下一个诊断问题、比较各种假设、解释权衡、起草建议、总结证据并协调工作。但 LLM 应当通过孪生来推理，而不是绕开它。
+
+这个孪生不必是完整的工厂孪生。它可以是工厂孪生、生产线孪生、流程孪生、资产孪生、产品孪生、试验孪生或车队孪生。对于第一个概念验证而言，一个小而成熟的流程孪生可能比一个庞大的工厂孪生更好，因为其状态、约束、不确定性和授权边界更容易被明确表达。
+
+架构上的分工很简单：
 
 ```text
-LLM agent
-  reasons, plans, explains, coordinates, proposes
+LLM 代理
+  推理、规划、解释、协调、提议
 
-Digital-twin harness
-  authorizes, validates, constrains, simulates, escalates, records
+数字孪生支撑装置
+  授权、验证、约束、仿真、上报、记录
 
-Industrial systems
-  execute, measure, maintain, produce, control
+工业系统
+  执行、测量、维护、生产、控制
 ```
 
-The agent can request. The harness decides what is valid, allowed, safe, traceable, and escalated.
+代理可以提出请求。支撑装置决定什么是有效的、允许的、安全的、可追溯的，以及需要上报的。
 
 ---
 
-# Why This Matters
+# 为什么这很重要
 
-The phrase **Industrial Agent = LLM + Digital-Twin Harness** is useful because it prevents two common mistakes.
+**工业 AI 代理 = LLM + 数字孪生支撑装置**这一表述之所以有用，是因为它能避免两个常见错误。
 
-The first mistake is treating the LLM as the industrial brain. The LLM is a reasoning and interaction component. It is not the source of operational truth.
+第一个错误是把 LLM 当作工业大脑。LLM 是一个推理与交互组件，它不是运行真值的来源。
 
-The second mistake is treating the digital twin as just another tool. A dashboard, simulation model, or RAG source is not enough. The twin becomes a harness only when it governs state, validity, uncertainty, constraints, permissions, provenance, and auditability.
+第二个错误是把数字孪生只当作又一个工具。仪表盘、仿真模型或 RAG 数据源都不够。只有当孪生治理着状态、有效性、不确定性、约束、权限、溯源和可审计性时，它才成为支撑装置。
 
-In other words:
+换句话说：
 
 ```text
-Current AI-agent harnesses manage the agent run.
-Digital-twin harnesses manage the industrial decision loop.
+当前的 AI 代理支撑装置管理的是代理的一次运行。
+数字孪生支撑装置管理的是工业决策闭环。
 ```
 
-This distinction matters because industrial AI failure is rarely only a reasoning failure. It is often a governance failure: stale data, missing context, invalid model assumptions, weak authority boundaries, unclear approvals, scattered traceability, or hidden uncertainty.
+这一区分之所以重要，是因为工业人工智能的失败很少仅仅是推理失败。它往往是治理失败：过时的数据、缺失的上下文、无效的模型假设、薄弱的授权边界、不清晰的审批、分散的可追溯性，或被掩盖的不确定性。
 
 ---
 
-# Not a Silver Bullet
+# 不是万能药
 
-A digital-twin harness does not make industrial AI automatically safe. A twin can be incomplete, stale, overconfident, poorly calibrated, or wrong. A polished twin can even create false authority if it hides missing data or uncertainty.
+数字孪生支撑装置并不会自动让工业人工智能变得安全。孪生可能是不完整的、过时的、过度自信的、校准不良的，甚至是错误的。一个做得很精致的孪生，如果掩盖了缺失的数据或不确定性，甚至可能制造出虚假的权威。
 
-The value of the digital-twin harness is architectural. It gives the industrial AI system a place to make trust requirements explicit:
+数字孪生支撑装置的价值在于架构层面。它为工业人工智能系统提供了一个把信任要求明确化的地方：
 
-- What is the current governed state?
-- Which models are valid here?
-- Which assumptions are active?
-- Which uncertainty remains?
-- Which actions are blocked?
-- Which approvals are required?
-- Which evidence must be preserved?
+- 当前受治理的状态是什么？
+- 哪些模型在此处有效？
+- 哪些假设处于生效状态？
+- 还剩下哪些不确定性？
+- 哪些行动被阻止？
+- 需要哪些审批？
+- 必须保存哪些证据？
 
-That does not eliminate engineering judgment. It gives engineering judgment a controlled system to work through.
+这并不会消除工程判断。它给工程判断提供了一个受控的系统去运作。
 
 ---
 
-# Short Synthesis
+# 简要综合
 
-The core idea is:
+核心思想是：
 
 ```text
-Industrial Agent = LLM + Digital-Twin Harness
+工业 AI 代理 = LLM + 数字孪生支撑装置
 ```
 
-The LLM provides reasoning, planning, language, explanation, and coordination.
+LLM 提供推理、规划、语言、解释和协调。
 
-The digital-twin harness provides industrial authority: governed state, model validity, safety constraints, permissions, uncertainty handling, escalation, provenance, auditability, and evaluation.
+数字孪生支撑装置提供工业授权：受治理的状态、模型有效性、安全约束、权限、不确定性处理、上报、溯源、可审计性以及评估。
 
-This is the difference between an agent that can produce a plausible answer and an industrial agent whose recommendation can be trusted, bounded, approved, and reconstructed.
+这就是一个能给出看似合理答案的代理，与一个其建议可以被信任、被限定、被批准、被重建的工业 AI 代理之间的区别。
 
-For industrial AI, the question is not only "Which agent framework should we use?"
+对于工业人工智能而言，问题不只是“我们应该用哪个代理框架？”
 
-The better question is:
+更好的问题是：
 
 ```text
-What owns operational truth when the agent acts?
+当代理行动时，由什么来掌握运行真值？
 ```
 
-If the answer is "the LLM," the architecture is fragile.
+如果答案是“LLM”，那么这个架构是脆弱的。
 
-If the answer is "a governed digital-twin harness," the agent has a real chance to become useful in production.
+如果答案是“一个受治理的数字孪生支撑装置”，那么这个代理才真正有机会在生产环境中变得有用。
 
 ---
 
-# Source Materials
+# 素材来源
 
 [1] `01_AI digital twin as harness/updated_digital_twin_harness_manuscript.md`
 
 [2] `01_AI digital twin as harness/updated_arxiv_revision_checklist_digital_twin_harness.md`
 
-[3] OpenAI. *A Practical Guide to Building Agents.* Local PDF: `01_AI digital twin as harness/Literature review/A practical guide to building agents.pdf`
+[3] OpenAI. *A Practical Guide to Building Agents.* 本地 PDF: `01_AI digital twin as harness/Literature review/A practical guide to building agents.pdf`
 
-[4] Zhou et al. *Digital Twin AI: Opportunities and Challenges from Large Language Models to World Models.* Local PDF: `01_AI digital twin as harness/Literature review/Digital Twin AI - Opportunities and Challenges from Large Language Models to World Models.pdf`
+[4] Zhou et al. *Digital Twin AI: Opportunities and Challenges from Large Language Models to World Models.* 本地 PDF: `01_AI digital twin as harness/Literature review/Digital Twin AI - Opportunities and Challenges from Large Language Models to World Models.pdf`
 
-[5] Hasan and Nguyen. *Integrating Agentic AI and Digital Twins for Intelligent Decision-Making Systems.* Local PDF: `01_AI digital twin as harness/Literature review/Integrating agentic AI and digital twins for intelligent decision-making systems.pdf`
+[5] Hasan and Nguyen. *Integrating Agentic AI and Digital Twins for Intelligent Decision-Making Systems.* 本地 PDF: `01_AI digital twin as harness/Literature review/Integrating agentic AI and digital twins for intelligent decision-making systems.pdf`

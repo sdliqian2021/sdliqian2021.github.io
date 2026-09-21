@@ -7,10 +7,10 @@ display_order: 10
 published: 2026-07-08
 updated: 2026-09-18
 topics:
-  - Industrial AI
-  - Human factors
-  - Automation
-  - Long-tail risk
+  - 工业 AI
+  - 人因工程
+  - 自动化
+  - 长尾风险
 permalink: /posts/ai-humans-simulation-and-physical-testing.html
 nav: essays
 page_class: article-page
