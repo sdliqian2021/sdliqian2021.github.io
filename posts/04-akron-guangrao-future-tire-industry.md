@@ -3,7 +3,7 @@ layout: default
 title: "Akron 与广饶：轮胎产业集群如何塑造全球竞争"
 description: "比较 Akron 与广饶的产业集群路径，分析广饶如何把制造密度转化为技术深度、OE 能力、品牌信任和全球运营能力。"
 content_type: essay
-display_order: 50
+display_order: 80
 published: 2026-09-01
 updated: 2026-09-18
 topics:

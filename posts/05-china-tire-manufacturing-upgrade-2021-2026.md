@@ -3,7 +3,7 @@ layout: default
 title: "中国轮胎制造升级：2021—2026 回顾与 2031 展望"
 description: "以证据等级回顾中国轮胎制造从自动化、装备国产化到工业软件与 AI 应用的升级路径。"
 content_type: essay
-display_order: 40
+display_order: 70
 published: 2026-09-01
 updated: 2026-09-21
 topics:
