@@ -29,9 +29,9 @@ _最后更新：2026-09-21_
 
 工业人工智能往往在有边界的实验中容易证明，却难以在真实运营中持续。概念验证可以使用精选的数据集、稳定的运行窗口、专家的支持和狭窄的成功指标。而生产环境要求人工智能系统在杂乱的数据流、不断变化的设备与材料、工厂工作流、一线用户、风险控制和业务指标之间都能正常工作。
 
-麦肯锡 2025 年的人工智能调查报告显示，人工智能已被广泛采用，但只有约三分之一的受访者表示已在整个组织内规模化推广人工智能项目。[1] 在制造业，这一点尤为重要，因为一个人工智能模型只有在改变了真实决策、并产生诸如更少停机时间、更少废品、更高良率、更安全的维护或更好的成本表现等可衡量结果时，才算有价值。
+麦肯锡 2025 年的人工智能调查报告显示，人工智能已被广泛采用，但只有约三分之一的受访者表示已在整个组织内规模化推广人工智能项目。[【1】](#ref-1) 在制造业，这一点尤为重要，因为一个人工智能模型只有在改变了真实决策、并产生诸如更少停机时间、更少废品、更高良率、更安全的维护或更好的成本表现等可衡量结果时，才算有价值。
 
-**具体案例。** Novelis 早已拥有预测分析类的用例，但据德勤报告，在制定“未来工厂”（Plant of the Future）路线图之前，该公司缺乏把这些用例推广到各制造基地的策略。[8]
+**具体案例。** Novelis 早已拥有预测分析类的用例，但据德勤报告，在制定“未来工厂”（Plant of the Future）路线图之前，该公司缺乏把这些用例推广到各制造基地的策略。[【8】](#ref-8)
 
 **分析。** 这个例子说明了“拥有工业人工智能用例”与“拥有工业人工智能能力”之间的差别。规模化需要的不只是模型成功：它需要可重复的部署、工作流的归属、数据访问、治理，以及一个在试点环境之外依然成立的价值论证。
 
@@ -43,17 +43,17 @@ _最后更新：2026-09-21_
 
 工业人工智能依赖于可靠、具备上下文、并与物理过程相连接的数据。实际中，工业数据可能缺失、有噪声、标注不良、被困在遗留系统里，或者与赋予数据意义的资产、批次、材料、运行工况或维护事件相脱节。
 
-制造业领导力委员会（Manufacturing Leadership Council）报告称，65% 的制造商缺乏适用于人工智能应用的合适数据，62% 提到数据是非结构化的或格式不佳。[2] 普华永道报告称，数据质量差已影响了许多运营负责人从数字化举措中获取价值。[3] 麻省理工斯隆管理学院同样指出，工业人工智能需要的是在正确的时间获得正确的数据，而不仅仅是更多的数据。[4]
+制造业领导力委员会（Manufacturing Leadership Council）报告称，65% 的制造商缺乏适用于人工智能应用的合适数据，62% 提到数据是非结构化的或格式不佳。[【2】](#ref-2) 普华永道报告称，数据质量差已影响了许多运营负责人从数字化举措中获取价值。[【3】](#ref-3) 麻省理工斯隆管理学院同样指出，工业人工智能需要的是在正确的时间获得正确的数据，而不仅仅是更多的数据。[【4】](#ref-4)
 
-**具体案例 1。** 麦肯锡描述了一家铁矿石公司为球团工艺构建优化器的经历：在工作启动之前，一个关键的项目传感器已经损坏了六个月，直到项目开始才被发现。[9]
+**具体案例 1。** 麦肯锡描述了一家铁矿石公司为球团工艺构建优化器的经历：在工作启动之前，一个关键的项目传感器已经损坏了六个月，直到项目开始才被发现。[【9】](#ref-9)
 
 **分析。** 这是一个基本的数据就绪度失败。优化器在数学上可能很强，但它无法从一个从未被正确测量的关键信号中学习。
 
-**具体案例 2。** Belden 将其里士满工厂描述为一个既有（棕地）工厂环境，机器和设备的年代与品牌各不相同；其预测性维护工作首先必须把设备连接起来，并在不更换全部遗留设备的前提下采集具备上下文的 OT 数据。[10]
+**具体案例 2。** Belden 将其里士满工厂描述为一个既有（棕地）工厂环境，机器和设备的年代与品牌各不相同；其预测性维护工作首先必须把设备连接起来，并在不更换全部遗留设备的前提下采集具备上下文的 OT 数据。[【10】](#ref-10)
 
 **分析。** 如果每一项资产、每一座工厂都需要一个新的数据抢救项目，工业人工智能就无法规模化。碎片化的 IT／OT 系统会把部署工作变成集成工作。
 
-**具体案例 3。** 在同一座 Belden 工厂，一个预测性维护试点从 150 个传感器采集了约 300 GB 的数据，并利用这些数据识别出了存在风险的部件，例如与皮带对中问题相关的异常振动。[10]
+**具体案例 3。** 在同一座 Belden 工厂，一个预测性维护试点从 150 个传感器采集了约 300 GB 的数据，并利用这些数据识别出了存在风险的部件，例如与皮带对中问题相关的异常振动。[【10】](#ref-10)
 
 **分析。** 数据量只有在被转化为与决策相关的信息时才有用。价值不在于采集传感器数据流，而在于产出一个有人可以据此行动的维护发现。
 
@@ -63,21 +63,21 @@ _最后更新：2026-09-21_
 
 工业人工智能必须先获得信任，才能影响生产、维护、质量、安全或工程决策。信任的范围比模型准确率更广。它包括验证、可解释性、可靠性、网络安全、知识产权保护、人的接受度，以及人工智能建议与人类决策之间清晰的权限边界。
 
-美国国家标准与技术研究院（NIST）的人工智能风险管理框架将可信性视为人工智能系统全生命周期的要求。[5] NIST 的工业人工智能评估工作也会追问：人工智能工具是否降低了制造风险、是否创造了系统层面的价值，而不只是模型孤立地看起来是否准确。[11]
+美国国家标准与技术研究院（NIST）的人工智能风险管理框架将可信性视为人工智能系统全生命周期的要求。[【5】](#ref-5) NIST 的工业人工智能评估工作也会追问：人工智能工具是否降低了制造风险、是否创造了系统层面的价值，而不只是模型孤立地看起来是否准确。[【11】](#ref-11)
 
-**具体案例 1。** 西门子报告称，在 PCB 制造中，自动光学检测的误报会逐渐累积成人工检验员的告警疲劳，并增加检验错误。[13]
+**具体案例 1。** 西门子报告称，在 PCB 制造中，自动光学检测的误报会逐渐累积成人工检验员的告警疲劳，并增加检验错误。[【13】](#ref-13)
 
 **分析。** 信任可能在人机界面处失效。如果人工智能或自动化反复用误报给用户增加负担，操作员就会学会忽视它，即便真正的问题出现时也是如此。
 
-**具体案例 2。** 西门子将其 Industrial Copilot 定位于维护配置和故障修复等任务，而路透社报道称，制造商对生成式人工智能推广中的回答准确性和幻觉问题表达了担忧。[6][12]
+**具体案例 2。** 西门子将其 Industrial Copilot 定位于维护配置和故障修复等任务，而路透社报道称，制造商对生成式人工智能推广中的回答准确性和幻觉问题表达了担忧。[【6】](#ref-6)[【12】](#ref-12)
 
 **分析。** 在工业工作中，一个流畅的回答是不够的。如果生成的指导可能影响故障排查或维护，用户就需要经过批准的知识来源、证据、审核规则，以及在不确定性较高时的上报机制。
 
-**具体案例 3。** 2023 年，据报道三星半导体的员工在寻求工作帮助时，将敏感源代码和在研半导体信息输入了 ChatGPT。[14]
+**具体案例 3。** 2023 年，据报道三星半导体的员工在寻求工作帮助时，将敏感源代码和在研半导体信息输入了 ChatGPT。[【14】](#ref-14)
 
 **分析。** 信任也包括治理。如果使用工业人工智能会把专有代码、工艺知识、良率证据或运营数据暴露在经批准的控制之外，它就无法负责任地规模化。
 
-**具体案例 4。** NIST 的工业人工智能工作明确包含人与代理之间的沟通以及人在回路的学习，其 AI 增强型制造监控工作也强调智能自动化中操作员的交互性与输入。[17][18]
+**具体案例 4。** NIST 的工业人工智能工作明确包含人与代理之间的沟通以及人在回路的学习，其 AI 增强型制造监控工作也强调智能自动化中操作员的交互性与输入。[【17】](#ref-17)[【18】](#ref-18)
 
 **分析。** 生产使用需要权限边界。工厂必须定义人工智能在何时可以观察、建议、排程、更改参数、停止工艺，或者必须获得人工批准。
 
@@ -87,13 +87,13 @@ _最后更新：2026-09-21_
 
 工业人工智能被部署到不断变化的物理系统中。机器会磨损，传感器会漂移，供应商和材料会更换，方法会修订，产品会演进，操作员会干预，运行工况会变化。因此，一个在受控概念验证中表现良好的模型，在生产环境中可能变得不准确、物理上站不住脚，甚至不安全。
 
-NIST 指出，工业人工智能的数据必须覆盖真实运行场景和物理认知，而不只是方便取得的历史样本。[7] 这个问题在部署之后会进一步加剧，因为被建模的系统不会保持不变。
+NIST 指出，工业人工智能的数据必须覆盖真实运行场景和物理认知，而不只是方便取得的历史样本。[【7】](#ref-7) 这个问题在部署之后会进一步加剧，因为被建模的系统不会保持不变。
 
-**具体案例 1。** 欧姆龙（Omron）描述了制造缺陷预测的用例，其中 4M（人、机、料、法）的变化可能诱发概念漂移，而这种漂移必须与缺陷征兆分开检测。[15]
+**具体案例 1。** 欧姆龙（Omron）描述了制造缺陷预测的用例，其中 4M（人、机、料、法）的变化可能诱发概念漂移，而这种漂移必须与缺陷征兆分开检测。[【15】](#ref-15)
 
 **分析。** 这就是为什么不能假定生产环境中的行为与试点数据集一致。人员、设备、材料或方法的变化都可能使工艺发生偏移，并悄无声息地使模型假设失效。
 
-**具体案例 2。** 在刀具磨损和剩余使用寿命预测中，近期融入物理规律的研究明确地对磨损动力学和可解释的物理特性进行建模，而不是仅依赖对历史数据的黑箱拟合。[16]
+**具体案例 2。** 在刀具磨损和剩余使用寿命预测中，近期融入物理规律的研究明确地对磨损动力学和可解释的物理特性进行建模，而不是仅依赖对历史数据的黑箱拟合。[【16】](#ref-16)
 
 **分析。** 演变中的系统依然遵守工程约束。规模化需要的模型，是在磨损、载荷变化、新的运行区间以及超出概念验证数据范围的外推情形下，仍然保持物理意义的模型。
 
@@ -348,41 +348,41 @@ Level 6：AI 代理在流程数字孪生网络上运行
 
 ## 参考文献
 
-[1] McKinsey & Company. (2025). *The State of AI: Global Survey 2025.* https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai
+<a id="ref-1"></a>【1】 McKinsey & Company. (2025). *The State of AI: Global Survey 2025.* https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai
 
-[2] Manufacturing Leadership Council / National Association of Manufacturers. (2025). *Shaping the AI-Powered Factory of the Future.* https://manufacturingleadershipcouncil.com/wp-content/uploads/2025/05/Shaping-the-AI-Powered-Factory-of-the-Future-Report.pdf
+<a id="ref-2"></a>【2】 Manufacturing Leadership Council / National Association of Manufacturers. (2025). *Shaping the AI-Powered Factory of the Future.* https://manufacturingleadershipcouncil.com/wp-content/uploads/2025/05/Shaping-the-AI-Powered-Factory-of-the-Future-Report.pdf
 
-[3] PwC. (2026). *PwC's 2026 Digital Trends in Operations Survey.* https://www.pwc.com/us/en/services/consulting/business-transformation/digital-supply-chain-survey.html
+<a id="ref-3"></a>【3】 PwC. (2026). *PwC's 2026 Digital Trends in Operations Survey.* https://www.pwc.com/us/en/services/consulting/business-transformation/digital-supply-chain-survey.html
 
-[4] MIT Sloan School of Management. (2025). *6 Steps to Succeeding with Industrial AI.* https://mitsloan.mit.edu/ideas-made-to-matter/6-steps-to-succeeding-industrial-ai
+<a id="ref-4"></a>【4】 MIT Sloan School of Management. (2025). *6 Steps to Succeeding with Industrial AI.* https://mitsloan.mit.edu/ideas-made-to-matter/6-steps-to-succeeding-industrial-ai
 
-[5] National Institute of Standards and Technology. (2023). *Artificial Intelligence Risk Management Framework (AI RMF 1.0).* https://www.nist.gov/itl/ai-risk-management-framework
+<a id="ref-5"></a>【5】 National Institute of Standards and Technology. (2023). *Artificial Intelligence Risk Management Framework (AI RMF 1.0).* https://www.nist.gov/itl/ai-risk-management-framework
 
-[6] Reuters. (2024). *Manufacturers slow Gen AI rollout on rising accuracy concerns, says study.* https://www.reuters.com/technology/artificial-intelligence/manufacturers-slow-gen-ai-rollout-rising-accuracy-concerns-says-study-2024-07-10/
+<a id="ref-6"></a>【6】 Reuters. (2024). *Manufacturers slow Gen AI rollout on rising accuracy concerns, says study.* https://www.reuters.com/technology/artificial-intelligence/manufacturers-slow-gen-ai-rollout-rising-accuracy-concerns-says-study-2024-07-10/
 
-[7] National Institute of Standards and Technology. (2025). *How to Find the Right Balance of Data for Your Industrial AI System.* https://www.nist.gov/blogs/manufacturing-innovation-blog/how-find-right-balance-data-your-industrial-ai-system
+<a id="ref-7"></a>【7】 National Institute of Standards and Technology. (2025). *How to Find the Right Balance of Data for Your Industrial AI System.* https://www.nist.gov/blogs/manufacturing-innovation-blog/how-find-right-balance-data-your-industrial-ai-system
 
-[8] Deloitte. *Novelis: Predictive Analytics in Manufacturing.* https://www.deloitte.com/us/en/services/consulting/case-studies/predictive-analytics-in-manufacturing.html
+<a id="ref-8"></a>【8】 Deloitte. *Novelis: Predictive Analytics in Manufacturing.* https://www.deloitte.com/us/en/services/consulting/case-studies/predictive-analytics-in-manufacturing.html
 
-[9] McKinsey & Company. (2023). *Clearing Data Quality Roadblocks: Unlocking AI in Manufacturing.* https://www.mckinsey.com/capabilities/tech-and-ai/our-insights/clearing-data-quality-roadblocks-unlocking-ai-in-manufacturing
+<a id="ref-9"></a>【9】 McKinsey & Company. (2023). *Clearing Data Quality Roadblocks: Unlocking AI in Manufacturing.* https://www.mckinsey.com/capabilities/tech-and-ai/our-insights/clearing-data-quality-roadblocks-unlocking-ai-in-manufacturing
 
-[10] Belden. (2023). *Laying the Foundation for Predictive Maintenance in Manufacturing.* https://www.belden.com/knowledge-hub/resources/case-studies/laying-the-foundation-for-predictive-maintenance-in-manufacturing
+<a id="ref-10"></a>【10】 Belden. (2023). *Laying the Foundation for Predictive Maintenance in Manufacturing.* https://www.belden.com/knowledge-hub/resources/case-studies/laying-the-foundation-for-predictive-maintenance-in-manufacturing
 
-[11] National Institute of Standards and Technology. (2022). *Are Industrial AI Tools Worth It? NIST Researchers Offer an Evaluation Procedure.* https://www.nist.gov/news-events/news/2022/02/are-industrial-ai-tools-worth-it-nist-researchers-offer-evaluation
+<a id="ref-11"></a>【11】 National Institute of Standards and Technology. (2022). *Are Industrial AI Tools Worth It? NIST Researchers Offer an Evaluation Procedure.* https://www.nist.gov/news-events/news/2022/02/are-industrial-ai-tools-worth-it-nist-researchers-offer-evaluation
 
-[12] Siemens. *Siemens Industrial Copilot.* https://www.siemens.com/global/en/products/automation/topic-areas/industrial-ai/industrial-copilot.html
+<a id="ref-12"></a>【12】 Siemens. *Siemens Industrial Copilot.* https://www.siemens.com/global/en/products/automation/topic-areas/industrial-ai/industrial-copilot.html
 
-[13] Siemens. (2023). *When Automated Processes Actually Slow Down Production.* https://blogs.sw.siemens.com/opcenter/when-automated-processes-actually-slow-down-production/
+<a id="ref-13"></a>【13】 Siemens. (2023). *When Automated Processes Actually Slow Down Production.* https://blogs.sw.siemens.com/opcenter/when-automated-processes-actually-slow-down-production/
 
-[14] The Register. (2023). *Samsung Reportedly Leaked Its Own Secrets Through ChatGPT.* https://www.theregister.com/2023/04/06/samsung_reportedly_leaked_its_own/
+<a id="ref-14"></a>【14】 The Register. (2023). *Samsung Reportedly Leaked Its Own Secrets Through ChatGPT.* https://www.theregister.com/2023/04/06/samsung_reportedly_leaked_its_own/
 
-[15] OMRON. (2025). *Proposal of Concept Drift Detection in Factory Automation Domain.* https://www.omron.com/global/en/technology/omrontechnics/vol57/003.html
+<a id="ref-15"></a>【15】 OMRON. (2025). *Proposal of Concept Drift Detection in Factory Automation Domain.* https://www.omron.com/global/en/technology/omrontechnics/vol57/003.html
 
-[16] Blume, S., et al. (2025). *Physics-informed symbolic regression for tool wear and remaining useful life predictions in manufacturing.* Journal of Manufacturing Systems. https://doi.org/10.1016/j.jmsy.2025.03.023
+<a id="ref-16"></a>【16】 Blume, S., et al. (2025). *Physics-informed symbolic regression for tool wear and remaining useful life predictions in manufacturing.* Journal of Manufacturing Systems. https://doi.org/10.1016/j.jmsy.2025.03.023
 
-[17] National Institute of Standards and Technology. *Industrial Artificial Intelligence Management and Metrology (IAIMM).* https://www.nist.gov/programs-projects/industrial-artificial-intelligence-management-and-metrology-iaimm
+<a id="ref-17"></a>【17】 National Institute of Standards and Technology. *Industrial Artificial Intelligence Management and Metrology (IAIMM).* https://www.nist.gov/programs-projects/industrial-artificial-intelligence-management-and-metrology-iaimm
 
-[18] National Institute of Standards and Technology. (2024). *NIST Explores AI-Enhanced Monitoring in Manufacturing Processes.* https://www.nist.gov/blogs/manufacturing-innovation-blog/nist-explores-ai-enhanced-monitoring-manufacturing-processes
+<a id="ref-18"></a>【18】 National Institute of Standards and Technology. (2024). *NIST Explores AI-Enhanced Monitoring in Manufacturing Processes.* https://www.nist.gov/blogs/manufacturing-innovation-blog/nist-explores-ai-enhanced-monitoring-manufacturing-processes
 
 ---
 

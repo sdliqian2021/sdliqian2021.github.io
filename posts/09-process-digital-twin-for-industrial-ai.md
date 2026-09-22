@@ -25,7 +25,7 @@ _最后更新：2026-09-21_
 
 **目的：** 在讨论流程数字孪生在工业人工智能中的角色之前，先给出一个精确且可操作的定义。
 
-**核心论点：** 流程数字孪生不是仪表盘，不是仿真，也不是机器学习模型。它是对一个工业流程的持续更新的、可执行的表示，把流程状态、历史、模型、约束、决策以及实测结果连接在一起。
+**核心论点：** 流程数字孪生不是仪表盘，不是仿真，也不是机器学习模型。它是对一个工业流程的持续更新的、可执行的表示，把流程状态、历史、模型、约束、决策以及实测结果连接在一起。[【1】](#ref-1)
 
 ---
 
@@ -161,6 +161,8 @@ _最后更新：2026-09-21_
 ```
 
 行为模型可以是基于物理的、数据驱动的、基于规则的，或是混合的。数字孪生并不要求使用最先进的模型，它要求的是一个对所支持的决策而言有效的模型。
+
+公开基准可以帮助团队验证不同层次的方法：Tennessee Eastman 流程适合研究全厂控制与故障诊断[【2】](#ref-2)；Modelica 及其开源实现 OpenModelica 支持复杂物理系统建模[【3】](#ref-3)[【4】](#ref-4)；NASA C-MAPSS 与 SUTD iTrust 数据集则可分别用于预测性维护和信息物理系统研究[【5】](#ref-5)[【6】](#ref-6)。
 
 ---
 
@@ -566,12 +568,12 @@ _最后更新：2026-09-21_
 
 ## 参考资料
 
-- ISO, [ISO 23247-1:2021 — Digital twin framework for manufacturing](https://www.iso.org/standard/75066.html).
-- J. J. Downs and E. F. Vogel, [“A Plant-Wide Industrial Process Control Problem,” *Computers & Chemical Engineering*, 1993](https://doi.org/10.1016/0098-1354(93)80018-I).
-- Modelica Association, [Modelica — an open language for modeling complex physical systems](https://modelica.org/).
-- Open Source Modelica Consortium, [OpenModelica](https://openmodelica.org/).
-- NASA Prognostics Center of Excellence, [C-MAPSS Jet Engine Simulated Data](https://data.nasa.gov/dataset/cmapss-jet-engine-simulated-data).
-- Singapore University of Technology and Design iTrust, [Public Cyber-Physical-System Datasets](https://www.sutd.edu.sg/itrust/itrust-labs/datasets/).
+<a id="ref-1"></a>【1】 ISO, [ISO 23247-1:2021 — Digital twin framework for manufacturing](https://www.iso.org/standard/75066.html).
+<a id="ref-2"></a>【2】 J. J. Downs and E. F. Vogel, [“A Plant-Wide Industrial Process Control Problem,” *Computers & Chemical Engineering*, 1993](https://doi.org/10.1016/0098-1354(93)80018-I).
+<a id="ref-3"></a>【3】 Modelica Association, [Modelica — an open language for modeling complex physical systems](https://modelica.org/).
+<a id="ref-4"></a>【4】 Open Source Modelica Consortium, [OpenModelica](https://openmodelica.org/).
+<a id="ref-5"></a>【5】 NASA Prognostics Center of Excellence, [C-MAPSS Jet Engine Simulated Data](https://data.nasa.gov/dataset/cmapss-jet-engine-simulated-data).
+<a id="ref-6"></a>【6】 Singapore University of Technology and Design iTrust, [Public Cyber-Physical-System Datasets](https://www.sutd.edu.sg/itrust/itrust-labs/datasets/).
 
 ---
 

@@ -416,13 +416,13 @@ LLM 的角色：
 
 **目的：** 本文解释为什么工业 AI 代理需要的不只是一个 LLM、工具、记忆和护栏。它把数字孪生定位为让代理式人工智能在工业系统中变得可治理的支撑装置（harness）。
 
-**核心论点：** 通用 AI 代理可以推理、规划、调用工具、总结证据并协调工作流。但工业 AI 代理还必须运行在一个受治理的决策闭环之中，具备运行真值、模型有效性、安全约束、权限、不确定性处理、人工上报以及可审计性。因此，切实可行的架构是：**工业 AI 代理 = LLM + 数字孪生支撑装置**。
+**核心论点：** 通用 AI 代理可以推理、规划、调用工具、总结证据并协调工作流。但工业 AI 代理还必须运行在一个受治理的决策闭环之中，具备运行真值、模型有效性、安全约束、权限、不确定性处理、人工上报以及可审计性。因此，切实可行的架构是：**工业 AI 代理 = LLM + 数字孪生支撑装置**。[【2】](#ref-2)[【3】](#ref-3)
 
 ---
 
 ### 核心问题：通用 AI 代理是可执行的，但工业决策必须是可治理的
 
-现代 LLM 代理之所以变得有用，是因为它们能够管理多步工作流。它们可以选择工具、检索信息、检查数据、撰写摘要、生成报告，并与人交互。这已经很强大了。
+现代 LLM 代理之所以变得有用，是因为它们能够管理多步工作流。它们可以选择工具、检索信息、检查数据、撰写摘要、生成报告，并与人交互。这已经很强大了。[【1】](#ref-1)
 
 但工业工作不同于普通的工作流自动化。在工业场景中，代理可能影响维护、质量、过程控制、试验、保修决策、车队运营、安全评审，或面向客户的技术声明。风险不仅在于答案可能出错。更深层的风险在于，答案可能没有建立在资产、流程、产品或车队的受治理状态之上。
 
@@ -631,9 +631,9 @@ LLM 提供推理、规划、语言、解释和协调。
 
 ## 参考资料
 
-- OpenAI, [*A Practical Guide to Building Agents*](https://openai.com/business/guides-and-resources/a-practical-guide-to-building-ai-agents/).
-- Zhou et al., [*Digital Twin AI: Opportunities and Challenges from Large Language Models to World Models*](https://arxiv.org/abs/2601.01321).
-- Hasan and Nguyen, [*Integrating Agentic AI and Digital Twins for Intelligent Decision-Making Systems*](https://doi.org/10.1016/j.array.2026.100721).
+<a id="ref-1"></a>【1】 OpenAI, [*A Practical Guide to Building Agents*](https://openai.com/business/guides-and-resources/a-practical-guide-to-building-ai-agents/).
+<a id="ref-2"></a>【2】 Zhou et al., [*Digital Twin AI: Opportunities and Challenges from Large Language Models to World Models*](https://arxiv.org/abs/2601.01321).
+<a id="ref-3"></a>【3】 Hasan and Nguyen, [*Integrating Agentic AI and Digital Twins for Intelligent Decision-Making Systems*](https://doi.org/10.1016/j.array.2026.100721).
 
 ---
 

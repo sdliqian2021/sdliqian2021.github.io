@@ -5,7 +5,7 @@ description: "AI 自动化会不断移动常规与异常的边界；工业组织
 content_type: essay
 display_order: 10
 published: 2026-07-08
-updated: 2026-09-18
+updated: 2026-09-21
 topics:
   - 工业 AI
   - 人因工程
@@ -64,7 +64,7 @@ _最后更新：2026-09-18_
 
 随着能力提升，今天的异常可能变成明天的常规任务。因此，“最后的 1%”不是一组固定问题，更不是人类永久保留的领地。它是一条不断移动的边界。
 
-自动化领域很早就观察到一个悖论：系统通常先自动化那些容易描述和频繁发生的部分，把最难预测的状态、系统失效后的恢复以及责任留给人。Bainbridge 在 1983 年将这种现象总结为“自动化的讽刺”。
+自动化领域很早就观察到一个悖论：系统通常先自动化那些容易描述和频繁发生的部分，把最难预测的状态、系统失效后的恢复以及责任留给人。Bainbridge 在 1983 年将这种现象总结为“自动化的讽刺”。[【1】](#ref-1)
 
 这并不证明 AI 只能处理简单工作。它说明任何自动化系统都有适用范围。当系统越过这个范围时，必须能够识别自己不再可靠，并把问题升级给具有足够信息和权限的人。
 
@@ -80,7 +80,7 @@ _最后更新：2026-09-18_
 
 当人不再持续参与日常操作时，接管异常并不会自动变得容易。
 
-人因研究把这称为 out-of-the-loop performance problem。Endsley 与 Kiris 的实验表明，较高程度的自动化可能降低操作者的情境感知；当自动化突然失效、需要人工接管时，人的表现反而可能变差。
+人因研究把这称为 out-of-the-loop performance problem。Endsley 与 Kiris 的实验表明，较高程度的自动化可能降低操作者的情境感知；当自动化突然失效、需要人工接管时，人的表现反而可能变差。[【2】](#ref-2)
 
 原因并不神秘。一个人如果平时只负责批准系统建议，就可能逐渐失去三个东西：
 
@@ -88,7 +88,7 @@ _最后更新：2026-09-18_
 2. 亲自诊断和操作的熟练度；
 3. 对异常前兆的敏感性。
 
-2026 年关于自动化、AI、技能退化与组织韧性的系统综述进一步指出，当技术替代了仍然需要保留的技能时，组织在技术中断后实施人工替代方案的能力也可能被削弱。
+2026 年关于自动化、AI、技能退化与组织韧性的系统综述进一步指出，当技术替代了仍然需要保留的技能时，组织在技术中断后实施人工替代方案的能力也可能被削弱。[【5】](#ref-5)
 
 这意味着自动化项目不能只计算节省了多少操作时间，还要问：
 
@@ -110,7 +110,7 @@ _最后更新：2026-09-18_
 
 第二，AI 不承担组织和法律意义上的责任。即使模型给出了建议，企业仍然需要决定谁批准行动、依据是什么，以及出现后果时怎样追溯。
 
-因此，信任 AI 不能只依赖答案看起来是否流畅。NIST 的 AI 风险管理框架把有效性、可靠性、安全、透明度、可解释性和问责放在同一个治理体系中。对于高后果场景，所需证据、监控和人工干预能力也应该更强。
+因此，信任 AI 不能只依赖答案看起来是否流畅。NIST 的 AI 风险管理框架把有效性、可靠性、安全、透明度、可解释性和问责放在同一个治理体系中。对于高后果场景，所需证据、监控和人工干预能力也应该更强。[【3】](#ref-3)[【4】](#ref-4)
 
 这不是说人类永远必须作最后决定。低风险、边界清楚、证据充分的任务可以拥有很高的自动化权限。关键是决策权必须与风险、证据和可恢复性匹配。
 
@@ -174,11 +174,11 @@ AI 在这里可能发挥两种完全不同的作用。
 
 英文文献的标题与出版信息保留原文，便于核对与引用。
 
-1. Bainbridge, L. (1983). *Ironies of Automation*. Automatica, 19(6), 775–779. <https://doi.org/10.1016/0005-1098(83)90046-8>
-2. Endsley, M. R., & Kiris, E. O. (1995). *The Out-of-the-Loop Performance Problem and Level of Control in Automation*. Human Factors, 37(2), 381–394. <https://doi.org/10.1518/001872095779064555>
-3. NIST. (2023). *Artificial Intelligence Risk Management Framework (AI RMF 1.0)*. <https://www.nist.gov/itl/ai-risk-management-framework>
-4. NIST. (2024). *Artificial Intelligence Risk Management Framework: Generative Artificial Intelligence Profile*. NIST AI 600-1. <https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf>
-5. Avery, A., Dinger, M., & Maier, C. (2026). *Technology-Driven Skill Degradation and Organizational Resilience in the Era of Automation and AI: An Integrated Systematic Review and Research Agenda*. ACM SIGMIS Database, 57(3), 42–80. <https://doi.org/10.1145/3822165.3822168>
+<a id="ref-1"></a>【1】 Bainbridge, L. (1983). *Ironies of Automation*. Automatica, 19(6), 775–779. <https://doi.org/10.1016/0005-1098(83)90046-8>
+<a id="ref-2"></a>【2】 Endsley, M. R., & Kiris, E. O. (1995). *The Out-of-the-Loop Performance Problem and Level of Control in Automation*. Human Factors, 37(2), 381–394. <https://doi.org/10.1518/001872095779064555>
+<a id="ref-3"></a>【3】 NIST. (2023). *Artificial Intelligence Risk Management Framework (AI RMF 1.0)*. <https://www.nist.gov/itl/ai-risk-management-framework>
+<a id="ref-4"></a>【4】 NIST. (2024). *Artificial Intelligence Risk Management Framework: Generative Artificial Intelligence Profile*. NIST AI 600-1. <https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf>
+<a id="ref-5"></a>【5】 Avery, A., Dinger, M., & Maier, C. (2026). *Technology-Driven Skill Degradation and Organizational Resilience in the Era of Automation and AI: An Integrated Systematic Review and Research Agenda*. ACM SIGMIS Database, 57(3), 42–80. <https://doi.org/10.1145/3822165.3822168>
 
 ---
 

@@ -23,7 +23,7 @@ _最后更新：2026-09-21_
 > 工业 AI 的核心不是把通用模型部署到工厂，而是让 AI 在物理系统、工程约束、验证证据和责任边界之内参与决策。
 
 
-工业人工智能（Industrial AI），也称 Industry AI，是应用于工程化物理系统与工业运营的人工智能。它的目的，是提升产品、流程、资产以及全生命周期决策在真实世界中的表现。
+工业人工智能（Industrial AI），也称 Industry AI，是应用于工程化物理系统与工业运营的人工智能。它的目的，是提升产品、流程、资产以及全生命周期决策在真实世界中的表现。[【1】](#ref-1)[【5】](#ref-5)
 
 它并不简单等同于“工业企业在用的人工智能”。一个帮助制造企业写邮件或总结人事政策的聊天机器人也许有用，但它仍然属于业务人工智能（Business AI）。而一个能估计设备健康状态、检测产品缺陷、指导仿真工况、优化工艺参数或支持工程设计决策的人工智能系统，则更接近工业人工智能。
 
@@ -161,7 +161,7 @@ RAG 系统
 
 数字孪生不应被视为只属于工业人工智能。
 
-数字孪生是跨领域的建模与编排范式。它可以表示物理资产、业务流程、客户旅程、供应链、组织，也可以表示个人系统。
+数字孪生是跨领域的建模与编排范式。它可以表示物理资产、业务流程、客户旅程、供应链、组织，也可以表示个人系统。[【2】](#ref-2)[【3】](#ref-3)
 
 | 数字孪生类型 | 领域 |
 |---|---|
@@ -182,7 +182,7 @@ RAG 系统
 
 工业系统很少产出干净、完整、均衡的数据。数据可能来自实验室测试、有限元仿真、生产传感器、检测记录、操作员笔记、维护日志、车队记录和现场测量。每个来源的噪声、偏差、分辨率、时延和可追溯性都不相同。
 
-模型还必须遵守物理约束。在许多工业场景中，仅有相关性是不够的。一个模型可能在历史数据上看起来很准确，却在面对新材料、新几何、新运行温度、新载荷工况、供应商变更或新工艺窗口时失效。
+模型还必须遵守物理约束。在许多工业场景中，仅有相关性是不够的。一个模型可能在历史数据上看起来很准确，却在面对新材料、新几何、新运行温度、新载荷工况、供应商变更或新工艺窗口时失效。[【6】](#ref-6)
 
 因此，工业人工智能通常需要混合式思维：
 
@@ -203,7 +203,7 @@ RAG 系统
 
 ## 8. 好的工业人工智能需要什么
 
-有用的工业人工智能需要的不只是一个训练好的模型。它需要围绕模型建立一个值得信赖的决策系统。
+有用的工业人工智能需要的不只是一个训练好的模型。它需要围绕模型建立一个值得信赖的决策系统。[【4】](#ref-4)
 
 重要的要求包括：
 
@@ -223,16 +223,14 @@ RAG 系统
 
 本文使用的是一种实用分类，而不是正式的标准分类体系。消费级人工智能、企业级人工智能、业务人工智能与工业人工智能的区分，是一个用来把业务工作流与工程化物理系统决策分开的工作框架。
 
-关于工业人工智能、数字孪生、可信人工智能、融入物理规律的建模以及橡胶工程背景，有用的参考文献包括：
+关于工业人工智能、数字孪生、可信人工智能、融入物理规律的建模以及融入物理规律的建模，有用的参考文献包括：
 
-1. National Institute of Standards and Technology. *Industrial Artificial Intelligence Management and Metrology (IAIMM).* https://www.nist.gov/programs-projects/industrial-artificial-intelligence-management-and-metrology-iaimm
-2. ISO. *ISO 23247-1:2021, Automation systems and integration - Digital twin framework for manufacturing - Part 1: Overview and general principles.* https://www.iso.org/standard/75066.html
-3. National Institute of Standards and Technology. *Digital Twins for Advanced Manufacturing.* https://www.nist.gov/programs-projects/digital-twins-advanced-manufacturing
-4. National Institute of Standards and Technology. *Artificial Intelligence Risk Management Framework (AI RMF 1.0).* https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-ai-rmf-10
-5. Lee, J., Davari, H., Singh, J., and Pandhare, V. (2018). *Industrial Artificial Intelligence for Industry 4.0-based Manufacturing Systems.* Manufacturing Letters, 18, 20-23. https://doi.org/10.1016/j.mfglet.2018.09.002
-6. Raissi, M., Perdikaris, P., and Karniadakis, G. E. (2019). *Physics-informed neural networks: A deep learning framework for solving forward and inverse problems involving nonlinear partial differential equations.* Journal of Computational Physics, 378, 686-707. https://doi.org/10.1016/j.jcp.2018.10.045
-7. Mars, W. V., and Fatemi, A. (2002). *A literature survey on fatigue analysis approaches for rubber.* International Journal of Fatigue, 24, 949-961. https://doi.org/10.1016/S0142-1123(02)00008-7
-
+<a id="ref-1"></a>【1】 National Institute of Standards and Technology. *Industrial Artificial Intelligence Management and Metrology (IAIMM).* https://www.nist.gov/programs-projects/industrial-artificial-intelligence-management-and-metrology-iaimm
+<a id="ref-2"></a>【2】 ISO. *ISO 23247-1:2021, Automation systems and integration - Digital twin framework for manufacturing - Part 1: Overview and general principles.* https://www.iso.org/standard/75066.html
+<a id="ref-3"></a>【3】 National Institute of Standards and Technology. *Digital Twins for Advanced Manufacturing.* https://www.nist.gov/programs-projects/digital-twins-advanced-manufacturing
+<a id="ref-4"></a>【4】 National Institute of Standards and Technology. *Artificial Intelligence Risk Management Framework (AI RMF 1.0).* https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-ai-rmf-10
+<a id="ref-5"></a>【5】 Lee, J., Davari, H., Singh, J., and Pandhare, V. (2018). *Industrial Artificial Intelligence for Industry 4.0-based Manufacturing Systems.* Manufacturing Letters, 18, 20-23. https://doi.org/10.1016/j.mfglet.2018.09.002
+<a id="ref-6"></a>【6】 Raissi, M., Perdikaris, P., and Karniadakis, G. E. (2019). *Physics-informed neural networks: A deep learning framework for solving forward and inverse problems involving nonlinear partial differential equations.* Journal of Computational Physics, 378, 686-707. https://doi.org/10.1016/j.jcp.2018.10.045
 ---
 
 **系列导航：** 本篇（定义） → [下一篇：工业 AI 为什么难以规模化](/posts/08-industrial-ai-scaling-gap.html)

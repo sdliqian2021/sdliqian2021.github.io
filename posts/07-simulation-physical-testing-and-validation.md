@@ -5,7 +5,7 @@ description: "仿真不会简单消灭物理测试，而是把测试资源转向
 content_type: essay
 display_order: 20
 published: 2026-09-18
-updated: 2026-09-18
+updated: 2026-09-21
 permalink: /posts/07-simulation-physical-testing-and-validation.html
 nav: essays
 page_class: article-page
@@ -63,7 +63,7 @@ _最后更新：2026-09-18_
 
 同一个模型可能足以支持概念筛选，却不足以支持安全认证。
 
-NASA 的模型与仿真标准、ASME 的验证与确认框架，都强调一个共同概念：**context of use，也就是模型的具体使用情境。** 模型用于判断哪个方案值得继续研究，和模型用于批准一个高后果设计，需要的证据强度完全不同。
+NASA 的模型与仿真标准、ASME 的验证与确认框架，都强调一个共同概念：**context of use，也就是模型的具体使用情境。** 模型用于判断哪个方案值得继续研究，和模型用于批准一个高后果设计，需要的证据强度完全不同。[【1】](#ref-1)[【2】](#ref-2)[【3】](#ref-3)
 
 这意味着“模型是否准确”不是一个脱离用途就能回答的问题。我们至少需要知道：
 
@@ -73,13 +73,13 @@ NASA 的模型与仿真标准、ASME 的验证与确认框架，都强调一个�
 - 如果判断错误，后果是什么？
 - 模型对最终决策有多大影响？
 
-验证也不是给模型盖一个永久的“准确”印章。材料变化、制造变差、软件版本、边界条件和使用环境，都可能让原来成立的验证结论失效。
+验证也不是给模型盖一个永久的“准确”印章。材料变化、制造变差、软件版本、边界条件和使用环境，都可能让原来成立的验证结论失效。[【4】](#ref-4)[【5】](#ref-5)
 
 所以，真正需要管理的是模型的**适用范围与证据边界**。
 
 ## 三、仿真减少的是一些测试，而不是测试这件事
 
-仿真当然能够减少物理测试。复杂产品开发的行业研究显示，CAE 和虚拟测试可以减少需要制造的变型数量，扩大可研究的场景，并缩短部分开发周期。
+仿真当然能够减少物理测试。复杂产品开发的行业研究显示，CAE 和虚拟测试可以减少需要制造的变型数量，扩大可研究的场景，并缩短部分开发周期。[【6】](#ref-6)
 
 例如，一个产品系列可能存在几十种配置。企业不必为每一种配置都制造完整样件，而可以选择少量代表性配置进行物理试验，用这些数据验证模型，再由模型帮助覆盖剩余设计空间。
 
@@ -111,7 +111,7 @@ NASA 的模型与仿真标准、ASME 的验证与确认框架，都强调一个�
 - 测量系统能否捕捉瞬态、局部或耦合效应？
 - 制造样件与数字模型之间是否具有可追溯的对应关系？
 
-为了回答这些问题，企业可能需要更精确的仪器、更丰富的传感器、更好的样件谱系以及新的试验方法。这也是为什么仿真能力增强以后，测试团队的工作不一定会简单减少：他们不再只是执行固定程序，而是在设计能够最大限度降低关键不确定性的试验。
+为了回答这些问题，企业可能需要更精确的仪器、更丰富的传感器、更好的样件谱系以及新的试验方法。这也是为什么仿真能力增强以后，测试团队的工作不一定会简单减少：他们不再只是执行固定程序，而是在设计能够最大限度降低关键不确定性的试验。[【7】](#ref-7)
 
 不过，这仍然不意味着测试总数必然增加。一个成熟项目可能用更少的试验获得更多有效信息。真正值得优化的指标不是“做了多少次测试”，而是：
 
@@ -177,13 +177,13 @@ NASA 的模型与仿真标准、ASME 的验证与确认框架，都强调一个�
 
 英文文献的标题与出版信息保留原文，便于核对与引用。
 
-1. NASA. *NASA-STD-7009B: Standard for Models and Simulations*. 2024. <https://standards.nasa.gov/node/263>
-2. ASME. *Assessing Credibility of Computational Modeling through Verification and Validation: Application to Medical Devices (V&V 40)*. <https://www.asme.org/codes-standards/find-codes-standards/assessing-credibility-of-computational-modeling-through-verification-and-validation-application-to-medical-devices>
-3. ASME. *Verification, Validation and Uncertainty Quantification*. <https://www.asme.org/codes-standards/publications-information/verification-validation-uncertainty>
-4. Shao, G., Hightower, J., & Schindel, W. (2023). *Credibility Consideration for Digital Twins in Manufacturing*. Manufacturing Letters, 35, 24–28. <https://www.nist.gov/publications/credibility-consideration-digital-twins-manufacturing>
-5. NIST. *Considerations for Digital Twin Technology and Emerging Standards*. NIST IR 8356, 2025. <https://nvlpubs.nist.gov/nistpubs/ir/2025/NIST.IR.8356.pdf>
-6. Tahera, K., Wynn, D. C., Earl, C., & Eckert, C. M. (2019). *Testing in the Incremental Design and Development of Complex Products*. Research in Engineering Design, 30, 291–316. <https://doi.org/10.1007/s00163-018-0295-6>
-7. Patterson, E. A., & Hack, E. (2023). *Validating out of the Box: Identifying a Campaign of Physical Tests*. The Journal of Strain Analysis for Engineering Design, 58(5), 422–424. <https://doi.org/10.1177/03093247221138344>
+<a id="ref-1"></a>【1】 NASA. *NASA-STD-7009B: Standard for Models and Simulations*. 2024. <https://standards.nasa.gov/node/263>
+<a id="ref-2"></a>【2】 ASME. *Assessing Credibility of Computational Modeling through Verification and Validation: Application to Medical Devices (V&V 40)*. <https://www.asme.org/codes-standards/find-codes-standards/assessing-credibility-of-computational-modeling-through-verification-and-validation-application-to-medical-devices>
+<a id="ref-3"></a>【3】 ASME. *Verification, Validation and Uncertainty Quantification*. <https://www.asme.org/codes-standards/publications-information/verification-validation-uncertainty>
+<a id="ref-4"></a>【4】 Shao, G., Hightower, J., & Schindel, W. (2023). *Credibility Consideration for Digital Twins in Manufacturing*. Manufacturing Letters, 35, 24–28. <https://www.nist.gov/publications/credibility-consideration-digital-twins-manufacturing>
+<a id="ref-5"></a>【5】 NIST. *Considerations for Digital Twin Technology and Emerging Standards*. NIST IR 8356, 2025. <https://nvlpubs.nist.gov/nistpubs/ir/2025/NIST.IR.8356.pdf>
+<a id="ref-6"></a>【6】 Tahera, K., Wynn, D. C., Earl, C., & Eckert, C. M. (2019). *Testing in the Incremental Design and Development of Complex Products*. Research in Engineering Design, 30, 291–316. <https://doi.org/10.1007/s00163-018-0295-6>
+<a id="ref-7"></a>【7】 Patterson, E. A., & Hack, E. (2023). *Validating out of the Box: Identifying a Campaign of Physical Tests*. The Journal of Strain Analysis for Engineering Design, 58(5), 422–424. <https://doi.org/10.1177/03093247221138344>
 
 ---
 
