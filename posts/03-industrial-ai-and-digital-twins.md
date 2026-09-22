@@ -223,13 +223,18 @@ RAG 系统
 
 本文使用的是一种实用分类，而不是正式的标准分类体系。消费级人工智能、企业级人工智能、业务人工智能与工业人工智能的区分，是一个用来把业务工作流与工程化物理系统决策分开的工作框架。
 
-关于工业人工智能、数字孪生、可信人工智能、融入物理规律的建模以及融入物理规律的建模，有用的参考文献包括：
+关于工业人工智能、数字孪生、可信人工智能以及融入物理规律的建模，有用的参考文献包括：
 
 <a id="ref-1"></a>【1】 National Institute of Standards and Technology. *Industrial Artificial Intelligence Management and Metrology (IAIMM).* https://www.nist.gov/programs-projects/industrial-artificial-intelligence-management-and-metrology-iaimm
+
 <a id="ref-2"></a>【2】 ISO. *ISO 23247-1:2021, Automation systems and integration - Digital twin framework for manufacturing - Part 1: Overview and general principles.* https://www.iso.org/standard/75066.html
+
 <a id="ref-3"></a>【3】 National Institute of Standards and Technology. *Digital Twins for Advanced Manufacturing.* https://www.nist.gov/programs-projects/digital-twins-advanced-manufacturing
+
 <a id="ref-4"></a>【4】 National Institute of Standards and Technology. *Artificial Intelligence Risk Management Framework (AI RMF 1.0).* https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-ai-rmf-10
+
 <a id="ref-5"></a>【5】 Lee, J., Davari, H., Singh, J., and Pandhare, V. (2018). *Industrial Artificial Intelligence for Industry 4.0-based Manufacturing Systems.* Manufacturing Letters, 18, 20-23. https://doi.org/10.1016/j.mfglet.2018.09.002
+
 <a id="ref-6"></a>【6】 Raissi, M., Perdikaris, P., and Karniadakis, G. E. (2019). *Physics-informed neural networks: A deep learning framework for solving forward and inverse problems involving nonlinear partial differential equations.* Journal of Computational Physics, 378, 686-707. https://doi.org/10.1016/j.jcp.2018.10.045
 ---
 

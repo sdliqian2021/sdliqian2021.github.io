@@ -569,10 +569,15 @@ _最后更新：2026-09-21_
 ## 参考资料
 
 <a id="ref-1"></a>【1】 ISO, [ISO 23247-1:2021 — Digital twin framework for manufacturing](https://www.iso.org/standard/75066.html).
+
 <a id="ref-2"></a>【2】 J. J. Downs and E. F. Vogel, [“A Plant-Wide Industrial Process Control Problem,” *Computers & Chemical Engineering*, 1993](https://doi.org/10.1016/0098-1354(93)80018-I).
+
 <a id="ref-3"></a>【3】 Modelica Association, [Modelica — an open language for modeling complex physical systems](https://modelica.org/).
+
 <a id="ref-4"></a>【4】 Open Source Modelica Consortium, [OpenModelica](https://openmodelica.org/).
+
 <a id="ref-5"></a>【5】 NASA Prognostics Center of Excellence, [C-MAPSS Jet Engine Simulated Data](https://data.nasa.gov/dataset/cmapss-jet-engine-simulated-data).
+
 <a id="ref-6"></a>【6】 Singapore University of Technology and Design iTrust, [Public Cyber-Physical-System Datasets](https://www.sutd.edu.sg/itrust/itrust-labs/datasets/).
 
 ---

@@ -632,7 +632,9 @@ LLM 提供推理、规划、语言、解释和协调。
 ## 参考资料
 
 <a id="ref-1"></a>【1】 OpenAI, [*A Practical Guide to Building Agents*](https://openai.com/business/guides-and-resources/a-practical-guide-to-building-ai-agents/).
+
 <a id="ref-2"></a>【2】 Zhou et al., [*Digital Twin AI: Opportunities and Challenges from Large Language Models to World Models*](https://arxiv.org/abs/2601.01321).
+
 <a id="ref-3"></a>【3】 Hasan and Nguyen, [*Integrating Agentic AI and Digital Twins for Intelligent Decision-Making Systems*](https://doi.org/10.1016/j.array.2026.100721).
 
 ---

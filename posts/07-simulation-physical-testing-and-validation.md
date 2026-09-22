@@ -178,11 +178,17 @@ NASA 的模型与仿真标准、ASME 的验证与确认框架，都强调一个�
 英文文献的标题与出版信息保留原文，便于核对与引用。
 
 <a id="ref-1"></a>【1】 NASA. *NASA-STD-7009B: Standard for Models and Simulations*. 2024. <https://standards.nasa.gov/node/263>
+
 <a id="ref-2"></a>【2】 ASME. *Assessing Credibility of Computational Modeling through Verification and Validation: Application to Medical Devices (V&V 40)*. <https://www.asme.org/codes-standards/find-codes-standards/assessing-credibility-of-computational-modeling-through-verification-and-validation-application-to-medical-devices>
+
 <a id="ref-3"></a>【3】 ASME. *Verification, Validation and Uncertainty Quantification*. <https://www.asme.org/codes-standards/publications-information/verification-validation-uncertainty>
+
 <a id="ref-4"></a>【4】 Shao, G., Hightower, J., & Schindel, W. (2023). *Credibility Consideration for Digital Twins in Manufacturing*. Manufacturing Letters, 35, 24–28. <https://www.nist.gov/publications/credibility-consideration-digital-twins-manufacturing>
+
 <a id="ref-5"></a>【5】 NIST. *Considerations for Digital Twin Technology and Emerging Standards*. NIST IR 8356, 2025. <https://nvlpubs.nist.gov/nistpubs/ir/2025/NIST.IR.8356.pdf>
+
 <a id="ref-6"></a>【6】 Tahera, K., Wynn, D. C., Earl, C., & Eckert, C. M. (2019). *Testing in the Incremental Design and Development of Complex Products*. Research in Engineering Design, 30, 291–316. <https://doi.org/10.1007/s00163-018-0295-6>
+
 <a id="ref-7"></a>【7】 Patterson, E. A., & Hack, E. (2023). *Validating out of the Box: Identifying a Campaign of Physical Tests*. The Journal of Strain Analysis for Engineering Design, 58(5), 422–424. <https://doi.org/10.1177/03093247221138344>
 
 ---

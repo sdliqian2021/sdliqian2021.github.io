@@ -175,9 +175,13 @@ AI 在这里可能发挥两种完全不同的作用。
 英文文献的标题与出版信息保留原文，便于核对与引用。
 
 <a id="ref-1"></a>【1】 Bainbridge, L. (1983). *Ironies of Automation*. Automatica, 19(6), 775–779. <https://doi.org/10.1016/0005-1098(83)90046-8>
+
 <a id="ref-2"></a>【2】 Endsley, M. R., & Kiris, E. O. (1995). *The Out-of-the-Loop Performance Problem and Level of Control in Automation*. Human Factors, 37(2), 381–394. <https://doi.org/10.1518/001872095779064555>
+
 <a id="ref-3"></a>【3】 NIST. (2023). *Artificial Intelligence Risk Management Framework (AI RMF 1.0)*. <https://www.nist.gov/itl/ai-risk-management-framework>
+
 <a id="ref-4"></a>【4】 NIST. (2024). *Artificial Intelligence Risk Management Framework: Generative Artificial Intelligence Profile*. NIST AI 600-1. <https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf>
+
 <a id="ref-5"></a>【5】 Avery, A., Dinger, M., & Maier, C. (2026). *Technology-Driven Skill Degradation and Organizational Resilience in the Era of Automation and AI: An Integrated Systematic Review and Research Agenda*. ACM SIGMIS Database, 57(3), 42–80. <https://doi.org/10.1145/3822165.3822168>
 
 ---
