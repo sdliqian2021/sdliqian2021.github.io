@@ -4,7 +4,7 @@ title: "What Akron Tire Companies Can Learn from Guangrao"
 description: "What established tire companies can learn from speed, integration, and manufacturing intensity."
 content_type: legacy_essay
 published: 2026-07-08
-updated: 2026-07-11
+updated: 2026-09-21
 topics:
   - Tire industry
   - Manufacturing
@@ -72,7 +72,7 @@ The Guangrao-side model emphasizes:
 - proximity to China's EV and intelligent-vehicle environment;
 - service-oriented industrial platforms.
 
-Public reports describe Guangrao as China's largest rubber tire industrial cluster, with annual output of about 177 million radial tires and exports reaching 86.6% of production.[^xinhua-guangrao-2025] Other reports describe high CNC equipment rates, intelligent upgrades, a local supporting circle, service-oriented manufacturing platforms, and AI/big-data integration in tire manufacturing.[^peoples-daily-guangrao][^china-daily-expo-2026]
+Public reports describe Guangrao as China's largest rubber tire industrial cluster, with annual output of about 177 million radial tires and exports reaching 86.6% of production.[【1】](#ref-1) Other reports describe high CNC equipment rates, intelligent upgrades, a local supporting circle, service-oriented manufacturing platforms, and AI/big-data integration in tire manufacturing.[【2】](#ref-2)[【5】](#ref-5)
 
 The important lesson is not the exact number. The lesson is the operating logic:
 
@@ -107,7 +107,7 @@ In tires, manufacturing directly affects:
 
 If manufacturing learning becomes weak, product innovation also becomes weaker.
 
-This connects to the industrial commons idea from Pisano and Shih: manufacturing capability supports innovation because it preserves operational know-how, supplier capability, skilled labor, process knowledge, and feedback from production to design.[^pisano-shih-hbr-2012][^hbs-industrial-commons]
+This connects to the industrial commons idea from Pisano and Shih: manufacturing capability supports innovation because it preserves operational know-how, supplier capability, skilled labor, process knowledge, and feedback from production to design.[【7】](#ref-7)[【8】](#ref-8)
 
 For Goodyear, the practical question is:
 
@@ -296,37 +296,37 @@ For Topic 7, Guangrao is the operating model to study, while Akron-side companie
 
 Useful evidence includes:
 
-- Guangrao's output scale and export orientation;[^xinhua-guangrao-2025]
-- smart-manufacturing and equipment-upgrade reports;[^peoples-daily-guangrao][^qilu-yongsheng]
-- Shandong's 2024-2027 tire-industry action plan;[^shandong-action-plan]
-- service-oriented manufacturing, industrial brain, local supporting circle, and AI/big-data integration;[^china-daily-expo-2026]
-- industrial cluster theory;[^porter-clusters]
-- industrial commons and why manufacturing supports innovation;[^pisano-shih-hbr-2012][^hbs-industrial-commons]
-- Akron cluster history and incumbent-inertia lessons;[^buenstorf-klepper][^sull-firestone]
-- global and China tire industry context.[^erj-global-tire-2025][^erj-china-tire-2025]
+- Guangrao's output scale and export orientation;[【1】](#ref-1)
+- smart-manufacturing and equipment-upgrade reports;[【2】](#ref-2)[【3】](#ref-3)
+- Shandong's 2024-2027 tire-industry action plan;[【4】](#ref-4)
+- service-oriented manufacturing, industrial brain, local supporting circle, and AI/big-data integration;[【5】](#ref-5)
+- industrial cluster theory;[【6】](#ref-6)
+- industrial commons and why manufacturing supports innovation;[【7】](#ref-7)[【8】](#ref-8)
+- Akron cluster history and incumbent-inertia lessons;[【9】](#ref-9)[【10】](#ref-10)
+- global and China tire industry context.[【11】](#ref-11)[【12】](#ref-12)
 
 ## References
 
-[^xinhua-guangrao-2025]: Xinhua. "A small Chinese county that gets a niche in global tire market." May 17, 2025. https://english.news.cn/20250517/97b771c9ad3b4b81a4003b3f39b24e6d/c.html
+<a id="ref-1"></a>【1】 Xinhua. "A small Chinese county that gets a niche in global tire market." May 17, 2025. https://english.news.cn/20250517/97b771c9ad3b4b81a4003b3f39b24e6d/c.html
 
-[^peoples-daily-guangrao]: People's Daily. "Rubber tire industry renewal in Guangrao." February 15, 2025. https://paper.people.com.cn/rmrb/pc/content/202502/15/content_30056778.html
+<a id="ref-2"></a>【2】 People's Daily. "Rubber tire industry renewal in Guangrao." February 15, 2025. https://paper.people.com.cn/rmrb/pc/content/202502/15/content_30056778.html
 
-[^qilu-yongsheng]: Qilu / Lightning News. "Dongying Guangrao implements intelligent and digital transformation; tire enterprises reach 90% CNC equipment rate." December 5, 2024. https://dongying.iqilu.com/dyminsheng/2024/1205/5752366.shtml
+<a id="ref-3"></a>【3】 Qilu / Lightning News. "Dongying Guangrao implements intelligent and digital transformation; tire enterprises reach 90% CNC equipment rate." December 5, 2024. https://dongying.iqilu.com/dyminsheng/2024/1205/5752366.shtml
 
-[^shandong-action-plan]: Shandong Department of Industry and Information Technology. "Action plan for promoting new productive forces in the tire industry, 2024-2027." October 23, 2024. https://gxt.shandong.gov.cn/art/2024/10/23/art_103885_10346439.html
+<a id="ref-4"></a>【4】 Shandong Department of Industry and Information Technology. "Action plan for promoting new productive forces in the tire industry, 2024-2027." October 23, 2024. https://gxt.shandong.gov.cn/art/2024/10/23/art_103885_10346439.html
 
-[^china-daily-expo-2026]: China Daily. "The 16th China (Guangrao) International Rubber Tire and Auto Parts Exhibition opens." May 18, 2026. https://ex.chinadaily.com.cn/exchange/partners/82/rss/channel/cn/columns/6ldgif/stories/WS6a0aaef7a310942cc49acbe5.html
+<a id="ref-5"></a>【5】 China Daily. "The 16th China (Guangrao) International Rubber Tire and Auto Parts Exhibition opens." May 18, 2026. https://ex.chinadaily.com.cn/exchange/partners/82/rss/channel/cn/columns/6ldgif/stories/WS6a0aaef7a310942cc49acbe5.html
 
-[^porter-clusters]: Michael E. Porter. "Clusters and the New Economics of Competition." Harvard Business Review, November-December 1998. https://hbr.org/1998/11/clusters-and-the-new-economics-of-competition
+<a id="ref-6"></a>【6】 Michael E. Porter. "Clusters and the New Economics of Competition." Harvard Business Review, November-December 1998. https://hbr.org/1998/11/clusters-and-the-new-economics-of-competition
 
-[^pisano-shih-hbr-2012]: Gary P. Pisano and Willy C. Shih. "Does America Really Need Manufacturing?" Harvard Business Review, March 2012. https://hbr.org/2012/03/does-america-really-need-manufacturing
+<a id="ref-7"></a>【7】 Gary P. Pisano and Willy C. Shih. "Does America Really Need Manufacturing?" Harvard Business Review, March 2012. https://hbr.org/2012/03/does-america-really-need-manufacturing
 
-[^hbs-industrial-commons]: Gary P. Pisano and Willy C. Shih. "America Needs a Manufacturing Renaissance." Harvard Business School Working Knowledge, October 17, 2012. https://www.library.hbs.edu/working-knowledge/america-needs-a-manufacturing-renaissance
+<a id="ref-8"></a>【8】 Gary P. Pisano and Willy C. Shih. "America Needs a Manufacturing Renaissance." Harvard Business School Working Knowledge, October 17, 2012. https://www.library.hbs.edu/working-knowledge/america-needs-a-manufacturing-renaissance
 
-[^buenstorf-klepper]: Guido Buenstorf and Steven Klepper. "Heritage and Agglomeration: The Akron Tyre Cluster Revisited." The Economic Journal, 2009. https://ideas.repec.org/a/ecj/econjl/v119y2009i537p705-733.html
+<a id="ref-9"></a>【9】 Guido Buenstorf and Steven Klepper. "Heritage and Agglomeration: The Akron Tyre Cluster Revisited." The Economic Journal, 2009. https://ideas.repec.org/a/ecj/econjl/v119y2009i537p705-733.html
 
-[^sull-firestone]: Donald N. Sull. "The Dynamics of Standing Still: Firestone Tire & Rubber and the Radial Revolution." Business History Review, 1999. https://www.cambridge.org/core/journals/business-history-review/article/dynamics-of-standing-still-firestone-tire-rubber-and-the-radial-revolution/0EA470FB95AFC443B972F39327B184CD
+<a id="ref-10"></a>【10】 Donald N. Sull. "The Dynamics of Standing Still: Firestone Tire & Rubber and the Radial Revolution." Business History Review, 1999. https://www.cambridge.org/core/journals/business-history-review/article/dynamics-of-standing-still-firestone-tire-rubber-and-the-radial-revolution/0EA470FB95AFC443B972F39327B184CD
 
-[^erj-global-tire-2025]: European Rubber Journal. Global Tire Report 2025. https://www.european-rubber-journal.com/files/assets/documents/2151842/GTR%202025.pdf
+<a id="ref-11"></a>【11】 European Rubber Journal. Global Tire Report 2025. https://www.european-rubber-journal.com/files/assets/documents/2151842/GTR%202025.pdf
 
-[^erj-china-tire-2025]: European Rubber Journal. China Tire Report 2025. https://www.european-rubber-journal.com/files/assets/documents/2151832/CHINA%20TIRE%20Report%202025.pdf
+<a id="ref-12"></a>【12】 European Rubber Journal. China Tire Report 2025. https://www.european-rubber-journal.com/files/assets/documents/2151832/CHINA%20TIRE%20Report%202025.pdf

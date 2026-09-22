@@ -4,7 +4,7 @@ title: "How a 5G Factory Can Help the Tire Design Process"
 description: "How connected factory data can shorten the loop between manufacturing evidence and tire design decisions."
 content_type: legacy_essay
 published: 2026-07-08
-updated: 2026-07-12
+updated: 2026-09-21
 topics:
   - Digital twin
   - Manufacturing
@@ -21,14 +21,14 @@ _Last updated: 2026-07-09 12:40 America/New_York (UTC-04:00)_
 
 The recent public evidence from China's tire industry suggests that digitalization is moving from isolated automation projects toward connected production, quality, energy, logistics, and field-use data systems. The phrase "5G factory" is important, but the practical story is broader: 5G/private industrial networks, industrial IoT, MES, WMS, RFID, AGV logistics, AI inspection, digital energy-carbon platforms, smart tire systems, and industrial data platforms are being combined into a more traceable tire value chain.
 
-From the general smart-manufacturing literature, 5G matters because it can support industrial IoT services and wireless industrial networking when integrated with Ethernet and time-sensitive networking; it can also support private/non-public industrial networks for factory use cases. Recent 5G positioning research also highlights AGVs as an important industrial use case because 5G can combine communication, positioning, and mapping functions. A recent digital-twin survey frames this trend more broadly: industrial digital twins depend on real-time communication between physical and virtual systems. For tire design, this is the key point: the network is valuable only when it feeds a usable process and product knowledge loop.
+From the general smart-manufacturing literature, 5G matters because it can support industrial IoT services and wireless industrial networking when integrated with Ethernet and time-sensitive networking; it can also support private/non-public industrial networks for factory use cases. Recent 5G positioning research also highlights AGVs as an important industrial use case because 5G can combine communication, positioning, and mapping functions. A recent digital-twin survey frames this trend more broadly: industrial digital twins depend on real-time communication between physical and virtual systems. For tire design, this is the key point: the network is valuable only when it feeds a usable process and product knowledge loop.[【1】](#ref-1)[【2】](#ref-2)[【3】](#ref-3)
 
 Recent China tire company activity shows several patterns:
 
-- Guizhou Tyre presents itself as the first Global Lighthouse Factory in China's tire industry and reports that its product development uses CAD, CAE, CAM, and simulation methods while moving from design to production toward a digital factory. Its smart tire material describes tire temperature and pressure monitoring, full lifecycle records from use to repair to scrap, and a future "tire smart cloud" service model. The signal is that digitalization is no longer only inside the factory; it is extending into field-use data and product lifecycle management.
-- Sailun Group describes a smart-manufacturing flow that includes intelligent batching, MES/WMS/AGV data links, RFID error prevention, green-tire logistics, automated curing information control, automatic alarm locking, automated inspection routing, and intelligent warehousing. Its quality-management material also mentions AI vision inspection and big-data platforms for process-quality control. The signal is that process data, quality data, and logistics data are being connected at multiple tire-production stages.
-- Linglong Tire's June 2026 news page reports the launch of a digital energy-carbon management platform using industrial IoT, fieldbus data acquisition, local databases, edge data collection, and big-data analysis for plant-wide energy management. The signal is that tire digitalization is also becoming a sustainability and energy-control system, not only a production-efficiency system.
-- Wanli Tire's 2025 company material emphasizes its Guangzhou Industrial Investment backing, global production expansion, and ranking among China's tire companies and the global top 75. While this is less explicit about factory data architecture than Guizhou, Sailun, or Linglong, it shows that digitalized and advanced manufacturing is part of a broader globalization and capacity-upgrade race among Chinese tire firms.
+- Guizhou Tyre presents itself as the first Global Lighthouse Factory in China's tire industry and reports that its product development uses CAD, CAE, CAM, and simulation methods while moving from design to production toward a digital factory. Its smart tire material describes tire temperature and pressure monitoring, full lifecycle records from use to repair to scrap, and a future "tire smart cloud" service model. The signal is that digitalization is no longer only inside the factory; it is extending into field-use data and product lifecycle management.[【4】](#ref-4)[【5】](#ref-5)
+- Sailun Group describes a smart-manufacturing flow that includes intelligent batching, MES/WMS/AGV data links, RFID error prevention, green-tire logistics, automated curing information control, automatic alarm locking, automated inspection routing, and intelligent warehousing. Its quality-management material also mentions AI vision inspection and big-data platforms for process-quality control. The signal is that process data, quality data, and logistics data are being connected at multiple tire-production stages.[【6】](#ref-6)
+- Linglong Tire's June 2026 news page reports the launch of a digital energy-carbon management platform using industrial IoT, fieldbus data acquisition, local databases, edge data collection, and big-data analysis for plant-wide energy management. The signal is that tire digitalization is also becoming a sustainability and energy-control system, not only a production-efficiency system.[【7】](#ref-7)
+- Wanli Tire's 2025 company material emphasizes its Guangzhou Industrial Investment backing, global production expansion, and ranking among China's tire companies and the global top 75. While this is less explicit about factory data architecture than Guizhou, Sailun, or Linglong, it shows that digitalized and advanced manufacturing is part of a broader globalization and capacity-upgrade race among Chinese tire firms.[【8】](#ref-8)
 
 These examples point to a shift in the competitive language of the China tire industry:
 
@@ -49,16 +49,23 @@ Factory Connectivity
 -> Design, Simulation, Testing, and Field Feedback
 ```
 
-Useful source base for this section:
+### References for this review
 
-- Sachs and Landernas, "Review of 5G capabilities for smart manufacturing," arXiv, 2022: https://arxiv.org/abs/2207.00417
-- Muthineni et al., "A Survey of 5G-Based Positioning for Industry 4.0," arXiv, 2024: https://arxiv.org/abs/2409.13308
-- Al Zami et al., "Digital Twin in Industries: A Comprehensive Survey," arXiv, 2024: https://arxiv.org/abs/2412.00209
-- Guizhou Tyre homepage and smart tire pages: https://www.gztyre.com/ and https://www.gztyre.com/solve/zhi-hui-lun-tai.htm
-- Guizhou Tyre manufacturing/R&D page: https://www.gztyre.com/create/jiang-xin-zhi-zao.htm
-- Sailun Group manufacturing and quality pages: https://www.sailungroup.com/about/quality.html and https://www.sailungroup.com/about/research.html
-- Linglong Tire news page: https://www.linglong.cn/about/news.html
-- Wanli Tire company page: https://www.wanli-global.com/
+<a id="ref-1"></a>【1】 Sachs and Landernas, "Review of 5G capabilities for smart manufacturing," arXiv, 2022: https://arxiv.org/abs/2207.00417
+
+<a id="ref-2"></a>【2】 Muthineni et al., "A Survey of 5G-Based Positioning for Industry 4.0," arXiv, 2024: https://arxiv.org/abs/2409.13308
+
+<a id="ref-3"></a>【3】 Al Zami et al., "Digital Twin in Industries: A Comprehensive Survey," arXiv, 2024: https://arxiv.org/abs/2412.00209
+
+<a id="ref-4"></a>【4】 Guizhou Tyre homepage and smart tire pages: https://www.gztyre.com/ and https://www.gztyre.com/solve/zhi-hui-lun-tai.htm
+
+<a id="ref-5"></a>【5】 Guizhou Tyre manufacturing/R&D page: https://www.gztyre.com/create/jiang-xin-zhi-zao.htm
+
+<a id="ref-6"></a>【6】 Sailun Group manufacturing and quality pages: https://www.sailungroup.com/about/quality.html and https://www.sailungroup.com/about/research.html
+
+<a id="ref-7"></a>【7】 Linglong Tire news page: https://www.linglong.cn/about/news.html
+
+<a id="ref-8"></a>【8】 Wanli Tire company page: https://www.wanli-global.com/
 
 ## Purpose
 
