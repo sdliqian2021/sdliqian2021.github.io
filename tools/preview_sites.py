@@ -273,6 +273,8 @@ def render_main_index(config: dict[str, object], essays: list[dict[str, object]]
         body,
         count=1,
     )
+    for source, target in local_replacements(config).items():
+        body = body.replace(source, target)
     return metadata, body
 
 
@@ -310,6 +312,8 @@ def render_intelligence_index(
         body,
         count=1,
     )
+    for source, target in local_replacements(config).items():
+        body = body.replace(source, target)
     return metadata, body
 
 
@@ -329,8 +333,11 @@ def render_layout(
     body_class = ' class="article-page"' if is_article else ""
     nav = str(metadata.get("nav", ""))
     technical_current = ' aria-current="page"' if section == "main" and nav in {"home", "essays"} else ""
-    intelligence_current = ' aria-current="page"' if section == "intelligence" else ""
-    about_current = ' aria-current="page"' if section == "main" and nav == "about" else ""
+    intelligence_current = (
+        ' aria-current="page"' if section == "intelligence" and nav != "about" else ""
+    )
+    about_href = f"{INTELLIGENCE_BASE}/about.html" if section == "intelligence" else "/about.html"
+    about_current = ' aria-current="page"' if nav == "about" else ""
     year = date.today().year
     related = ""
     if metadata.get("related_url"):
@@ -355,7 +362,7 @@ def render_layout(
         <nav class="site-nav" aria-label="Primary navigation">
           <a href="/#technical-essays"{technical_current}>Technical thoughts</a>
           <a href="{INTELLIGENCE_BASE}/"{intelligence_current}>Intelligence</a>
-          <a href="/about.html"{about_current}>About</a>
+          <a href="{about_href}"{about_current}>About</a>
         </nav>
       </div>
     </header>
@@ -413,6 +420,15 @@ class PreviewHandler(BaseHTTPRequestHandler):
 
         if normalized == INTELLIGENCE_BASE:
             metadata, content = render_intelligence_index(intelligence_config, reports)
+            self.send_page(
+                render_layout(intelligence_config, metadata, content, path, "intelligence")
+            )
+            return
+        if normalized == f"{INTELLIGENCE_BASE}/about.html":
+            metadata, body = split_front_matter(
+                (INTELLIGENCE_ROOT / "about.md").read_text(encoding="utf-8")
+            )
+            content = markdown_to_html(body, local_replacements(intelligence_config))
             self.send_page(
                 render_layout(intelligence_config, metadata, content, path, "intelligence")
             )
