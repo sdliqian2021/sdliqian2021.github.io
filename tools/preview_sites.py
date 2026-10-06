@@ -16,6 +16,8 @@ from urllib.parse import unquote, urlsplit
 MAIN_ROOT = Path(__file__).resolve().parent.parent
 INTELLIGENCE_ROOT = MAIN_ROOT.parent / "tire-and-rubber-weekly-intelligence-report"
 INTELLIGENCE_BASE = "/tire-and-rubber-weekly-intelligence-report"
+ENGINEERING_ROOT = MAIN_ROOT.parent / "engineering-ai-monthly-intelligence"
+ENGINEERING_BASE = "/engineering-ai-monthly-intelligence"
 
 
 def parse_simple_yaml(text: str) -> dict[str, object]:
@@ -161,7 +163,7 @@ def markdown_to_html(markdown: str, replacements: dict[str, str]) -> str:
             index += 1
             continue
 
-        heading = re.match(r"^(#{1,3})\s+(.+)$", line)
+        heading = re.match(r"^(#{1,4})\s+(.+)$", line)
         if heading:
             flush_paragraph()
             close_list()
@@ -241,6 +243,8 @@ def local_replacements(config: dict[str, object]) -> dict[str, str]:
     return {
         "{{ site.primary_site_url }}": "",
         "{{ site.intelligence_url }}": INTELLIGENCE_BASE,
+        "{{ site.tire_intelligence_url }}": INTELLIGENCE_BASE,
+        "{{ site.engineering_ai_url }}": ENGINEERING_BASE,
         "{{ site.baseurl }}": str(config.get("baseurl", "")),
     }
 
@@ -317,6 +321,35 @@ def render_intelligence_index(
     return metadata, body
 
 
+def render_engineering_index(
+    config: dict[str, object], reports: list[dict[str, object]]
+) -> tuple[dict[str, object], str]:
+    metadata, body = split_front_matter((ENGINEERING_ROOT / "index.md").read_text(encoding="utf-8"))
+    reports = sorted(reports, key=lambda item: str(item.get("period_end", "")), reverse=True)
+    cards: list[str] = []
+    for report in reports:
+        title = html.escape(str(report.get("title", "Monthly report")))
+        permalink = f"{ENGINEERING_BASE}{str(report.get('permalink', '/'))}"
+        period = format_period(str(report["period_start"]), str(report["period_end"]))
+        count = html.escape(str(report.get("story_count", "")))
+        cards.append(
+            "      <article class=\"post-preview\">\n"
+            f"        <h3><a href=\"{permalink}\">{title}</a></h3>\n"
+            f"        <p class=\"post-meta\">{period} · {count} stories</p>\n"
+            "      </article>"
+        )
+    body = re.sub(r"(?m)^\{% assign monthly_reports = .*?%\}\s*", "", body)
+    body = re.sub(
+        r"(?s)\s*\{% for report in monthly_reports %\}.*?\{% endfor %\}",
+        "\n" + "\n".join(cards) + "\n",
+        body,
+        count=1,
+    )
+    for source, target in local_replacements(config).items():
+        body = body.replace(source, target)
+    return metadata, body
+
+
 def render_layout(
     config: dict[str, object],
     metadata: dict[str, object],
@@ -336,7 +369,15 @@ def render_layout(
     intelligence_current = (
         ' aria-current="page"' if section == "intelligence" and nav != "about" else ""
     )
-    about_href = f"{INTELLIGENCE_BASE}/about.html" if section == "intelligence" else "/about.html"
+    engineering_current = (
+        ' aria-current="page"' if section == "engineering" and nav != "about" else ""
+    )
+    if section == "intelligence":
+        about_href = f"{INTELLIGENCE_BASE}/about.html"
+    elif section == "engineering":
+        about_href = f"{ENGINEERING_BASE}/about.html"
+    else:
+        about_href = "/about.html"
     about_current = ' aria-current="page"' if nav == "about" else ""
     year = date.today().year
     related = ""
@@ -361,7 +402,8 @@ def render_layout(
         <a class="site-name" href="/">Qian Li's Notes</a>
         <nav class="site-nav" aria-label="Primary navigation">
           <a href="/#technical-essays"{technical_current}>Technical thoughts</a>
-          <a href="{INTELLIGENCE_BASE}/"{intelligence_current}>Intelligence</a>
+          <a href="{INTELLIGENCE_BASE}/"{intelligence_current}>Tire intelligence</a>
+          <a href="{ENGINEERING_BASE}/"{engineering_current}>Engineering AI</a>
           <a href="{about_href}"{about_current}>About</a>
         </nav>
       </div>
@@ -391,6 +433,9 @@ class PreviewHandler(BaseHTTPRequestHandler):
         if normalized == f"{INTELLIGENCE_BASE}/assets/css/site.css":
             self.send_file(INTELLIGENCE_ROOT / "assets" / "css" / "site.css")
             return
+        if normalized == f"{ENGINEERING_BASE}/assets/css/site.css":
+            self.send_file(ENGINEERING_ROOT / "assets" / "css" / "site.css")
+            return
         if normalized.startswith("/images/"):
             relative = normalized.removeprefix("/")
             candidate = (MAIN_ROOT / relative).resolve()
@@ -400,8 +445,10 @@ class PreviewHandler(BaseHTTPRequestHandler):
 
         main_config = load_config(MAIN_ROOT)
         intelligence_config = load_config(INTELLIGENCE_ROOT)
+        engineering_config = load_config(ENGINEERING_ROOT)
         essays = load_collection(MAIN_ROOT, "posts", "essay")
         reports = load_collection(INTELLIGENCE_ROOT, "reports", "weekly_report")
+        engineering_reports = load_collection(ENGINEERING_ROOT, "reports", "monthly_report")
 
         if normalized == "/":
             metadata, content = render_main_index(main_config, essays)
@@ -444,6 +491,32 @@ class PreviewHandler(BaseHTTPRequestHandler):
                 )
                 return
 
+        if normalized == ENGINEERING_BASE:
+            metadata, content = render_engineering_index(engineering_config, engineering_reports)
+            self.send_page(
+                render_layout(engineering_config, metadata, content, path, "engineering")
+            )
+            return
+        if normalized == f"{ENGINEERING_BASE}/about.html":
+            metadata, body = split_front_matter(
+                (ENGINEERING_ROOT / "about.md").read_text(encoding="utf-8")
+            )
+            content = markdown_to_html(body, local_replacements(engineering_config))
+            self.send_page(
+                render_layout(engineering_config, metadata, content, path, "engineering")
+            )
+            return
+        for report in engineering_reports:
+            permalink = f"{ENGINEERING_BASE}{str(report.get('permalink', '/')).rstrip('/')}"
+            if normalized == permalink:
+                content = markdown_to_html(
+                    str(report["body"]), local_replacements(engineering_config)
+                )
+                self.send_page(
+                    render_layout(engineering_config, report, content, path, "engineering")
+                )
+                return
+
         self.send_error(404, "Preview page not found")
 
     def send_page(self, page: str) -> None:
@@ -469,16 +542,19 @@ class PreviewHandler(BaseHTTPRequestHandler):
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Preview both Qian Li public websites locally")
+    parser = argparse.ArgumentParser(description="Preview Qian Li public websites locally")
     parser.add_argument("--port", type=int, default=4000)
     parser.add_argument("--no-browser", action="store_true")
     args = parser.parse_args()
     if not INTELLIGENCE_ROOT.is_dir():
         raise SystemExit(f"Sibling intelligence repository not found: {INTELLIGENCE_ROOT}")
+    if not ENGINEERING_ROOT.is_dir():
+        raise SystemExit(f"Sibling Engineering AI repository not found: {ENGINEERING_ROOT}")
     server = ThreadingHTTPServer(("127.0.0.1", args.port), PreviewHandler)
     root_url = f"http://127.0.0.1:{args.port}/"
     print(f"Technical Thoughts: {root_url}")
     print(f"Intelligence: {root_url.rstrip('/')}{INTELLIGENCE_BASE}/")
+    print(f"Engineering AI: {root_url.rstrip('/')}{ENGINEERING_BASE}/")
     print("Save a website file and refresh the browser to see the change.")
     print("Press Ctrl+C to stop the preview server.")
     if not args.no_browser:
